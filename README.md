@@ -25,13 +25,13 @@ The project aims to optimize the allocation of classrooms to professors by consi
 
 ## Data collection
 
-- Classroom Size Requirements:
+- Classroom Size Requirements
   - Extract detailed scheduling needs from Boston University’s website, including class sizes and time slots.
-- Distances Between Classrooms:
+- Distances Between Classrooms
   - Create a model using building addresses and room numbers to estimate the walking cost between classrooms, possibly using campus maps or GIS data.
-- Class Schedules:
+- Class Schedules
   - Obtain fixed class schedules arranged by the university from the student portal
-- Classroom Equipment Requirements:
+- Classroom Equipment Requirements
   - Identify any special needs for classroom equipment for certain professors, such as lecture capture device and wireless microphone.
 - Classroom Features
   - Gather information on classrooms with special equipment or facilities, such as
