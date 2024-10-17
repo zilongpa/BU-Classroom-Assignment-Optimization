@@ -24,7 +24,7 @@ The project aims to optimize the allocation of classrooms to professors by consi
 
 
 ## Data collection
-
+we are planing to use info on https://www.bu.edu/classrooms/find-a-classroom/
 - Classroom Size Requirements
   - Extract detailed scheduling needs from Boston University’s website, including class sizes and time slots.
 - Distances Between Classrooms
