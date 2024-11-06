@@ -9,6 +9,9 @@ Optimizing Classroom Allocation to Minimize Professors’ Walking Cost at Boston
 - Junhui Huang (hjh604@bu.edu)
 - Mingyuan Sun (mingyuan@bu.edu)
 
+#### Midterm Report
+(Video)[https://www.youtube.com/watch?v=cfRX62oWjNg]
+
 #### Description
 
 The project aims to optimize the allocation of classrooms to professors by considering each professor’s required classroom size at specific time periods and the cost associated with walking between classrooms. The objective is to reassign classrooms to minimize the total walking cost for all professors. The optimization will be performed using the PuLP library in Python.
