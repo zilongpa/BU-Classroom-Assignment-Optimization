@@ -26,22 +26,66 @@ The project aims to optimize the allocation of classrooms to professors by consi
 
 
 
-## Data collection
-we are planing to use info on https://www.bu.edu/classrooms/find-a-classroom/
-- Classroom Size Requirements
-  - Extract detailed scheduling needs from Boston University’s website, including class sizes and time slots.
-- Distances Between Classrooms
-  - Create a model using building addresses and room numbers to estimate the walking cost between classrooms, possibly using campus maps or GIS data.
-- Class Schedules
-  - Obtain fixed class schedules arranged by the university from the student portal
-- Classroom Equipment Requirements
-  - Identify any special needs for classroom equipment for certain professors, such as lecture capture device and wireless microphone.
-- Classroom Features
-  - Gather information on classrooms with special equipment or facilities, such as
-    - Lecture Capture
-    - Audio Equipment
-    - Chalkboard
-    - Projector
+# Data Processing Report
+
+### Overview
+
+This report provides a detailed description of the data processing steps completed so far in our project. The data has been gathered from two primary sources: BU’s public student information system and BU’s classroom resources website. The main focus of this processing phase was to clean, reformat, and integrate data from these disparate sources to facilitate modeling and analysis.
+
+### Data Collection
+
+1. **Course Information**  
+   - **Collected by**: Junhui Huang  
+   - **Source**: [BU Public Student Information System](https://public.mybustudent.bu.edu/psp/BUPRD/EMPLOYEE/SA/s/WEBLIB_HCX_CM.H_CLASS_SEARCH.FieldFormula.IScript_Main)  
+   - **Description**: All available course information for the Spring semester was scraped, covering details such as course names, schedules, locations, and instructor IDs.
+
+2. **Classroom Information**  
+   - **Collected by**: Mingyuan Sun  
+   - **Source**: [BU Classroom Resource Finder](https://www.bu.edu/classrooms/find-a-classroom/)  
+   - **Description**: Classroom details including room capacities, locations, and equipment were gathered from BU’s classroom finder website.
+
+3. **Building Coordinates and Distance Matrix**  
+   - **Collected by**: Junhui Huang  
+   - **Description**: Geographical coordinates of all academic buildings were collected, and a matrix representing distances between each building was generated to calculate walking times between classrooms.
+
+### Data Cleaning and Integration
+
+- **Data Cleaning**  
+  - **Responsibility**: Mingyuan Sun  
+  - **Process**: Irrelevant fields were removed, and rows with missing or unreliable data were discarded to ensure data quality.
+  - **Reformatting**: The data from both sources were reformatted to achieve consistency, enabling integration between course and classroom datasets.
+
+- **Data Transformation**  
+  - Fields were transformed and mapped across datasets, establishing links between course schedules and classroom details to support advanced scheduling models.
+
+### Data Extraction for Modeling
+
+From the cleaned and integrated dataset, the following data elements were extracted for use in modeling:
+
+1. **Classroom Capacities**  
+   - **Format**: Integer array  
+   - **Description**: An array listing the seating capacity of each classroom, useful for determining space constraints in scheduling.
+
+2. **Professor Schedule**  
+   - **Format**: Dictionary with keys as `professor_id` and values as tuples `(start_time, end_time, capacity_required)`  
+   - **Description**: Each professor’s weekly schedule, recorded in five-minute intervals, with a total of 2016 time slots per week. This structure also records each professor’s required classroom capacity.
+
+3. **Professor Courses**  
+   - **Format**: 3D Integer Array `[i][j][k]`  
+   - **Description**: A binary indicator array where `1` denotes that professor `i` is scheduled to use classroom `k` at time `j`, and `0` otherwise.
+
+4. **Walking Cost**  
+   - **Format**: 2D Float Array `[i][j]`  
+   - **Description**: A matrix representing the walking distance (cost) between classrooms `i` and `j`, facilitating calculations for optimal scheduling based on proximity.
+
+### Data Packaging
+
+To streamline future data access, all processed datasets were serialized using Python’s `pickle` library. This approach allows for quick loading and ensures data consistency across multiple sessions and models.
+
+### Conclusion
+
+This data processing phase has successfully collected, cleaned, and structured the necessary information for advanced scheduling and classroom allocation models. The data is now ready for further analysis and modeling.
+
 
 
 
