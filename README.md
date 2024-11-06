@@ -10,7 +10,7 @@ Optimizing Classroom Allocation to Minimize Professors’ Walking Cost at Boston
 - Mingyuan Sun (mingyuan@bu.edu)
 
 #### Midterm Report
-(Video)[https://www.youtube.com/watch?v=cfRX62oWjNg]
+[Video](https://www.youtube.com/watch?v=cfRX62oWjNg)
 
 #### Description
 
