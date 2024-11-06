@@ -122,6 +122,20 @@ The classroom assignment challenge is formulated as a linear optimization model.
 
 
 
+#### Pairs of building to building distances distribution
+
+![image-20241105235331135](assets/image-20241105235331135.png)
+
+#### Top 10 longest and shortest distances
+
+![image-20241105235446879](assets/image-20241105235446879.png)
+
+#### A map showing the distribution of building locations.
+
+[Here](https://github.com/zilongpa/CS506-Final-Project/blob/master/map.html)
+
+
+
 ## Testing
 
 - Test the model on various what-if scenarios, such as changes in classroom availability.

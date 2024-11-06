@@ -1,0 +1,3222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5b1fd5a702702c32aa1357dac714b1e4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5b1fd5a702702c32aa1357dac714b1e4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5b1fd5a702702c32aa1357dac714b1e4 = L.map(
+                "map_5b1fd5a702702c32aa1357dac714b1e4",
+                {
+                    center: [42.350421499999996, -71.10322831831216],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 16,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_63064798ed0b4a5c00795d79a983d172 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_63064798ed0b4a5c00795d79a983d172.addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var marker_7b867008a6c188ddc37e186fd650149b = L.marker(
+                [42.34848825, -71.10792453810609],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_01ee6b307b3c53840328bc7430d609a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7b867008a6c188ddc37e186fd650149b.setIcon(icon_01ee6b307b3c53840328bc7430d609a5);
+        
+    
+        var popup_24f345851b3e94c4d1330798353a669b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9591f155ecb056829ffcdd97c85307f4 = $(`<div id="html_9591f155ecb056829ffcdd97c85307f4" style="width: 100.0%; height: 100.0%;">138 Mountfort Street</div>`)[0];
+                popup_24f345851b3e94c4d1330798353a669b.setContent(html_9591f155ecb056829ffcdd97c85307f4);
+            
+        
+
+        marker_7b867008a6c188ddc37e186fd650149b.bindPopup(popup_24f345851b3e94c4d1330798353a669b)
+        ;
+
+        
+    
+    
+            marker_7b867008a6c188ddc37e186fd650149b.bindTooltip(
+                `<div>
+                     African American Studies
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_64203014a9c73a28ba56e4098a333219 = L.marker(
+                [42.3364039, -71.07223994070816],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_1c0352f167d6caee2b18d2061da1ec2e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_64203014a9c73a28ba56e4098a333219.setIcon(icon_1c0352f167d6caee2b18d2061da1ec2e);
+        
+    
+        var popup_0ba10e4a61e7cc38c0377e472bf634cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_954625c873948c0061bf3a0a2fd18d3c = $(`<div id="html_954625c873948c0061bf3a0a2fd18d3c" style="width: 100.0%; height: 100.0%;">72 East Concord Street</div>`)[0];
+                popup_0ba10e4a61e7cc38c0377e472bf634cb.setContent(html_954625c873948c0061bf3a0a2fd18d3c);
+            
+        
+
+        marker_64203014a9c73a28ba56e4098a333219.bindPopup(popup_0ba10e4a61e7cc38c0377e472bf634cb)
+        ;
+
+        
+    
+    
+            marker_64203014a9c73a28ba56e4098a333219.bindTooltip(
+                `<div>
+                     ABG
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_48a84beadde52287565fcbc74aa2a055 = L.marker(
+                [42.3522233, -71.11773001441316],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_a6d82fd6c01cde5aa0536c07bb861eb4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_48a84beadde52287565fcbc74aa2a055.setIcon(icon_a6d82fd6c01cde5aa0536c07bb861eb4);
+        
+    
+        var popup_fc61c97584648bc021a18ca53347865b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c678e6dc650296919d265fbc70137f6 = $(`<div id="html_7c678e6dc650296919d265fbc70137f6" style="width: 100.0%; height: 100.0%;">925 Commonwealth Avenue</div>`)[0];
+                popup_fc61c97584648bc021a18ca53347865b.setContent(html_7c678e6dc650296919d265fbc70137f6);
+            
+        
+
+        marker_48a84beadde52287565fcbc74aa2a055.bindPopup(popup_fc61c97584648bc021a18ca53347865b)
+        ;
+
+        
+    
+    
+            marker_48a84beadde52287565fcbc74aa2a055.bindTooltip(
+                `<div>
+                     Agganis Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bdf668d4e3bc7733f0ddf68801a99a83 = L.marker(
+                [42.335202, -71.06984300654784],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_0a6b64df918750a2f92c46ff6691cb79 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bdf668d4e3bc7733f0ddf68801a99a83.setIcon(icon_0a6b64df918750a2f92c46ff6691cb79);
+        
+    
+        var popup_481d5a3291c7c665eed617ca6dcd1aab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85027cecec39d4b534de595b65536b7d = $(`<div id="html_85027cecec39d4b534de595b65536b7d" style="width: 100.0%; height: 100.0%;">670 Albany Street</div>`)[0];
+                popup_481d5a3291c7c665eed617ca6dcd1aab.setContent(html_85027cecec39d4b534de595b65536b7d);
+            
+        
+
+        marker_bdf668d4e3bc7733f0ddf68801a99a83.bindPopup(popup_481d5a3291c7c665eed617ca6dcd1aab)
+        ;
+
+        
+    
+    
+            marker_bdf668d4e3bc7733f0ddf68801a99a83.bindTooltip(
+                `<div>
+                     ALB
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3adc427b06e4fab2080207aa2c45737d = L.marker(
+                [42.354296250000004, -71.12122556854106],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_04bc37bb77ec053eac109b4ac696d40b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3adc427b06e4fab2080207aa2c45737d.setIcon(icon_04bc37bb77ec053eac109b4ac696d40b);
+        
+    
+        var popup_763bbfdeaa08251f14c84384820835d0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_835c6e738b0796d20b046bb89e5bfd2f = $(`<div id="html_835c6e738b0796d20b046bb89e5bfd2f" style="width: 100.0%; height: 100.0%;">300 Babcock Street</div>`)[0];
+                popup_763bbfdeaa08251f14c84384820835d0.setContent(html_835c6e738b0796d20b046bb89e5bfd2f);
+            
+        
+
+        marker_3adc427b06e4fab2080207aa2c45737d.bindPopup(popup_763bbfdeaa08251f14c84384820835d0)
+        ;
+
+        
+    
+    
+            marker_3adc427b06e4fab2080207aa2c45737d.bindTooltip(
+                `<div>
+                     Academic Support Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1a1b6755b855dabef52d57f78711eedf = L.marker(
+                [42.354296250000004, -71.12122556854106],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_644b88fcf3cb0992e390c4b2fcb598a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1a1b6755b855dabef52d57f78711eedf.setIcon(icon_644b88fcf3cb0992e390c4b2fcb598a2);
+        
+    
+        var popup_2074f6afc2dea512bb10ba91a1403811 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3b56bd10628018982795ddd3a42d4d4 = $(`<div id="html_b3b56bd10628018982795ddd3a42d4d4" style="width: 100.0%; height: 100.0%;">300 Babcock Street</div>`)[0];
+                popup_2074f6afc2dea512bb10ba91a1403811.setContent(html_b3b56bd10628018982795ddd3a42d4d4);
+            
+        
+
+        marker_1a1b6755b855dabef52d57f78711eedf.bindPopup(popup_2074f6afc2dea512bb10ba91a1403811)
+        ;
+
+        
+    
+    
+            marker_1a1b6755b855dabef52d57f78711eedf.bindTooltip(
+                `<div>
+                     BAB
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_be98e69f7ee9d18825cee928636cf00c = L.marker(
+                [42.3485174, -71.0993601],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_62e10b54e6b16bf56bee68b2da2f69ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_be98e69f7ee9d18825cee928636cf00c.setIcon(icon_62e10b54e6b16bf56bee68b2da2f69ca);
+        
+    
+        var popup_2694cd5897ee96221ded20d88a590ee2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92880e6de8a34daab816c575e8947ccd = $(`<div id="html_92880e6de8a34daab816c575e8947ccd" style="width: 100.0%; height: 100.0%;">Art Institute of Boston Library</div>`)[0];
+                popup_2694cd5897ee96221ded20d88a590ee2.setContent(html_92880e6de8a34daab816c575e8947ccd);
+            
+        
+
+        marker_be98e69f7ee9d18825cee928636cf00c.bindPopup(popup_2694cd5897ee96221ded20d88a590ee2)
+        ;
+
+        
+    
+    
+            marker_be98e69f7ee9d18825cee928636cf00c.bindTooltip(
+                `<div>
+                     BCN
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5fdc63b1c2fba325a7feae6398e405b5 = L.marker(
+                [42.34865105, -71.10126530464467],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_aad1c85b8c1440c6d14dba6962926e8f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5fdc63b1c2fba325a7feae6398e405b5.setIcon(icon_aad1c85b8c1440c6d14dba6962926e8f);
+        
+    
+        var popup_ac0a9585aeabed260acbfc5a48ba1538 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c55c32fe380cd3bb6264f62fbbf0465c = $(`<div id="html_c55c32fe380cd3bb6264f62fbbf0465c" style="width: 100.0%; height: 100.0%;">5 Cummington Mall</div>`)[0];
+                popup_ac0a9585aeabed260acbfc5a48ba1538.setContent(html_c55c32fe380cd3bb6264f62fbbf0465c);
+            
+        
+
+        marker_5fdc63b1c2fba325a7feae6398e405b5.bindPopup(popup_ac0a9585aeabed260acbfc5a48ba1538)
+        ;
+
+        
+    
+    
+            marker_5fdc63b1c2fba325a7feae6398e405b5.bindTooltip(
+                `<div>
+                     Biology Research Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_20504a38b9600cdda68e446fb2dbd4c6 = L.marker(
+                [42.348208549999995, -71.10116164185519],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_c0270906db3db627b1e869c09726d0fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_20504a38b9600cdda68e446fb2dbd4c6.setIcon(icon_c0270906db3db627b1e869c09726d0fd);
+        
+    
+        var popup_a049c2635d3deb1fc6551d0b7ea2fe9d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee66bb40a54b63047bdacf50963e8ae9 = $(`<div id="html_ee66bb40a54b63047bdacf50963e8ae9" style="width: 100.0%; height: 100.0%;">2 Cummington Mall</div>`)[0];
+                popup_a049c2635d3deb1fc6551d0b7ea2fe9d.setContent(html_ee66bb40a54b63047bdacf50963e8ae9);
+            
+        
+
+        marker_20504a38b9600cdda68e446fb2dbd4c6.bindPopup(popup_a049c2635d3deb1fc6551d0b7ea2fe9d)
+        ;
+
+        
+    
+    
+            marker_20504a38b9600cdda68e446fb2dbd4c6.bindTooltip(
+                `<div>
+                     Biological Science Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ab89e302842e83766da1814c8095ddda = L.marker(
+                [42.3502728, -71.1055321],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_657ac641148074a1400600ef75cbe435 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ab89e302842e83766da1814c8095ddda.setIcon(icon_657ac641148074a1400600ef75cbe435);
+        
+    
+        var popup_a02e91f1c31dead6800aec042df264a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_15b129e42631a2a6388fba27470a6d71 = $(`<div id="html_15b129e42631a2a6388fba27470a6d71" style="width: 100.0%; height: 100.0%;">685–725 Commonwealth Avenue</div>`)[0];
+                popup_a02e91f1c31dead6800aec042df264a6.setContent(html_15b129e42631a2a6388fba27470a6d71);
+            
+        
+
+        marker_ab89e302842e83766da1814c8095ddda.bindPopup(popup_a02e91f1c31dead6800aec042df264a6)
+        ;
+
+        
+    
+    
+            marker_ab89e302842e83766da1814c8095ddda.bindTooltip(
+                `<div>
+                     College of Arts & Sciences
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f966f5699635cbafd3aeac77af28182a = L.marker(
+                [42.3500229, -71.10311127482268],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_76d4fb8a34cdbf464061bf6bd3b1a24f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f966f5699635cbafd3aeac77af28182a.setIcon(icon_76d4fb8a34cdbf464061bf6bd3b1a24f);
+        
+    
+        var popup_658c7dc31d6cfb2f945e4ff867ae1517 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e4506ec6bce8eb0125433956d709fa1a = $(`<div id="html_e4506ec6bce8eb0125433956d709fa1a" style="width: 100.0%; height: 100.0%;">665 Commonwealth Avenue</div>`)[0];
+                popup_658c7dc31d6cfb2f945e4ff867ae1517.setContent(html_e4506ec6bce8eb0125433956d709fa1a);
+            
+        
+
+        marker_f966f5699635cbafd3aeac77af28182a.bindPopup(popup_658c7dc31d6cfb2f945e4ff867ae1517)
+        ;
+
+        
+    
+    
+            marker_f966f5699635cbafd3aeac77af28182a.bindTooltip(
+                `<div>
+                     Center for Computing & Data Sciences
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8d6777c6752a43aa6ba9148271fc074c = L.marker(
+                [42.351293600000005, -71.11387671441952],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_cabce8cfcd85d2cb3e00ca77b2260903 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8d6777c6752a43aa6ba9148271fc074c.setIcon(icon_cabce8cfcd85d2cb3e00ca77b2260903);
+        
+    
+        var popup_6e5297cd36bfc9ecdc2e5f4096400620 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_68255d193f2a312d4131a61b70e71d9c = $(`<div id="html_68255d193f2a312d4131a61b70e71d9c" style="width: 100.0%; height: 100.0%;">855 Commonwealth Avenue</div>`)[0];
+                popup_6e5297cd36bfc9ecdc2e5f4096400620.setContent(html_68255d193f2a312d4131a61b70e71d9c);
+            
+        
+
+        marker_8d6777c6752a43aa6ba9148271fc074c.bindPopup(popup_6e5297cd36bfc9ecdc2e5f4096400620)
+        ;
+
+        
+    
+    
+            marker_8d6777c6752a43aa6ba9148271fc074c.bindTooltip(
+                `<div>
+                     College of Fine Arts
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6dd471f53f057b238b07bcd753907871 = L.marker(
+                [42.351481699999994, -71.1145903356746],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_204aad7c75a012bb446b58e4a32ec107 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6dd471f53f057b238b07bcd753907871.setIcon(icon_204aad7c75a012bb446b58e4a32ec107);
+        
+    
+        var popup_fa5f3af7926b2bb0f592b61239dc3096 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8934e99d4e335b719548471f79101b14 = $(`<div id="html_8934e99d4e335b719548471f79101b14" style="width: 100.0%; height: 100.0%;">871 Commonwealth Avenue</div>`)[0];
+                popup_fa5f3af7926b2bb0f592b61239dc3096.setContent(html_8934e99d4e335b719548471f79101b14);
+            
+        
+
+        marker_6dd471f53f057b238b07bcd753907871.bindPopup(popup_fa5f3af7926b2bb0f592b61239dc3096)
+        ;
+
+        
+    
+    
+            marker_6dd471f53f057b238b07bcd753907871.bindTooltip(
+                `<div>
+                     College of General Studies
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f55b9c2593de73e1453677f1ade4d76d = L.marker(
+                [42.3508071, -71.1161896],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_3b111e2798e654f1ed071e61a10a6830 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f55b9c2593de73e1453677f1ade4d76d.setIcon(icon_3b111e2798e654f1ed071e61a10a6830);
+        
+    
+        var popup_7746ba75827090f57ce5b85a43fca7f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_98d9bc53e3f80a10fb81b4a2d34859ca = $(`<div id="html_98d9bc53e3f80a10fb81b4a2d34859ca" style="width: 100.0%; height: 100.0%;">900 Commonwealth Avenue</div>`)[0];
+                popup_7746ba75827090f57ce5b85a43fca7f1.setContent(html_98d9bc53e3f80a10fb81b4a2d34859ca);
+            
+        
+
+        marker_f55b9c2593de73e1453677f1ade4d76d.bindPopup(popup_7746ba75827090f57ce5b85a43fca7f1)
+        ;
+
+        
+    
+    
+            marker_f55b9c2593de73e1453677f1ade4d76d.bindTooltip(
+                `<div>
+                     Clinical Psychology
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_97a7ca20d34f7daaa8f0cf5ee1d99477 = L.marker(
+                [42.3481453, -71.0986357601812],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_0a66c472506381059e3ed235cdb9610f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_97a7ca20d34f7daaa8f0cf5ee1d99477.setIcon(icon_0a66c472506381059e3ed235cdb9610f);
+        
+    
+        var popup_4cf3cfffe664984c0a2f6f9452191216 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d5ad98bf7bb5f32e7a985a0d7cf1dda1 = $(`<div id="html_d5ad98bf7bb5f32e7a985a0d7cf1dda1" style="width: 100.0%; height: 100.0%;">677 Beacon Street</div>`)[0];
+                popup_4cf3cfffe664984c0a2f6f9452191216.setContent(html_d5ad98bf7bb5f32e7a985a0d7cf1dda1);
+            
+        
+
+        marker_97a7ca20d34f7daaa8f0cf5ee1d99477.bindPopup(popup_4cf3cfffe664984c0a2f6f9452191216)
+        ;
+
+        
+    
+    
+            marker_97a7ca20d34f7daaa8f0cf5ee1d99477.bindTooltip(
+                `<div>
+                     Cognitive & Neural Systems
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4759d403982cf30d9153d116e6921d90 = L.marker(
+                [42.3489018, -71.1023218],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_8a4bb860bacae2ea3de10ac2e4b3531d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4759d403982cf30d9153d116e6921d90.setIcon(icon_8a4bb860bacae2ea3de10ac2e4b3531d);
+        
+    
+        var popup_bf5de88d94ef80cb933bedbfda39348c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_907474b27819aa1e32e80a931f976d30 = $(`<div id="html_907474b27819aa1e32e80a931f976d30" style="width: 100.0%; height: 100.0%;">640 Commonwealth Avenue</div>`)[0];
+                popup_bf5de88d94ef80cb933bedbfda39348c.setContent(html_907474b27819aa1e32e80a931f976d30);
+            
+        
+
+        marker_4759d403982cf30d9153d116e6921d90.bindPopup(popup_bf5de88d94ef80cb933bedbfda39348c)
+        ;
+
+        
+    
+    
+            marker_4759d403982cf30d9153d116e6921d90.bindTooltip(
+                `<div>
+                     College of Communication
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_327ec3167f4d19d471629f3cfa3db3a3 = L.marker(
+                [42.3532496, -71.10777000756758],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_d57fa8b6e90cb4f024494418601dc36f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_327ec3167f4d19d471629f3cfa3db3a3.setIcon(icon_d57fa8b6e90cb4f024494418601dc36f);
+        
+    
+        var popup_800a13848baf4692b324c547a03b993d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26896a2800edf4734de36fa431468552 = $(`<div id="html_26896a2800edf4734de36fa431468552" style="width: 100.0%; height: 100.0%;">619 Memorial Drive</div>`)[0];
+                popup_800a13848baf4692b324c547a03b993d.setContent(html_26896a2800edf4734de36fa431468552);
+            
+        
+
+        marker_327ec3167f4d19d471629f3cfa3db3a3.bindPopup(popup_800a13848baf4692b324c547a03b993d)
+        ;
+
+        
+    
+    
+            marker_327ec3167f4d19d471629f3cfa3db3a3.bindTooltip(
+                `<div>
+                     DeWolfe Crew Boathouse
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_18bc91631445fe54fbe865387c7932e0 = L.marker(
+                [42.3539611, -71.1203527],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_b7df631900fc01b4382abdd501eb5fbd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_18bc91631445fe54fbe865387c7932e0.setIcon(icon_b7df631900fc01b4382abdd501eb5fbd);
+        
+    
+        var popup_aeaab37b5757ea254c6f84967ed0b71b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_68d3ddce9345c9ac066b06b90aac10cc = $(`<div id="html_68d3ddce9345c9ac066b06b90aac10cc" style="width: 100.0%; height: 100.0%;">285 Babcock Street</div>`)[0];
+                popup_aeaab37b5757ea254c6f84967ed0b71b.setContent(html_68d3ddce9345c9ac066b06b90aac10cc);
+            
+        
+
+        marker_18bc91631445fe54fbe865387c7932e0.bindPopup(popup_aeaab37b5757ea254c6f84967ed0b71b)
+        ;
+
+        
+    
+    
+            marker_18bc91631445fe54fbe865387c7932e0.bindTooltip(
+                `<div>
+                     Case Physical Education Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b0ec4c77685119b27acc48d834d3bdfe = L.marker(
+                [42.33302405, -71.07351342066596],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_e8193d0cfdb55a7d08d45094113b3702 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b0ec4c77685119b27acc48d834d3bdfe.setIcon(icon_e8193d0cfdb55a7d08d45094113b3702);
+        
+    
+        var popup_b474e09c57aaafd184ca319c02e07517 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b232876bdcb03364bf5ff551667fd77 = $(`<div id="html_3b232876bdcb03364bf5ff551667fd77" style="width: 100.0%; height: 100.0%;">801 Massachusetts Avenue</div>`)[0];
+                popup_b474e09c57aaafd184ca319c02e07517.setContent(html_3b232876bdcb03364bf5ff551667fd77);
+            
+        
+
+        marker_b0ec4c77685119b27acc48d834d3bdfe.bindPopup(popup_b474e09c57aaafd184ca319c02e07517)
+        ;
+
+        
+    
+    
+            marker_b0ec4c77685119b27acc48d834d3bdfe.bindTooltip(
+                `<div>
+                     CTC
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f5465a31972551964e3f150870c953c1 = L.marker(
+                [42.350582900000006, -71.10413120618469],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_dc18e6d2cce19b41257fe4317ff8a0b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f5465a31972551964e3f150870c953c1.setIcon(icon_dc18e6d2cce19b41257fe4317ff8a0b1);
+        
+    
+        var popup_1dd83dc550122a5c42d562733e2d578c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d924432cace5a9fb2c3a980a2913bf7 = $(`<div id="html_1d924432cace5a9fb2c3a980a2913bf7" style="width: 100.0%; height: 100.0%;">236 Bay State Road</div>`)[0];
+                popup_1dd83dc550122a5c42d562733e2d578c.setContent(html_1d924432cace5a9fb2c3a980a2913bf7);
+            
+        
+
+        marker_f5465a31972551964e3f150870c953c1.bindPopup(popup_1dd83dc550122a5c42d562733e2d578c)
+        ;
+
+        
+    
+    
+            marker_f5465a31972551964e3f150870c953c1.bindTooltip(
+                `<div>
+                     English Faculty offices
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_53055778e521502ac77816777e949dc1 = L.marker(
+                [42.3505035, -71.09985850000001],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_3ba336d3d18f969389a1e14f97604545 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_53055778e521502ac77816777e949dc1.setIcon(icon_3ba336d3d18f969389a1e14f97604545);
+        
+    
+        var popup_44209cdb6b803ee5f65d4ada7f360f19 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7239b7350e1e0fc28f8ff952726b6051 = $(`<div id="html_7239b7350e1e0fc28f8ff952726b6051" style="width: 100.0%; height: 100.0%;">143 Bay State Road</div>`)[0];
+                popup_44209cdb6b803ee5f65d4ada7f360f19.setContent(html_7239b7350e1e0fc28f8ff952726b6051);
+            
+        
+
+        marker_53055778e521502ac77816777e949dc1.bindPopup(popup_44209cdb6b803ee5f65d4ada7f360f19)
+        ;
+
+        
+    
+    
+            marker_53055778e521502ac77816777e949dc1.bindTooltip(
+                `<div>
+                     Editorial Institute Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2090dd8f1e5710e4991979e23eb41b68 = L.marker(
+                [42.3539611, -71.1203527],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_8cd196c1390d3ecf36de6b00f0721ea6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2090dd8f1e5710e4991979e23eb41b68.setIcon(icon_8cd196c1390d3ecf36de6b00f0721ea6);
+        
+    
+        var popup_df39b7e1a93f07a7c9e6593bde6715ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6eb5b5c3baf01b04be72093abf4aee75 = $(`<div id="html_6eb5b5c3baf01b04be72093abf4aee75" style="width: 100.0%; height: 100.0%;">285 Babcock Street</div>`)[0];
+                popup_df39b7e1a93f07a7c9e6593bde6715ee.setContent(html_6eb5b5c3baf01b04be72093abf4aee75);
+            
+        
+
+        marker_2090dd8f1e5710e4991979e23eb41b68.bindPopup(popup_df39b7e1a93f07a7c9e6593bde6715ee)
+        ;
+
+        
+    
+    
+            marker_2090dd8f1e5710e4991979e23eb41b68.bindTooltip(
+                `<div>
+                     Eilberg Lounge (Case Center)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b3941d823e29362f71d36f0b2d2aa8a6 = L.marker(
+                [42.34972105, -71.10750259091596],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_5e9155343dd4ee08a0f3521d6edb7c61 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b3941d823e29362f71d36f0b2d2aa8a6.setIcon(icon_5e9155343dd4ee08a0f3521d6edb7c61);
+        
+    
+        var popup_fb380fc19c5bc55455c6210a99b65487 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df1ed5517bdb3ef2e3e577096a3bcc3d = $(`<div id="html_df1ed5517bdb3ef2e3e577096a3bcc3d" style="width: 100.0%; height: 100.0%;">730 Commonwealth Avenue</div>`)[0];
+                popup_fb380fc19c5bc55455c6210a99b65487.setContent(html_df1ed5517bdb3ef2e3e577096a3bcc3d);
+            
+        
+
+        marker_b3941d823e29362f71d36f0b2d2aa8a6.bindPopup(popup_fb380fc19c5bc55455c6210a99b65487)
+        ;
+
+        
+    
+    
+            marker_b3941d823e29362f71d36f0b2d2aa8a6.bindTooltip(
+                `<div>
+                     Engineering Manufacturing Annex
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4119b0ccfe9fdfce9446bf748c031fe3 = L.marker(
+                [42.34936675, -71.1072935998869],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_8919e6f6aba67940a707fc4f49a6c3bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4119b0ccfe9fdfce9446bf748c031fe3.setIcon(icon_8919e6f6aba67940a707fc4f49a6c3bb);
+        
+    
+        var popup_0d8d7b5400a74597233917ee2d4b6564 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e59691dfb967943e2a9c1aa099754a7 = $(`<div id="html_4e59691dfb967943e2a9c1aa099754a7" style="width: 100.0%; height: 100.0%;">15 St. Mary’s Street</div>`)[0];
+                popup_0d8d7b5400a74597233917ee2d4b6564.setContent(html_4e59691dfb967943e2a9c1aa099754a7);
+            
+        
+
+        marker_4119b0ccfe9fdfce9446bf748c031fe3.bindPopup(popup_0d8d7b5400a74597233917ee2d4b6564)
+        ;
+
+        
+    
+    
+            marker_4119b0ccfe9fdfce9446bf748c031fe3.bindTooltip(
+                `<div>
+                     Engineering Manufacturing Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_048d3660bebe28c57c6c959e5b6c2014 = L.marker(
+                [42.349106, -71.105177],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_d9c0f88941b26ae58daa3a7434030bf9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_048d3660bebe28c57c6c959e5b6c2014.setIcon(icon_d9c0f88941b26ae58daa3a7434030bf9);
+        
+    
+        var popup_dc994845d34d5854cf9d9a6389e033f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bfd808bc6655bae52d2bca68926df80c = $(`<div id="html_bfd808bc6655bae52d2bca68926df80c" style="width: 100.0%; height: 100.0%;">110–112 Cummington Mall</div>`)[0];
+                popup_dc994845d34d5854cf9d9a6389e033f6.setContent(html_bfd808bc6655bae52d2bca68926df80c);
+            
+        
+
+        marker_048d3660bebe28c57c6c959e5b6c2014.bindPopup(popup_dc994845d34d5854cf9d9a6389e033f6)
+        ;
+
+        
+    
+    
+            marker_048d3660bebe28c57c6c959e5b6c2014.bindTooltip(
+                `<div>
+                     College of Engineering
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7865dc25f3817cde925bc441a44ce9f2 = L.marker(
+                [42.3507339, -71.115618],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_d88ea2bf99abe4cee693fa161b1806e4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7865dc25f3817cde925bc441a44ce9f2.setIcon(icon_d88ea2bf99abe4cee693fa161b1806e4);
+        
+    
+        var popup_a290f9d6e53aebfecf4dbb3c27e9daa4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_051f8ff1af967f30a6694280b228d955 = $(`<div id="html_051f8ff1af967f30a6694280b228d955" style="width: 100.0%; height: 100.0%;">890 Commonwealth Avenue</div>`)[0];
+                popup_a290f9d6e53aebfecf4dbb3c27e9daa4.setContent(html_051f8ff1af967f30a6694280b228d955);
+            
+        
+
+        marker_7865dc25f3817cde925bc441a44ce9f2.bindPopup(popup_a290f9d6e53aebfecf4dbb3c27e9daa4)
+        ;
+
+        
+    
+    
+            marker_7865dc25f3817cde925bc441a44ce9f2.bindTooltip(
+                `<div>
+                     Center for English Language & Orientation Programs
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4fee563daf590d5758c50ac456b97682 = L.marker(
+                [42.3497962, -71.10803121297329],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_1306ac4fc7585fd3b03551f364a3883e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4fee563daf590d5758c50ac456b97682.setIcon(icon_1306ac4fc7585fd3b03551f364a3883e);
+        
+    
+        var popup_61aab800024c485b2f1a526708e7ea41 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c15cebb841a909f7389b164ddb339f78 = $(`<div id="html_c15cebb841a909f7389b164ddb339f78" style="width: 100.0%; height: 100.0%;">750 Commonwealth Avenue</div>`)[0];
+                popup_61aab800024c485b2f1a526708e7ea41.setContent(html_c15cebb841a909f7389b164ddb339f78);
+            
+        
+
+        marker_4fee563daf590d5758c50ac456b97682.bindPopup(popup_61aab800024c485b2f1a526708e7ea41)
+        ;
+
+        
+    
+    
+            marker_4fee563daf590d5758c50ac456b97682.bindTooltip(
+                `<div>
+                     Engineering Product Innovation Center (EPIC)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_48a6e95d5b1a8d5bcb9277caa81ee21e = L.marker(
+                [42.348654350000004, -71.10350846676505],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_a31cd2571b60d5277081214838c5baf2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_48a6e95d5b1a8d5bcb9277caa81ee21e.setIcon(icon_a31cd2571b60d5277081214838c5baf2);
+        
+    
+        var popup_cfaaa30b607c5f961474261b1729f237 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0157ccec51a4cc78343a8d15dbe6039 = $(`<div id="html_b0157ccec51a4cc78343a8d15dbe6039" style="width: 100.0%; height: 100.0%;">48 Cummington Mall</div>`)[0];
+                popup_cfaaa30b607c5f961474261b1729f237.setContent(html_b0157ccec51a4cc78343a8d15dbe6039);
+            
+        
+
+        marker_48a6e95d5b1a8d5bcb9277caa81ee21e.bindPopup(popup_cfaaa30b607c5f961474261b1729f237)
+        ;
+
+        
+    
+    
+            marker_48a6e95d5b1a8d5bcb9277caa81ee21e.bindTooltip(
+                `<div>
+                     Engineering Research Annex
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7e97d44e00ef31312a61ac89f6f2c793 = L.marker(
+                [42.34854035, -71.10284565282228],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_6619f1856ee1aeac3871f83f06804532 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7e97d44e00ef31312a61ac89f6f2c793.setIcon(icon_6619f1856ee1aeac3871f83f06804532);
+        
+    
+        var popup_c4062e1e25cf927b743af192ae590c35 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_693b0ba39d77263adddf2fb21c41a694 = $(`<div id="html_693b0ba39d77263adddf2fb21c41a694" style="width: 100.0%; height: 100.0%;">44 Cummington Mall</div>`)[0];
+                popup_c4062e1e25cf927b743af192ae590c35.setContent(html_693b0ba39d77263adddf2fb21c41a694);
+            
+        
+
+        marker_7e97d44e00ef31312a61ac89f6f2c793.bindPopup(popup_c4062e1e25cf927b743af192ae590c35)
+        ;
+
+        
+    
+    
+            marker_7e97d44e00ef31312a61ac89f6f2c793.bindTooltip(
+                `<div>
+                     Engineering Research Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_614928cfd5e6e678e0cb5df6863ef2e7 = L.marker(
+                [42.3364039, -71.07223994070816],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_2dcbee9486f1bb6f383e70fb46c8ed6e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_614928cfd5e6e678e0cb5df6863ef2e7.setIcon(icon_2dcbee9486f1bb6f383e70fb46c8ed6e);
+        
+    
+        var popup_2271957d4a63a9fe468a8495a5bcfbda = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c0cfcff0cec38e1d2e61dea3f8aa44e = $(`<div id="html_0c0cfcff0cec38e1d2e61dea3f8aa44e" style="width: 100.0%; height: 100.0%;">72 East Concord Street</div>`)[0];
+                popup_2271957d4a63a9fe468a8495a5bcfbda.setContent(html_0c0cfcff0cec38e1d2e61dea3f8aa44e);
+            
+        
+
+        marker_614928cfd5e6e678e0cb5df6863ef2e7.bindPopup(popup_2271957d4a63a9fe468a8495a5bcfbda)
+        ;
+
+        
+    
+    
+            marker_614928cfd5e6e678e0cb5df6863ef2e7.bindTooltip(
+                `<div>
+                     EVN
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ac6db6a7db2ffe5d4cf83e42716d2119 = L.marker(
+                [42.341954799999996, -71.10605008798282],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_8199a420733258f14e0548364f2362b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ac6db6a7db2ffe5d4cf83e42716d2119.setIcon(icon_8199a420733258f14e0548364f2362b3);
+        
+    
+        var popup_322a51aab8e1bd0d6d92bde64971c9a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_820b1fa2f30a068e1f1d2c2d1cb7ced0 = $(`<div id="html_820b1fa2f30a068e1f1d2c2d1cb7ced0" style="width: 100.0%; height: 100.0%;">180 Riverway</div>`)[0];
+                popup_322a51aab8e1bd0d6d92bde64971c9a6.setContent(html_820b1fa2f30a068e1f1d2c2d1cb7ced0);
+            
+        
+
+        marker_ac6db6a7db2ffe5d4cf83e42716d2119.bindPopup(popup_322a51aab8e1bd0d6d92bde64971c9a6)
+        ;
+
+        
+    
+    
+            marker_ac6db6a7db2ffe5d4cf83e42716d2119.bindTooltip(
+                `<div>
+                     Fenway Activities Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c1a60e1f89096f20ae1f164a67d5cd23 = L.marker(
+                [42.342699749999994, -71.10489130168085],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_1f3a12490133283f49ee5b6c99b1ec80 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c1a60e1f89096f20ae1f164a67d5cd23.setIcon(icon_1f3a12490133283f49ee5b6c99b1ec80);
+        
+    
+        var popup_f2e6ff50f6a4cad800780a576bce09c4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_363f92043f964abb55fc54f81e78e522 = $(`<div id="html_363f92043f964abb55fc54f81e78e522" style="width: 100.0%; height: 100.0%;">25 Pilgrim Road</div>`)[0];
+                popup_f2e6ff50f6a4cad800780a576bce09c4.setContent(html_363f92043f964abb55fc54f81e78e522);
+            
+        
+
+        marker_c1a60e1f89096f20ae1f164a67d5cd23.bindPopup(popup_f2e6ff50f6a4cad800780a576bce09c4)
+        ;
+
+        
+    
+    
+            marker_c1a60e1f89096f20ae1f164a67d5cd23.bindTooltip(
+                `<div>
+                     Fenway Classroom Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7f6ff0182be423c8647d0c78305c49ec = L.marker(
+                [42.342985150000004, -71.10519520944966],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_169ff066e412d42467ed955ccd4b50f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7f6ff0182be423c8647d0c78305c49ec.setIcon(icon_169ff066e412d42467ed955ccd4b50f3);
+        
+    
+        var popup_e1f7c79fe43746e3ed1d6ced3db56f29 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b790cf05b6097496f638fad77a8ff9e1 = $(`<div id="html_b790cf05b6097496f638fad77a8ff9e1" style="width: 100.0%; height: 100.0%;">150 Riverway</div>`)[0];
+                popup_e1f7c79fe43746e3ed1d6ced3db56f29.setContent(html_b790cf05b6097496f638fad77a8ff9e1);
+            
+        
+
+        marker_7f6ff0182be423c8647d0c78305c49ec.bindPopup(popup_e1f7c79fe43746e3ed1d6ced3db56f29)
+        ;
+
+        
+    
+    
+            marker_7f6ff0182be423c8647d0c78305c49ec.bindTooltip(
+                `<div>
+                     Fenway Campus Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f53098297bea99ad1e25c6e2b20197c = L.marker(
+                [42.35013155, -71.11140104490026],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_ab1cb71efe39b890b31994b20e16cd99 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2f53098297bea99ad1e25c6e2b20197c.setIcon(icon_ab1cb71efe39b890b31994b20e16cd99);
+        
+    
+        var popup_cdb4de6cd3bf897fb359e44584c339c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eacbeda89239cb9da7a846278d250312 = $(`<div id="html_eacbeda89239cb9da7a846278d250312" style="width: 100.0%; height: 100.0%;">808 Commonwealth Avenue</div>`)[0];
+                popup_cdb4de6cd3bf897fb359e44584c339c5.setContent(html_eacbeda89239cb9da7a846278d250312);
+            
+        
+
+        marker_2f53098297bea99ad1e25c6e2b20197c.bindPopup(popup_cdb4de6cd3bf897fb359e44584c339c5)
+        ;
+
+        
+    
+    
+            marker_2f53098297bea99ad1e25c6e2b20197c.bindTooltip(
+                `<div>
+                     Fuller Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_17d7dfb019c72011de9ce7e97f4c0c1c = L.marker(
+                [42.34945635, -71.105266656638],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_bca41e047171989ab21d54a46cdf9bba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_17d7dfb019c72011de9ce7e97f4c0c1c.setIcon(icon_bca41e047171989ab21d54a46cdf9bba);
+        
+    
+        var popup_0daad3c24df8dd76931dd4b487d4c5e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a8735511d497fccfffc77f19faea9cd = $(`<div id="html_0a8735511d497fccfffc77f19faea9cd" style="width: 100.0%; height: 100.0%;">704 Commonwealth Avenue</div>`)[0];
+                popup_0daad3c24df8dd76931dd4b487d4c5e3.setContent(html_0a8735511d497fccfffc77f19faea9cd);
+            
+        
+
+        marker_17d7dfb019c72011de9ce7e97f4c0c1c.bindPopup(popup_0daad3c24df8dd76931dd4b487d4c5e3)
+        ;
+
+        
+    
+    
+            marker_17d7dfb019c72011de9ce7e97f4c0c1c.bindTooltip(
+                `<div>
+                     Faculty Office Building (Alden Hall)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_32ea8c408d47fea2369d2fbb48c85586 = L.marker(
+                [42.342504399999996, -71.10536300402536],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_2498be2d61c2ca6b05620314ead54205 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_32ea8c408d47fea2369d2fbb48c85586.setIcon(icon_2498be2d61c2ca6b05620314ead54205);
+        
+    
+        var popup_f159720a25a2ff631b9b66727d76c258 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8928315407595e4904fb1dfdda343dd8 = $(`<div id="html_8928315407595e4904fb1dfdda343dd8" style="width: 100.0%; height: 100.0%;">37 Pilgrim Road</div>`)[0];
+                popup_f159720a25a2ff631b9b66727d76c258.setContent(html_8928315407595e4904fb1dfdda343dd8);
+            
+        
+
+        marker_32ea8c408d47fea2369d2fbb48c85586.bindPopup(popup_f159720a25a2ff631b9b66727d76c258)
+        ;
+
+        
+    
+    
+            marker_32ea8c408d47fea2369d2fbb48c85586.bindTooltip(
+                `<div>
+                     FPH
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_11311b43e30546f29073c6187afda018 = L.marker(
+                [42.3518204, -71.11646235858747],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_b901df51b70d0395044978cdd93b7071 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_11311b43e30546f29073c6187afda018.setIcon(icon_b901df51b70d0395044978cdd93b7071);
+        
+    
+        var popup_142153d333a64d806057acc3ba2203e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_686fa241b03f28307306306ca760fd9b = $(`<div id="html_686fa241b03f28307306306ca760fd9b" style="width: 100.0%; height: 100.0%;">915 Commonwealth Avenue</div>`)[0];
+                popup_142153d333a64d806057acc3ba2203e6.setContent(html_686fa241b03f28307306306ca760fd9b);
+            
+        
+
+        marker_11311b43e30546f29073c6187afda018.bindPopup(popup_142153d333a64d806057acc3ba2203e6)
+        ;
+
+        
+    
+    
+            marker_11311b43e30546f29073c6187afda018.bindTooltip(
+                `<div>
+                     Fitness & Recreation Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e1491ccb3cf15e38403cb3f18b32b736 = L.marker(
+                [42.350170399999996, -71.095114],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_106343f13b0b0109f4f62c3023ca2d62 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e1491ccb3cf15e38403cb3f18b32b736.setIcon(icon_106343f13b0b0109f4f62c3023ca2d62);
+        
+    
+        var popup_3b62ac9762e62b35966feaba4470a4e1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14bdeb06ba4d5b8901ed2ac1100ca4db = $(`<div id="html_14bdeb06ba4d5b8901ed2ac1100ca4db" style="width: 100.0%; height: 100.0%;">53 Bay State Road</div>`)[0];
+                popup_3b62ac9762e62b35966feaba4470a4e1.setContent(html_14bdeb06ba4d5b8901ed2ac1100ca4db);
+            
+        
+
+        marker_e1491ccb3cf15e38403cb3f18b32b736.bindPopup(popup_3b62ac9762e62b35966feaba4470a4e1)
+        ;
+
+        
+    
+    
+            marker_e1491ccb3cf15e38403cb3f18b32b736.bindTooltip(
+                `<div>
+                     Global Development Policy Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1280047fdcfed9654466602a3258f51e = L.marker(
+                [42.336374750000004, -71.07016239901102],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_0f2605a3d0011cc6bc8e34aa611db1b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1280047fdcfed9654466602a3258f51e.setIcon(icon_0f2605a3d0011cc6bc8e34aa611db1b9);
+        
+    
+        var popup_3eabe2f72eaedba98a68bc5e089fb5bf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a7fcbeee53a60ced3ed5c4c3e397ebc2 = $(`<div id="html_a7fcbeee53a60ced3ed5c4c3e397ebc2" style="width: 100.0%; height: 100.0%;">635 Albany Street</div>`)[0];
+                popup_3eabe2f72eaedba98a68bc5e089fb5bf.setContent(html_a7fcbeee53a60ced3ed5c4c3e397ebc2);
+            
+        
+
+        marker_1280047fdcfed9654466602a3258f51e.bindPopup(popup_3eabe2f72eaedba98a68bc5e089fb5bf)
+        ;
+
+        
+    
+    
+            marker_1280047fdcfed9654466602a3258f51e.bindTooltip(
+                `<div>
+                     GDS
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ef4b5a9a873513c7c2e766670828e131 = L.marker(
+                [42.3364039, -71.07223994070816],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_f2b2093bd273ed5359aea87fea7d69b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ef4b5a9a873513c7c2e766670828e131.setIcon(icon_f2b2093bd273ed5359aea87fea7d69b7);
+        
+    
+        var popup_96e6949c599c515b05d9eec74a8e1a78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_98517d109f1d87aeb55012f6e395fc61 = $(`<div id="html_98517d109f1d87aeb55012f6e395fc61" style="width: 100.0%; height: 100.0%;">72 East Concord Street</div>`)[0];
+                popup_96e6949c599c515b05d9eec74a8e1a78.setContent(html_98517d109f1d87aeb55012f6e395fc61);
+            
+        
+
+        marker_ef4b5a9a873513c7c2e766670828e131.bindPopup(popup_96e6949c599c515b05d9eec74a8e1a78)
+        ;
+
+        
+    
+    
+            marker_ef4b5a9a873513c7c2e766670828e131.bindTooltip(
+                `<div>
+                     Graduate Medical Sciences
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1ec38aa2668ce61326e443f02c061c08 = L.marker(
+                [42.35028335, -71.10557727131746],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_9dc3c61bd80878390d1fd6813c2273c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1ec38aa2668ce61326e443f02c061c08.setIcon(icon_9dc3c61bd80878390d1fd6813c2273c3);
+        
+    
+        var popup_08b69c43896494af7bb4f6652ad4817f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_67ad3da26d710183fba3bb9ca6190a6a = $(`<div id="html_67ad3da26d710183fba3bb9ca6190a6a" style="width: 100.0%; height: 100.0%;">705 Commonwealth Avenue</div>`)[0];
+                popup_08b69c43896494af7bb4f6652ad4817f.setContent(html_67ad3da26d710183fba3bb9ca6190a6a);
+            
+        
+
+        marker_1ec38aa2668ce61326e443f02c061c08.bindPopup(popup_08b69c43896494af7bb4f6652ad4817f)
+        ;
+
+        
+    
+    
+            marker_1ec38aa2668ce61326e443f02c061c08.bindTooltip(
+                `<div>
+                     Graduate School of Arts & Sciences
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c39d6531ed205ba89cc89273387f5a06 = L.marker(
+                [42.35097115000001, -71.10897900447887],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_825458af85976f82cb3da062c500b98d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c39d6531ed205ba89cc89273387f5a06.setIcon(icon_825458af85976f82cb3da062c500b98d);
+        
+    
+        var popup_a4d04589ee5359e0c015379dce9b43dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6898a09fd3204f5a8e67587f7b362bf5 = $(`<div id="html_6898a09fd3204f5a8e67587f7b362bf5" style="width: 100.0%; height: 100.0%;">775 Commonwealth Avenue</div>`)[0];
+                popup_a4d04589ee5359e0c015379dce9b43dc.setContent(html_6898a09fd3204f5a8e67587f7b362bf5);
+            
+        
+
+        marker_c39d6531ed205ba89cc89273387f5a06.bindPopup(popup_a4d04589ee5359e0c015379dce9b43dc)
+        ;
+
+        
+    
+    
+            marker_c39d6531ed205ba89cc89273387f5a06.bindTooltip(
+                `<div>
+                     George Sherman Union
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4efac85420cd9a0eaa8da871462c96a5 = L.marker(
+                [42.349639749999994, -71.09973226925189],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_7912cb47b54dff276aae78cf157ce12d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4efac85420cd9a0eaa8da871462c96a5.setIcon(icon_7912cb47b54dff276aae78cf157ce12d);
+        
+    
+        var popup_e04eb2d42f4fa58c446f360ca23b55bf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d3d20a572d2ba5983b03e63ca2fb9e0e = $(`<div id="html_d3d20a572d2ba5983b03e63ca2fb9e0e" style="width: 100.0%; height: 100.0%;">595 Commonwealth Avenue</div>`)[0];
+                popup_e04eb2d42f4fa58c446f360ca23b55bf.setContent(html_d3d20a572d2ba5983b03e63ca2fb9e0e);
+            
+        
+
+        marker_4efac85420cd9a0eaa8da871462c96a5.bindPopup(popup_e04eb2d42f4fa58c446f360ca23b55bf)
+        ;
+
+        
+    
+    
+            marker_4efac85420cd9a0eaa8da871462c96a5.bindTooltip(
+                `<div>
+                     Rafik B. Hariri Building (Questrom School of Business)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3d142ce07f59cb697b74cdf9ef8d9ad9 = L.marker(
+                [42.3437927, -71.10976791168142],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_cf6291a46ad1d70a7f9511ad70d65bf1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3d142ce07f59cb697b74cdf9ef8d9ad9.setIcon(icon_cf6291a46ad1d70a7f9511ad70d65bf1);
+        
+    
+        var popup_1f5c2b3dc39b6957de0d5d320ded9b79 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ea47536e29c44f8fe1e2aa086c076d78 = $(`<div id="html_ea47536e29c44f8fe1e2aa086c076d78" style="width: 100.0%; height: 100.0%;">43 Hawes Street, Brookline</div>`)[0];
+                popup_1f5c2b3dc39b6957de0d5d320ded9b79.setContent(html_ea47536e29c44f8fe1e2aa086c076d78);
+            
+        
+
+        marker_3d142ce07f59cb697b74cdf9ef8d9ad9.bindPopup(popup_1f5c2b3dc39b6957de0d5d320ded9b79)
+        ;
+
+        
+    
+    
+            marker_3d142ce07f59cb697b74cdf9ef8d9ad9.bindTooltip(
+                `<div>
+                     Hawes Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3c8d47c8dd277e6f070bf172fc1eb141 = L.marker(
+                [42.3504456, -71.10368611901973],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_bf3d9ad167591c392be16bd40ca72749 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3c8d47c8dd277e6f070bf172fc1eb141.setIcon(icon_bf3d9ad167591c392be16bd40ca72749);
+        
+    
+        var popup_bec9ca9d3788f9f23f1a05b27a4c47c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_672a6d6ba8142071f41ddc9e2490a9c4 = $(`<div id="html_672a6d6ba8142071f41ddc9e2490a9c4" style="width: 100.0%; height: 100.0%;">226 Bay State Road</div>`)[0];
+                popup_bec9ca9d3788f9f23f1a05b27a4c47c2.setContent(html_672a6d6ba8142071f41ddc9e2490a9c4);
+            
+        
+
+        marker_3c8d47c8dd277e6f070bf172fc1eb141.bindPopup(popup_bec9ca9d3788f9f23f1a05b27a4c47c2)
+        ;
+
+        
+    
+    
+            marker_3c8d47c8dd277e6f070bf172fc1eb141.bindTooltip(
+                `<div>
+                     History and American Studies Departments
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f8767572d7d00b1b1c0a96bf923a135b = L.marker(
+                [42.3364039, -71.07223994070816],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_c6ff3db912e7f1d5178dccdf99a35465 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f8767572d7d00b1b1c0a96bf923a135b.setIcon(icon_c6ff3db912e7f1d5178dccdf99a35465);
+        
+    
+        var popup_8ef5ecf6bfac738d88b84a3237589439 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_860493aa50e6881ec86e01e1a5d50f9e = $(`<div id="html_860493aa50e6881ec86e01e1a5d50f9e" style="width: 100.0%; height: 100.0%;">72 East Concord Street</div>`)[0];
+                popup_8ef5ecf6bfac738d88b84a3237589439.setContent(html_860493aa50e6881ec86e01e1a5d50f9e);
+            
+        
+
+        marker_f8767572d7d00b1b1c0a96bf923a135b.bindPopup(popup_8ef5ecf6bfac738d88b84a3237589439)
+        ;
+
+        
+    
+    
+            marker_f8767572d7d00b1b1c0a96bf923a135b.bindTooltip(
+                `<div>
+                     HOU
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1b5db22581b3bae35fa04f3bf360c053 = L.marker(
+                [42.3507339, -71.115618],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_69ab6a6dcd96c6be7510cc19312aca8e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1b5db22581b3bae35fa04f3bf360c053.setIcon(icon_69ab6a6dcd96c6be7510cc19312aca8e);
+        
+    
+        var popup_13a57487c897d29f96f1635975da3817 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ea7bd5a069422572b682c34685a94644 = $(`<div id="html_ea7bd5a069422572b682c34685a94644" style="width: 100.0%; height: 100.0%;">888 Commonwealth Avenue</div>`)[0];
+                popup_13a57487c897d29f96f1635975da3817.setContent(html_ea7bd5a069422572b682c34685a94644);
+            
+        
+
+        marker_1b5db22581b3bae35fa04f3bf360c053.bindPopup(popup_13a57487c897d29f96f1635975da3817)
+        ;
+
+        
+    
+    
+            marker_1b5db22581b3bae35fa04f3bf360c053.bindTooltip(
+                `<div>
+                     International Education Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c4365136d2755f4971968f741c2958e3 = L.marker(
+                [42.3364039, -71.07223994070816],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_e0feaad689034d82ee5bd17de98fc4ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c4365136d2755f4971968f741c2958e3.setIcon(icon_e0feaad689034d82ee5bd17de98fc4ed);
+        
+    
+        var popup_b07104d6d751cd2eb0deef3a4bc1f5e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_228a0054975f1a639a88081093294184 = $(`<div id="html_228a0054975f1a639a88081093294184" style="width: 100.0%; height: 100.0%;">72 East Concord Street</div>`)[0];
+                popup_b07104d6d751cd2eb0deef3a4bc1f5e3.setContent(html_228a0054975f1a639a88081093294184);
+            
+        
+
+        marker_c4365136d2755f4971968f741c2958e3.bindPopup(popup_b07104d6d751cd2eb0deef3a4bc1f5e3)
+        ;
+
+        
+    
+    
+            marker_c4365136d2755f4971968f741c2958e3.bindTooltip(
+                `<div>
+                     INS
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fcf93b6eb9a77fc16f66fd82cd19762b = L.marker(
+                [42.3501426, -71.10067825702964],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_947236b13e98b7e0b6fb1f57c060a639 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fcf93b6eb9a77fc16f66fd82cd19762b.setIcon(icon_947236b13e98b7e0b6fb1f57c060a639);
+        
+    
+        var popup_1c4b52c340571b47ec6b4a92433770c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7299545abc755c7746b6275d740b190 = $(`<div id="html_b7299545abc755c7746b6275d740b190" style="width: 100.0%; height: 100.0%;">154 Bay State Road</div>`)[0];
+                popup_1c4b52c340571b47ec6b4a92433770c6.setContent(html_b7299545abc755c7746b6275d740b190);
+            
+        
+
+        marker_fcf93b6eb9a77fc16f66fd82cd19762b.bindPopup(popup_1c4b52c340571b47ec6b4a92433770c6)
+        ;
+
+        
+    
+    
+            marker_fcf93b6eb9a77fc16f66fd82cd19762b.bindTooltip(
+                `<div>
+                     International Relations Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b8e21a8f953baa72e18ee080a386a1d5 = L.marker(
+                [42.350104849999994, -71.10058154558558],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_eff11e520901d8f7322c829a617f96d9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b8e21a8f953baa72e18ee080a386a1d5.setIcon(icon_eff11e520901d8f7322c829a617f96d9);
+        
+    
+        var popup_978b6ed180edba57116da645769a90da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_15b74f34b20e1ec6448cf513e3570295 = $(`<div id="html_15b74f34b20e1ec6448cf513e3570295" style="width: 100.0%; height: 100.0%;">152 Bay State Road</div>`)[0];
+                popup_978b6ed180edba57116da645769a90da.setContent(html_15b74f34b20e1ec6448cf513e3570295);
+            
+        
+
+        marker_b8e21a8f953baa72e18ee080a386a1d5.bindPopup(popup_978b6ed180edba57116da645769a90da)
+        ;
+
+        
+    
+    
+            marker_b8e21a8f953baa72e18ee080a386a1d5.bindTooltip(
+                `<div>
+                     International Relations Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4e6a0450c582cefc4be4a53c2a79a9e5 = L.marker(
+                [42.35052185, -71.10009615151182],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_1ed82b31685fbfccd96043edaddfe947 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4e6a0450c582cefc4be4a53c2a79a9e5.setIcon(icon_1ed82b31685fbfccd96043edaddfe947);
+        
+    
+        var popup_07fcaeed0cfe880f214d12de622240d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc90f6c7ad449a24c078f845a1de7c02 = $(`<div id="html_dc90f6c7ad449a24c078f845a1de7c02" style="width: 100.0%; height: 100.0%;">147 Bay State Road</div>`)[0];
+                popup_07fcaeed0cfe880f214d12de622240d3.setContent(html_dc90f6c7ad449a24c078f845a1de7c02);
+            
+        
+
+        marker_4e6a0450c582cefc4be4a53c2a79a9e5.bindPopup(popup_07fcaeed0cfe880f214d12de622240d3)
+        ;
+
+        
+    
+    
+            marker_4e6a0450c582cefc4be4a53c2a79a9e5.bindTooltip(
+                `<div>
+                     Elie Wiesel Center for Jewish Studies
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ee77b4a1ac6f9b0e16bd225ea4a9ce84 = L.marker(
+                [42.349457799999996, -71.09810497506007],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_eef52f56cf992debbb3d876b388fc6d4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ee77b4a1ac6f9b0e16bd225ea4a9ce84.setIcon(icon_eef52f56cf992debbb3d876b388fc6d4);
+        
+    
+        var popup_d253e10c1fab45751539b4ad18f2fe03 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0118be750a60c67dd21661439f5d10f = $(`<div id="html_a0118be750a60c67dd21661439f5d10f" style="width: 100.0%; height: 100.0%;">565 Commonwealth Avenue</div>`)[0];
+                popup_d253e10c1fab45751539b4ad18f2fe03.setContent(html_a0118be750a60c67dd21661439f5d10f);
+            
+        
+
+        marker_ee77b4a1ac6f9b0e16bd225ea4a9ce84.bindPopup(popup_d253e10c1fab45751539b4ad18f2fe03)
+        ;
+
+        
+    
+    
+            marker_ee77b4a1ac6f9b0e16bd225ea4a9ce84.bindTooltip(
+                `<div>
+                     Kenmore Classroom Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_19288d01de50814de9a210abd176b3c6 = L.marker(
+                [42.3503203, -71.09700303119664],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_7d52d2feb18edc9da79a0d8c64ef0f41 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_19288d01de50814de9a210abd176b3c6.setIcon(icon_7d52d2feb18edc9da79a0d8c64ef0f41);
+        
+    
+        var popup_99ce1d81f5980de03e1fc110e14ef33a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a62df14d0c39a0523a453fc7f5286878 = $(`<div id="html_a62df14d0c39a0523a453fc7f5286878" style="width: 100.0%; height: 100.0%;">91 Bay State Road</div>`)[0];
+                popup_99ce1d81f5980de03e1fc110e14ef33a.setContent(html_a62df14d0c39a0523a453fc7f5286878);
+            
+        
+
+        marker_19288d01de50814de9a210abd176b3c6.bindPopup(popup_99ce1d81f5980de03e1fc110e14ef33a)
+        ;
+
+        
+    
+    
+            marker_19288d01de50814de9a210abd176b3c6.bindTooltip(
+                `<div>
+                     Kilachand Honors College
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8e62cba651787b50f408c617fe94e8b1 = L.marker(
+                [42.351064300000004, -71.1075071069339],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_37d37f68be01d3eda2742c39b825e924 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8e62cba651787b50f408c617fe94e8b1.setIcon(icon_37d37f68be01d3eda2742c39b825e924);
+        
+    
+        var popup_d1bdf3716d981af645905bd65d4571fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3c9bb579300ad4cb11783c8be5796f6 = $(`<div id="html_f3c9bb579300ad4cb11783c8be5796f6" style="width: 100.0%; height: 100.0%;">765 Commonwealth Avenue</div>`)[0];
+                popup_d1bdf3716d981af645905bd65d4571fe.setContent(html_f3c9bb579300ad4cb11783c8be5796f6);
+            
+        
+
+        marker_8e62cba651787b50f408c617fe94e8b1.bindPopup(popup_d1bdf3716d981af645905bd65d4571fe)
+        ;
+
+        
+    
+    
+            marker_8e62cba651787b50f408c617fe94e8b1.bindTooltip(
+                `<div>
+                     Law School
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_52472faec406bb2d1cec609f8fd7db61 = L.marker(
+                [42.350860850000004, -71.10386660061369],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_a700a17328edbfe96790e03b505b910d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_52472faec406bb2d1cec609f8fd7db61.setIcon(icon_a700a17328edbfe96790e03b505b910d);
+        
+    
+        var popup_683dccd109b344bffdfeb193ccc96779 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_988db77d01909ccc68fa881f77879842 = $(`<div id="html_988db77d01909ccc68fa881f77879842" style="width: 100.0%; height: 100.0%;">233 Bay State Road</div>`)[0];
+                popup_683dccd109b344bffdfeb193ccc96779.setContent(html_988db77d01909ccc68fa881f77879842);
+            
+        
+
+        marker_52472faec406bb2d1cec609f8fd7db61.bindPopup(popup_683dccd109b344bffdfeb193ccc96779)
+        ;
+
+        
+    
+    
+            marker_52472faec406bb2d1cec609f8fd7db61.bindTooltip(
+                `<div>
+                     Leventhal Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eb0722f40d76d93881390e1643c58426 = L.marker(
+                [42.3495087, -71.10580869890427],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_531a424cf667fb742763892394a3f4f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_eb0722f40d76d93881390e1643c58426.setIcon(icon_531a424cf667fb742763892394a3f4f7);
+        
+    
+        var popup_09a57544bfffd9977558264e44cc9f4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_634c35e87fcf9a757017cfb260ef69ef = $(`<div id="html_634c35e87fcf9a757017cfb260ef69ef" style="width: 100.0%; height: 100.0%;">718 Commonwealth Avenue</div>`)[0];
+                popup_09a57544bfffd9977558264e44cc9f4e.setContent(html_634c35e87fcf9a757017cfb260ef69ef);
+            
+        
+
+        marker_eb0722f40d76d93881390e1643c58426.bindPopup(popup_09a57544bfffd9977558264e44cc9f4e)
+        ;
+
+        
+    
+    
+            marker_eb0722f40d76d93881390e1643c58426.bindTooltip(
+                `<div>
+                     Romance Studies, Modern Foreign Languages & Comparative Literature
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_64ba1df1389cd617c25ace935c5c0adc = L.marker(
+                [42.3483358, -71.10173878356534],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_d866821d5dcf04d83fd70be36eb45305 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_64ba1df1389cd617c25ace935c5c0adc.setIcon(icon_d866821d5dcf04d83fd70be36eb45305);
+        
+    
+        var popup_09af3d1c83b21b07eef7ad61848832d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc9338dd5184104ed2a4736620fb0c93 = $(`<div id="html_bc9338dd5184104ed2a4736620fb0c93" style="width: 100.0%; height: 100.0%;">24 Cummington Mall</div>`)[0];
+                popup_09af3d1c83b21b07eef7ad61848832d8.setContent(html_bc9338dd5184104ed2a4736620fb0c93);
+            
+        
+
+        marker_64ba1df1389cd617c25ace935c5c0adc.bindPopup(popup_09af3d1c83b21b07eef7ad61848832d8)
+        ;
+
+        
+    
+    
+            marker_64ba1df1389cd617c25ace935c5c0adc.bindTooltip(
+                `<div>
+                     Life Science & Engineering Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0bd3fc3c6b8320f904c39964e1b5a1a6 = L.marker(
+                [42.35066235, -71.1064382921208],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_54fa71ed75680b225b333b1f0ad7b825 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0bd3fc3c6b8320f904c39964e1b5a1a6.setIcon(icon_54fa71ed75680b225b333b1f0ad7b825);
+        
+    
+        var popup_77730dbe251b3c4d8d19e584e41ac0e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9208103ca021a01f4647cec7ed42c252 = $(`<div id="html_9208103ca021a01f4647cec7ed42c252" style="width: 100.0%; height: 100.0%;">735 Commonwealth Avenue</div>`)[0];
+                popup_77730dbe251b3c4d8d19e584e41ac0e8.setContent(html_9208103ca021a01f4647cec7ed42c252);
+            
+        
+
+        marker_0bd3fc3c6b8320f904c39964e1b5a1a6.bindPopup(popup_77730dbe251b3c4d8d19e584e41ac0e8)
+        ;
+
+        
+    
+    
+            marker_0bd3fc3c6b8320f904c39964e1b5a1a6.bindTooltip(
+                `<div>
+                     Marsh Chapel
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_18d601763172000709c98d8aaeaa7eb5 = L.marker(
+                [42.349090849999996, -71.1041455900759],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_4b9d5f5939d6c64b642025774123bac2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_18d601763172000709c98d8aaeaa7eb5.setIcon(icon_4b9d5f5939d6c64b642025774123bac2);
+        
+    
+        var popup_a2aaa03376dae9b63d9a2d79e9a7c4ca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3946e6749f46be200a48ccb91b601f54 = $(`<div id="html_3946e6749f46be200a48ccb91b601f54" style="width: 100.0%; height: 100.0%;">111 Cummington Mall</div>`)[0];
+                popup_a2aaa03376dae9b63d9a2d79e9a7c4ca.setContent(html_3946e6749f46be200a48ccb91b601f54);
+            
+        
+
+        marker_18d601763172000709c98d8aaeaa7eb5.bindPopup(popup_a2aaa03376dae9b63d9a2d79e9a7c4ca)
+        ;
+
+        
+    
+    
+            marker_18d601763172000709c98d8aaeaa7eb5.bindTooltip(
+                `<div>
+                     Math & Computer Science
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0d36f0c7bc83d3e2fc6caa03e3687095 = L.marker(
+                [42.335479649999996, -71.0717193943673],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_9ce6e87084b69f19bed6a15c9e817e63 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0d36f0c7bc83d3e2fc6caa03e3687095.setIcon(icon_9ce6e87084b69f19bed6a15c9e817e63);
+        
+    
+        var popup_be01120e8a5e0a0367289e0413484143 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_230c74761c0a0b9e4146e3217b707d17 = $(`<div id="html_230c74761c0a0b9e4146e3217b707d17" style="width: 100.0%; height: 100.0%;">715 Albany Street</div>`)[0];
+                popup_be01120e8a5e0a0367289e0413484143.setContent(html_230c74761c0a0b9e4146e3217b707d17);
+            
+        
+
+        marker_0d36f0c7bc83d3e2fc6caa03e3687095.bindPopup(popup_be01120e8a5e0a0367289e0413484143)
+        ;
+
+        
+    
+    
+            marker_0d36f0c7bc83d3e2fc6caa03e3687095.bindTooltip(
+                `<div>
+                     Aram V. Chobanian & Edward Avedisian School of Medicine
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b313cfb2c9988bcd8f57d8e92ea39cec = L.marker(
+                [42.3514835, -71.1212481],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_adca4c4980e9d7cfe5a94587b8373926 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b313cfb2c9988bcd8f57d8e92ea39cec.setIcon(icon_adca4c4980e9d7cfe5a94587b8373926);
+        
+    
+        var popup_4158bf983bbacee15f3e391d8c3e369f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae0f8d987f281e5fd1192bf2dccceeca = $(`<div id="html_ae0f8d987f281e5fd1192bf2dccceeca" style="width: 100.0%; height: 100.0%;">1010 Commonwealth Avenue</div>`)[0];
+                popup_4158bf983bbacee15f3e391d8c3e369f.setContent(html_ae0f8d987f281e5fd1192bf2dccceeca);
+            
+        
+
+        marker_b313cfb2c9988bcd8f57d8e92ea39cec.bindPopup(popup_4158bf983bbacee15f3e391d8c3e369f)
+        ;
+
+        
+    
+    
+            marker_b313cfb2c9988bcd8f57d8e92ea39cec.bindTooltip(
+                `<div>
+                     Metropolitan College
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a2b2557e437891915d1215cbaf07ccc6 = L.marker(
+                [42.3489751, -71.1009021],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_6bd8622e9a7f4440a4ee3e07300bdde7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a2b2557e437891915d1215cbaf07ccc6.setIcon(icon_6bd8622e9a7f4440a4ee3e07300bdde7);
+        
+    
+        var popup_5c348c04c0c8df8c2e8bd3fa81ae261c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_72f50617294841cb77b864a69f886efa = $(`<div id="html_72f50617294841cb77b864a69f886efa" style="width: 100.0%; height: 100.0%;">602 Commonwealth Avenue</div>`)[0];
+                popup_5c348c04c0c8df8c2e8bd3fa81ae261c.setContent(html_72f50617294841cb77b864a69f886efa);
+            
+        
+
+        marker_a2b2557e437891915d1215cbaf07ccc6.bindPopup(popup_5c348c04c0c8df8c2e8bd3fa81ae261c)
+        ;
+
+        
+    
+    
+            marker_a2b2557e437891915d1215cbaf07ccc6.bindTooltip(
+                `<div>
+                     Morse Auditorium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2fdf963602a628fdd921236852de60be = L.marker(
+                [42.3509964, -71.10799517909709],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_a8b54bdb21e2989f1c7cddf5b07b4b66 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2fdf963602a628fdd921236852de60be.setIcon(icon_a8b54bdb21e2989f1c7cddf5b07b4b66);
+        
+    
+        var popup_6f992dd9c7ab55d466fbf8a660a9690c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb51ff76842f955965dc5d70661901cb = $(`<div id="html_eb51ff76842f955965dc5d70661901cb" style="width: 100.0%; height: 100.0%;">771 Commonwealth Avenue</div>`)[0];
+                popup_6f992dd9c7ab55d466fbf8a660a9690c.setContent(html_eb51ff76842f955965dc5d70661901cb);
+            
+        
+
+        marker_2fdf963602a628fdd921236852de60be.bindPopup(popup_6f992dd9c7ab55d466fbf8a660a9690c)
+        ;
+
+        
+    
+    
+            marker_2fdf963602a628fdd921236852de60be.bindTooltip(
+                `<div>
+                     Mugar Memorial Library
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c38eadb8951753201d2279f10b20cfcd = L.marker(
+                [42.3496881, -71.1001848],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_14ee739d51fcf774c8700826bfee6cd2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c38eadb8951753201d2279f10b20cfcd.setIcon(icon_14ee739d51fcf774c8700826bfee6cd2);
+        
+    
+        var popup_e14e0d52d82394e3da0811f688087701 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_34cc5bfcde0b40a3f7344591fac569f6 = $(`<div id="html_34cc5bfcde0b40a3f7344591fac569f6" style="width: 100.0%; height: 100.0%;">1 Silber Way</div>`)[0];
+                popup_e14e0d52d82394e3da0811f688087701.setContent(html_34cc5bfcde0b40a3f7344591fac569f6);
+            
+        
+
+        marker_c38eadb8951753201d2279f10b20cfcd.bindPopup(popup_e14e0d52d82394e3da0811f688087701)
+        ;
+
+        
+    
+    
+            marker_c38eadb8951753201d2279f10b20cfcd.bindTooltip(
+                `<div>
+                     OSW
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_90f4e7cf9861ce86a7b87a697816599c = L.marker(
+                [42.3518204, -71.11646235858747],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_d86975466cb9790a87794e5ee08215e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_90f4e7cf9861ce86a7b87a697816599c.setIcon(icon_d86975466cb9790a87794e5ee08215e3);
+        
+    
+        var popup_c938568c751cc225f3470b908efd08dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e81af91bead6a36fb38976c5dee88656 = $(`<div id="html_e81af91bead6a36fb38976c5dee88656" style="width: 100.0%; height: 100.0%;">915 Commonwealth Avenue</div>`)[0];
+                popup_c938568c751cc225f3470b908efd08dd.setContent(html_e81af91bead6a36fb38976c5dee88656);
+            
+        
+
+        marker_90f4e7cf9861ce86a7b87a697816599c.bindPopup(popup_c938568c751cc225f3470b908efd08dd)
+        ;
+
+        
+    
+    
+            marker_90f4e7cf9861ce86a7b87a697816599c.bindTooltip(
+                `<div>
+                     Physical Development Program
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a975e92390fc7a0652b04c8259c5c3a6 = L.marker(
+                [42.3491905, -71.1060852],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_14c44b51935d06460f13da50ab7ded4a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a975e92390fc7a0652b04c8259c5c3a6.setIcon(icon_14c44b51935d06460f13da50ab7ded4a);
+        
+    
+        var popup_016bf7ccb7f6b0dd098ae76eb43934fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3ff7a4f7a983b946af5c373846b6306c = $(`<div id="html_3ff7a4f7a983b946af5c373846b6306c" style="width: 100.0%; height: 100.0%;">6–8 St. Mary’s Street</div>`)[0];
+                popup_016bf7ccb7f6b0dd098ae76eb43934fb.setContent(html_3ff7a4f7a983b946af5c373846b6306c);
+            
+        
+
+        marker_a975e92390fc7a0652b04c8259c5c3a6.bindPopup(popup_016bf7ccb7f6b0dd098ae76eb43934fb)
+        ;
+
+        
+    
+    
+            marker_a975e92390fc7a0652b04c8259c5c3a6.bindTooltip(
+                `<div>
+                     Photonics Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f890eac8081f2e48a823641662fe21e = L.marker(
+                [42.3505083, -71.1039114501441],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_9b216b2b0c69f6d42c02d83cb4115f4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9f890eac8081f2e48a823641662fe21e.setIcon(icon_9b216b2b0c69f6d42c02d83cb4115f4d);
+        
+    
+        var popup_70afc0368c4225fa6f47f884d429dd10 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a5bc91f53380390e426f23c01d36f60b = $(`<div id="html_a5bc91f53380390e426f23c01d36f60b" style="width: 100.0%; height: 100.0%;">232 Bay State Road</div>`)[0];
+                popup_70afc0368c4225fa6f47f884d429dd10.setContent(html_a5bc91f53380390e426f23c01d36f60b);
+            
+        
+
+        marker_9f890eac8081f2e48a823641662fe21e.bindPopup(popup_70afc0368c4225fa6f47f884d429dd10)
+        ;
+
+        
+    
+    
+            marker_9f890eac8081f2e48a823641662fe21e.bindTooltip(
+                `<div>
+                     Anthropology, Philosophy, Political Science
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dcc26aaa04e7be6e9434db071924a973 = L.marker(
+                [42.34865105, -71.10126530464467],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_b608b3fe3109adc75978657471a3c696 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dcc26aaa04e7be6e9434db071924a973.setIcon(icon_b608b3fe3109adc75978657471a3c696);
+        
+    
+        var popup_35e679e5933f0bb3bc4f196a764bb78a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f000d346c703554622658683ec0461bc = $(`<div id="html_f000d346c703554622658683ec0461bc" style="width: 100.0%; height: 100.0%;">3 Cummington Mall</div>`)[0];
+                popup_35e679e5933f0bb3bc4f196a764bb78a.setContent(html_f000d346c703554622658683ec0461bc);
+            
+        
+
+        marker_dcc26aaa04e7be6e9434db071924a973.bindPopup(popup_35e679e5933f0bb3bc4f196a764bb78a)
+        ;
+
+        
+    
+    
+            marker_dcc26aaa04e7be6e9434db071924a973.bindTooltip(
+                `<div>
+                     Physics Research Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_14d7cc14afeb507243b278267c86e38b = L.marker(
+                [42.34877175, -71.10419840251558],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_809cbbf2c1e8a7e72429c10c293a9d15 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_14d7cc14afeb507243b278267c86e38b.setIcon(icon_809cbbf2c1e8a7e72429c10c293a9d15);
+        
+    
+        var popup_fc93bf44e26f6833f11b70e09a2de551 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b4d833f3060ac093c694741a4105067d = $(`<div id="html_b4d833f3060ac093c694741a4105067d" style="width: 100.0%; height: 100.0%;">64–72–86 Cummington Mall</div>`)[0];
+                popup_fc93bf44e26f6833f11b70e09a2de551.setContent(html_b4d833f3060ac093c694741a4105067d);
+            
+        
+
+        marker_14d7cc14afeb507243b278267c86e38b.bindPopup(popup_fc93bf44e26f6833f11b70e09a2de551)
+        ;
+
+        
+    
+    
+            marker_14d7cc14afeb507243b278267c86e38b.bindTooltip(
+                `<div>
+                     Psychological & Brain Sciences
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a70ac46254695d77066feab4ee5205f2 = L.marker(
+                [42.3517837, -71.1187216],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_77919f64de30c4925c87605f6d75f6bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a70ac46254695d77066feab4ee5205f2.setIcon(icon_77919f64de30c4925c87605f6d75f6bb);
+        
+    
+        var popup_e3a273d0909341c91b58523889b2c9b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ef803266f1bcb0cfcc588af9c1565d5 = $(`<div id="html_7ef803266f1bcb0cfcc588af9c1565d5" style="width: 100.0%; height: 100.0%;">949 Commonwealth Avenue</div>`)[0];
+                popup_e3a273d0909341c91b58523889b2c9b6.setContent(html_7ef803266f1bcb0cfcc588af9c1565d5);
+            
+        
+
+        marker_a70ac46254695d77066feab4ee5205f2.bindPopup(popup_e3a273d0909341c91b58523889b2c9b6)
+        ;
+
+        
+    
+    
+            marker_a70ac46254695d77066feab4ee5205f2.bindTooltip(
+                `<div>
+                     Playwrights’ Theatre
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5d78caaee8662462e4a00e928f1afa4f = L.marker(
+                [42.35051115, -71.09995235],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_6de1a6352d4a64a1fd4ebe49946fc153 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5d78caaee8662462e4a00e928f1afa4f.setIcon(icon_6de1a6352d4a64a1fd4ebe49946fc153);
+        
+    
+        var popup_7b62a1040442a9397aa1f03d62efb76b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1df3be077688e6b4ba2159b637c14fa = $(`<div id="html_a1df3be077688e6b4ba2159b637c14fa" style="width: 100.0%; height: 100.0%;">145 Bay State Road</div>`)[0];
+                popup_7b62a1040442a9397aa1f03d62efb76b.setContent(html_a1df3be077688e6b4ba2159b637c14fa);
+            
+        
+
+        marker_5d78caaee8662462e4a00e928f1afa4f.bindPopup(popup_7b62a1040442a9397aa1f03d62efb76b)
+        ;
+
+        
+    
+    
+            marker_5d78caaee8662462e4a00e928f1afa4f.bindTooltip(
+                `<div>
+                     CAS Religion
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_57c66b47d4601ef28392ec2e2045fae1 = L.marker(
+                [42.3490585, -71.10153394404658],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_41a4484b123af5bbbfc5af32a3ce291a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_57c66b47d4601ef28392ec2e2045fae1.setIcon(icon_41a4484b123af5bbbfc5af32a3ce291a);
+        
+    
+        var popup_4b7087171dbc18ebf735148723de7430 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f82cc5398b6869d76f8b1fa4847a1fb6 = $(`<div id="html_f82cc5398b6869d76f8b1fa4847a1fb6" style="width: 100.0%; height: 100.0%;">610 Commonwealth Avenue</div>`)[0];
+                popup_4b7087171dbc18ebf735148723de7430.setContent(html_f82cc5398b6869d76f8b1fa4847a1fb6);
+            
+        
+
+        marker_57c66b47d4601ef28392ec2e2045fae1.bindPopup(popup_4b7087171dbc18ebf735148723de7430)
+        ;
+
+        
+    
+    
+            marker_57c66b47d4601ef28392ec2e2045fae1.bindTooltip(
+                `<div>
+                     Rajen Kilachand Center for Integrated Life Sciences & Engineering
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ecbfcd3393c616da1a3770587ef6009c = L.marker(
+                [42.3510171, -71.10981338167903],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_c21b8557375f368a2cfb448aadee971d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ecbfcd3393c616da1a3770587ef6009c.setIcon(icon_c21b8557375f368a2cfb448aadee971d);
+        
+    
+        var popup_c3e8bc2162906312fa1e4ea0399243a3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0611b9d05850384d4ba4384e564912a = $(`<div id="html_a0611b9d05850384d4ba4384e564912a" style="width: 100.0%; height: 100.0%;">1 University Road</div>`)[0];
+                popup_c3e8bc2162906312fa1e4ea0399243a3.setContent(html_a0611b9d05850384d4ba4384e564912a);
+            
+        
+
+        marker_ecbfcd3393c616da1a3770587ef6009c.bindPopup(popup_c3e8bc2162906312fa1e4ea0399243a3)
+        ;
+
+        
+    
+    
+            marker_ecbfcd3393c616da1a3770587ef6009c.bindTooltip(
+                `<div>
+                     Sargent Activities Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_da95074f4773487be136f03b7ef59489 = L.marker(
+                [42.3520335, -71.11030686731542],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_5d99ece88890a2043ea201a432eca41b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_da95074f4773487be136f03b7ef59489.setIcon(icon_5d99ece88890a2043ea201a432eca41b);
+        
+    
+        var popup_1044fae689432020fd9bb95a95b571fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ed61c890c86e9e22a0deeef62c8900f = $(`<div id="html_6ed61c890c86e9e22a0deeef62c8900f" style="width: 100.0%; height: 100.0%;">Charles River, behind BU Bridge</div>`)[0];
+                popup_1044fae689432020fd9bb95a95b571fa.setContent(html_6ed61c890c86e9e22a0deeef62c8900f);
+            
+        
+
+        marker_da95074f4773487be136f03b7ef59489.bindPopup(popup_1044fae689432020fd9bb95a95b571fa)
+        ;
+
+        
+    
+    
+            marker_da95074f4773487be136f03b7ef59489.bindTooltip(
+                `<div>
+                     Sailing Docks
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6e29a5508c4b34239c164cec70f54bf9 = L.marker(
+                [42.3498642, -71.1020204],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_80e2e140880479e5fd040307c9659d38 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6e29a5508c4b34239c164cec70f54bf9.setIcon(icon_80e2e140880479e5fd040307c9659d38);
+        
+    
+        var popup_5887118eb291dc449839fe8e5e020af4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3d68298c6efa516f5503cce286e90ae = $(`<div id="html_a3d68298c6efa516f5503cce286e90ae" style="width: 100.0%; height: 100.0%;">635 Commonwealth Avenue</div>`)[0];
+                popup_5887118eb291dc449839fe8e5e020af4.setContent(html_a3d68298c6efa516f5503cce286e90ae);
+            
+        
+
+        marker_6e29a5508c4b34239c164cec70f54bf9.bindPopup(popup_5887118eb291dc449839fe8e5e020af4)
+        ;
+
+        
+    
+    
+            marker_6e29a5508c4b34239c164cec70f54bf9.bindTooltip(
+                `<div>
+                     College of Health & Rehabilitation Sciences: Sargent College
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d79db0bed3291232bad4e60419d8d960 = L.marker(
+                [42.348448899999994, -71.10015580728992],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_1cc81cfbb1c507563bec9935e3fd632d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d79db0bed3291232bad4e60419d8d960.setIcon(icon_1cc81cfbb1c507563bec9935e3fd632d);
+        
+    
+        var popup_002a71b730aa196359428a2d9f0f4437 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d6558d7a0725ea56a6554f12782aa243 = $(`<div id="html_d6558d7a0725ea56a6554f12782aa243" style="width: 100.0%; height: 100.0%;">590–596 Commonwealth Avenue</div>`)[0];
+                popup_002a71b730aa196359428a2d9f0f4437.setContent(html_d6558d7a0725ea56a6554f12782aa243);
+            
+        
+
+        marker_d79db0bed3291232bad4e60419d8d960.bindPopup(popup_002a71b730aa196359428a2d9f0f4437)
+        ;
+
+        
+    
+    
+            marker_d79db0bed3291232bad4e60419d8d960.bindTooltip(
+                `<div>
+                     Metcalf Science Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2be324049fefa88345661224c99d3beb = L.marker(
+                [42.336374750000004, -71.07016239901102],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_97c388b243b97c62c306f5513bdb70f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2be324049fefa88345661224c99d3beb.setIcon(icon_97c388b243b97c62c306f5513bdb70f2);
+        
+    
+        var popup_588d50b8ef53cb380ed0bf2fb058254d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f611bca8aec7248f9c1b8305a1ebd909 = $(`<div id="html_f611bca8aec7248f9c1b8305a1ebd909" style="width: 100.0%; height: 100.0%;">635 Albany Street</div>`)[0];
+                popup_588d50b8ef53cb380ed0bf2fb058254d.setContent(html_f611bca8aec7248f9c1b8305a1ebd909);
+            
+        
+
+        marker_2be324049fefa88345661224c99d3beb.bindPopup(popup_588d50b8ef53cb380ed0bf2fb058254d)
+        ;
+
+        
+    
+    
+            marker_2be324049fefa88345661224c99d3beb.bindTooltip(
+                `<div>
+                     Henry M. Goldman School of Dental Medicine
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ee64376ea7cd7f6670d38b9783f0b5cc = L.marker(
+                [42.3508802, -71.11750772346343],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_2b0ba10ba0758abd22067f2f2f739bc6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ee64376ea7cd7f6670d38b9783f0b5cc.setIcon(icon_2b0ba10ba0758abd22067f2f2f739bc6);
+        
+    
+        var popup_1525c55a9168d6324ba449248e8eea1c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_63335c139d800d4e64b17a28c0c322a5 = $(`<div id="html_63335c139d800d4e64b17a28c0c322a5" style="width: 100.0%; height: 100.0%;">928 Commonwealth Avenue</div>`)[0];
+                popup_1525c55a9168d6324ba449248e8eea1c.setContent(html_63335c139d800d4e64b17a28c0c322a5);
+            
+        
+
+        marker_ee64376ea7cd7f6670d38b9783f0b5cc.bindPopup(popup_1525c55a9168d6324ba449248e8eea1c)
+        ;
+
+        
+    
+    
+            marker_ee64376ea7cd7f6670d38b9783f0b5cc.bindTooltip(
+                `<div>
+                     School of Hospitality Administration
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_61389d1cef465534a88f27553cb860a3 = L.marker(
+                [42.3484364, -71.10230804217932],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_030f347442719b12ac48e69fc0953c86 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_61389d1cef465534a88f27553cb860a3.setIcon(icon_030f347442719b12ac48e69fc0953c86);
+        
+    
+        var popup_f8a98217b17623485983a76331152077 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8633b675f579f443c58720c8fda9b49d = $(`<div id="html_8633b675f579f443c58720c8fda9b49d" style="width: 100.0%; height: 100.0%;">30–38 Cummington Mall</div>`)[0];
+                popup_f8a98217b17623485983a76331152077.setContent(html_8633b675f579f443c58720c8fda9b49d);
+            
+        
+
+        marker_61389d1cef465534a88f27553cb860a3.bindPopup(popup_f8a98217b17623485983a76331152077)
+        ;
+
+        
+    
+    
+            marker_61389d1cef465534a88f27553cb860a3.bindTooltip(
+                `<div>
+                     Science Library Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_acfac1005a25c6a50a598db16f4e660a = L.marker(
+                [42.34888825, -71.10484432143394],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_7ba78c9dd9818539e667629e113bafa1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_acfac1005a25c6a50a598db16f4e660a.setIcon(icon_7ba78c9dd9818539e667629e113bafa1);
+        
+    
+        var popup_591d160f4486b542ddc08e33c48714af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3092dad36d5f373885b6761df6caf85e = $(`<div id="html_3092dad36d5f373885b6761df6caf85e" style="width: 100.0%; height: 100.0%;">96–100 Cummington Mall</div>`)[0];
+                popup_591d160f4486b542ddc08e33c48714af.setContent(html_3092dad36d5f373885b6761df6caf85e);
+            
+        
+
+        marker_acfac1005a25c6a50a598db16f4e660a.bindPopup(popup_591d160f4486b542ddc08e33c48714af)
+        ;
+
+        
+    
+    
+            marker_acfac1005a25c6a50a598db16f4e660a.bindTooltip(
+                `<div>
+                     Sociology
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8d90ce3f2012ecf3841ca76d503c81c5 = L.marker(
+                [42.335479649999996, -71.0717193943673],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_276b3a3d061334efbb1d85bcc9af0141 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8d90ce3f2012ecf3841ca76d503c81c5.setIcon(icon_276b3a3d061334efbb1d85bcc9af0141);
+        
+    
+        var popup_0d1380b460017d1f44ae226c0b33be1c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d4057d8ed8336e22b1622270660d29d = $(`<div id="html_3d4057d8ed8336e22b1622270660d29d" style="width: 100.0%; height: 100.0%;">715 Albany Street</div>`)[0];
+                popup_0d1380b460017d1f44ae226c0b33be1c.setContent(html_3d4057d8ed8336e22b1622270660d29d);
+            
+        
+
+        marker_8d90ce3f2012ecf3841ca76d503c81c5.bindPopup(popup_0d1380b460017d1f44ae226c0b33be1c)
+        ;
+
+        
+    
+    
+            marker_8d90ce3f2012ecf3841ca76d503c81c5.bindTooltip(
+                `<div>
+                     School of Public Health
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1d44e3463f76276c97e50bee9efeec14 = L.marker(
+                [42.35078225, -71.10524017370268],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_7008bb0cb26084309c478ec4e775327d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1d44e3463f76276c97e50bee9efeec14.setIcon(icon_7008bb0cb26084309c478ec4e775327d);
+        
+    
+        var popup_5449312d2e96c0cb2c671bc908134d46 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d32c6bd322a741a2ea5ceea649db1bd3 = $(`<div id="html_d32c6bd322a741a2ea5ceea649db1bd3" style="width: 100.0%; height: 100.0%;">264–270 Bay State Road</div>`)[0];
+                popup_5449312d2e96c0cb2c671bc908134d46.setContent(html_d32c6bd322a741a2ea5ceea649db1bd3);
+            
+        
+
+        marker_1d44e3463f76276c97e50bee9efeec14.bindPopup(popup_5449312d2e96c0cb2c671bc908134d46)
+        ;
+
+        
+    
+    
+            marker_1d44e3463f76276c97e50bee9efeec14.bindTooltip(
+                `<div>
+                     School of Social Work
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dc622a02d48103fdef0ebd5abd19940f = L.marker(
+                [42.3505236, -71.10754495805156],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_7d65ca19f47c501b2d5463131b7f249a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dc622a02d48103fdef0ebd5abd19940f.setIcon(icon_7d65ca19f47c501b2d5463131b7f249a);
+        
+    
+        var popup_63dc7481351cef5e48edf3f26e2c1c79 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0271cd9eb0fbf09f5b1f2b7b43641c6 = $(`<div id="html_a0271cd9eb0fbf09f5b1f2b7b43641c6" style="width: 100.0%; height: 100.0%;">745 Commonwealth Avenue</div>`)[0];
+                popup_63dc7481351cef5e48edf3f26e2c1c79.setContent(html_a0271cd9eb0fbf09f5b1f2b7b43641c6);
+            
+        
+
+        marker_dc622a02d48103fdef0ebd5abd19940f.bindPopup(popup_63dc7481351cef5e48edf3f26e2c1c79)
+        ;
+
+        
+    
+    
+            marker_dc622a02d48103fdef0ebd5abd19940f.bindTooltip(
+                `<div>
+                     School of Theology
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_81090a2ed44d268db948f466e32ee640 = L.marker(
+                [42.3501003, -71.10383756091035],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_31ff7ba5b7ab4adff59d09dd39a4e65a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_81090a2ed44d268db948f466e32ee640.setIcon(icon_31ff7ba5b7ab4adff59d09dd39a4e65a);
+        
+    
+        var popup_d3303ced2e9f456cfcd57e1bd4e07fef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6a07e406d5f3cb92c1a17e6b1629ab0e = $(`<div id="html_6a07e406d5f3cb92c1a17e6b1629ab0e" style="width: 100.0%; height: 100.0%;">675 Commonwealth Avenue</div>`)[0];
+                popup_d3303ced2e9f456cfcd57e1bd4e07fef.setContent(html_6a07e406d5f3cb92c1a17e6b1629ab0e);
+            
+        
+
+        marker_81090a2ed44d268db948f466e32ee640.bindPopup(popup_d3303ced2e9f456cfcd57e1bd4e07fef)
+        ;
+
+        
+    
+    
+            marker_81090a2ed44d268db948f466e32ee640.bindTooltip(
+                `<div>
+                     Stone Science Building
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_23ff1737fbad7974e9b17c5df0c2ad78 = L.marker(
+                [42.351051050235355, -71.1137959187151],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_861aa5e339fdfc1eca9c43ac26bbed57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_23ff1737fbad7974e9b17c5df0c2ad78.setIcon(icon_861aa5e339fdfc1eca9c43ac26bbed57);
+        
+    
+        var popup_48c67e1164bc775ef0ac7c3cecb402cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ddc182077f5092554bc546c8c1ef1fe7 = $(`<div id="html_ddc182077f5092554bc546c8c1ef1fe7" style="width: 100.0%; height: 100.0%;">820 Commonwealth Avenue</div>`)[0];
+                popup_48c67e1164bc775ef0ac7c3cecb402cf.setContent(html_ddc182077f5092554bc546c8c1ef1fe7);
+            
+        
+
+        marker_23ff1737fbad7974e9b17c5df0c2ad78.bindPopup(popup_48c67e1164bc775ef0ac7c3cecb402cf)
+        ;
+
+        
+    
+    
+            marker_23ff1737fbad7974e9b17c5df0c2ad78.bindTooltip(
+                `<div>
+                     Joan & Edgar Booth Theatre
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e26c34199c2b3cde912457b46c9d0423 = L.marker(
+                [42.35455655, -71.12354972039716],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_fbca72e09e610b1c81d2a8252a262d4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e26c34199c2b3cde912457b46c9d0423.setIcon(icon_fbca72e09e610b1c81d2a8252a262d4e);
+        
+    
+        var popup_ddf46e54b4e13c6cc5c7bb203b119718 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91e5fffb5a719dd0a5e0d45a8be506e4 = $(`<div id="html_91e5fffb5a719dd0a5e0d45a8be506e4" style="width: 100.0%; height: 100.0%;">100 Ashford Street</div>`)[0];
+                popup_ddf46e54b4e13c6cc5c7bb203b119718.setContent(html_91e5fffb5a719dd0a5e0d45a8be506e4);
+            
+        
+
+        marker_e26c34199c2b3cde912457b46c9d0423.bindPopup(popup_ddf46e54b4e13c6cc5c7bb203b119718)
+        ;
+
+        
+    
+    
+            marker_e26c34199c2b3cde912457b46c9d0423.bindTooltip(
+                `<div>
+                     Track & Tennis Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d0e3c0ca92372c349b5623d9d9901f8c = L.marker(
+                [42.3497494, -71.10134870499787],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_87d7f2e2081be70faaf7609351eecd83 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d0e3c0ca92372c349b5623d9d9901f8c.setIcon(icon_87d7f2e2081be70faaf7609351eecd83);
+        
+    
+        var popup_8ed73ffacb90b3b2b8addcd0dcfead74 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4ba53accc1b6d1d8a32682d0d7481360 = $(`<div id="html_4ba53accc1b6d1d8a32682d0d7481360" style="width: 100.0%; height: 100.0%;">621 Commonwealth Avenue</div>`)[0];
+                popup_8ed73ffacb90b3b2b8addcd0dcfead74.setContent(html_4ba53accc1b6d1d8a32682d0d7481360);
+            
+        
+
+        marker_d0e3c0ca92372c349b5623d9d9901f8c.bindPopup(popup_8ed73ffacb90b3b2b8addcd0dcfead74)
+        ;
+
+        
+    
+    
+            marker_d0e3c0ca92372c349b5623d9d9901f8c.bindTooltip(
+                `<div>
+                     Wheelock College of Education & Human Development Annex
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_20b210965fd1e66b59a28cffa9334bfd = L.marker(
+                [42.34972315, -71.10086607545841],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_fc5fece8c16be8afa1ccf25f03fc8c99 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_20b210965fd1e66b59a28cffa9334bfd.setIcon(icon_fc5fece8c16be8afa1ccf25f03fc8c99);
+        
+    
+        var popup_10b32894330f6f3bc7decd7a98a54c4c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6bcd6431826f7b2189ffb98e398e056e = $(`<div id="html_6bcd6431826f7b2189ffb98e398e056e" style="width: 100.0%; height: 100.0%;">2 Silber Way</div>`)[0];
+                popup_10b32894330f6f3bc7decd7a98a54c4c.setContent(html_6bcd6431826f7b2189ffb98e398e056e);
+            
+        
+
+        marker_20b210965fd1e66b59a28cffa9334bfd.bindPopup(popup_10b32894330f6f3bc7decd7a98a54c4c)
+        ;
+
+        
+    
+    
+            marker_20b210965fd1e66b59a28cffa9334bfd.bindTooltip(
+                `<div>
+                     Wheelock College of Education & Human Development
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5827fb8544d82d64f508ee542806e8e4 = L.marker(
+                [42.3360176, -71.0694751],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_688cb2116bb621f973efad73d8f8c81c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5827fb8544d82d64f508ee542806e8e4.setIcon(icon_688cb2116bb621f973efad73d8f8c81c);
+        
+    
+        var popup_b715468581d7f296b3d2209efbb66d41 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_42984cca71698fa8778caf3efba1aee6 = $(`<div id="html_42984cca71698fa8778caf3efba1aee6" style="width: 100.0%; height: 100.0%;">Evans Biomedical Research Center</div>`)[0];
+                popup_b715468581d7f296b3d2209efbb66d41.setContent(html_42984cca71698fa8778caf3efba1aee6);
+            
+        
+
+        marker_5827fb8544d82d64f508ee542806e8e4.bindPopup(popup_b715468581d7f296b3d2209efbb66d41)
+        ;
+
+        
+    
+    
+            marker_5827fb8544d82d64f508ee542806e8e4.bindTooltip(
+                `<div>
+                     XBG
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_980b265f4845d50a010b845124388d55 = L.marker(
+                [42.3497874, -71.09794138426676],
+                {}
+            ).addTo(map_5b1fd5a702702c32aa1357dac714b1e4);
+        
+    
+            var icon_3008e330f6a22fad63aace8fbb936764 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "book", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_980b265f4845d50a010b845124388d55.setIcon(icon_3008e330f6a22fad63aace8fbb936764);
+        
+    
+        var popup_f7ff19daa25f0b7d4660f23e4131fbbb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2c852a3d1281cf5058b9688c4305255b = $(`<div id="html_2c852a3d1281cf5058b9688c4305255b" style="width: 100.0%; height: 100.0%;">100 Bay State Road</div>`)[0];
+                popup_f7ff19daa25f0b7d4660f23e4131fbbb.setContent(html_2c852a3d1281cf5058b9688c4305255b);
+            
+        
+
+        marker_980b265f4845d50a010b845124388d55.bindPopup(popup_f7ff19daa25f0b7d4660f23e4131fbbb)
+        ;
+
+        
+    
+    
+            marker_980b265f4845d50a010b845124388d55.bindTooltip(
+                `<div>
+                     Yawkey Center for Student Services
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
