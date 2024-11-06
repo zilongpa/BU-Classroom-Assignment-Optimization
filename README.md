@@ -47,10 +47,25 @@ we are planing to use info on https://www.bu.edu/classrooms/find-a-classroom/
 
 ## Modeling
 
-- Formulate the problem as a linear optimization model.
-- Define decision variables representing classroom assignments to professors to minimize the total walking cost for all professors.
-- Set constraints based on classroom capacities and equipment availability.
-- Use PuLP to model and solve the optimization problem to minimize average walking time.
+The classroom assignment challenge is formulated as a linear optimization model. The objective is to allocate classrooms to professors in a way that **minimizes the total walking cost** over the entire schedule.
+
+
+
+**Decision Variables**:
+
+- Define a binary variable `x[i, j, k]`, which represents whether professor i is assigned to classroom j at time slot k. This variable helps determine classroom assignments while aiming to minimize walking costs.
+- Introduce another helper binary variable `y[i, j, k, m]` to represent whether professor i transitions from classroom j at time k to classroom m at time k+1. 
+
+**Constraints**:
+
+- **Transition Constraints**: For each professor, if they are in classroom j at time k and then move to classroom m at time k+1, the variable y[i,j,k,m] must be 1 according to the classroom assignments.
+- **One Classroom per Course**: Each professor can only be assigned to one classroom at a time.
+- **One Course per Classroom**: To prevent classroom conflicts, each classroom can host only one course at any given time. 
+- **Classroom Capacity Constraint**: Each classroom’s capacity must meet or exceed the demand of the assigned course. 
+
+**Solution Approach**:
+
+- The optimization problem is modeled with PuLP and solved using CBC for the midterm with a small datasets. We decide to run the full datasets with Cplex since it has a better optimization strategy.
 
 
 
