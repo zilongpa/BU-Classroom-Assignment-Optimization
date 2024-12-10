@@ -5,6 +5,7 @@ from datetime import datetime
 import re
 import pandas as pd
 
+
 input_file = '../data/details.json'
 output_file = '../data/details_cleaned.json'
 classroom_json = '../data/classroom_data.json'
@@ -345,7 +346,6 @@ def allocate_professor_courses_for_day(professor_mapping, classroom_mapping, out
     M = len(classroom_mapping)
     T_day = 24 * 60 // 5
 
-    # 初始化每天的数据存储
     professor_courses_monday = np.zeros((N, M, T_day), dtype=int)
     professor_courses_tuesday = np.zeros((N, M, T_day), dtype=int)
     professor_courses_wednesday = np.zeros((N, M, T_day), dtype=int)
@@ -373,10 +373,6 @@ def allocate_professor_courses_for_day(professor_mapping, classroom_mapping, out
                     professor_name = instructor.get("name")
                     professor_id = professor_mapping.get(professor_name)
                     room_id = classroom_mapping.get(room_name)
-                    if professor_id is None:
-                        print(f"教授 '{professor_name}' 未找到对应的 ID")
-                    if room_id is None:
-                        print(f"Room '{room_name}' can't find ID")
                     if professor_id is not None and room_id is not None:
                         days_str = obj.get("days", "")
                         start_time = parse_time_to_5_min_units(obj["meeting_time_start"])
@@ -436,8 +432,6 @@ def create_walking_cost_matrix(classroom_mapping, b2b_distance_file):
     if inf_positions[0].size > 0:
         for i, j in zip(inf_positions[0], inf_positions[1]):
             print(f"Inf found at walking_cost[{i}][{j}]")
-    else:
-        print("No Inf values found in walking_cost matrix.")
 
     return walking_cost
 
@@ -452,6 +446,71 @@ def export_schedule_to_pkl(day_name, professor_schedule, professor_courses, file
     }
     with open(file_name, "wb") as file:
         pickle.dump(data_to_export, file)
+
+def process_solution(file_path):
+    with open(file_path, 'rb') as file:
+        data = pickle.load(file)
+    solution = data[0]
+    total_walking_cost = 0.0
+    for prof_id, classrooms in solution.items():
+        if len(classrooms) <= 1:
+            continue
+        for i in range(len(classrooms) - 1):
+            from_room = classrooms[i]
+            to_room = classrooms[i + 1]
+            cost = walking_cost[from_room][to_room]
+            total_walking_cost += cost
+
+    print(f"Solution walking cost：{total_walking_cost}")
+    id_to_professor = {v: k for k, v in professor_mapping.items()}
+    id_to_classroom = {v: k for k, v in classroom_mapping.items()}
+
+    formatted_solution = {}
+
+    for prof_id, room_ids in solution.items():
+        prof_name = id_to_professor.get(prof_id, f"Unknown Professor {prof_id}")
+        formatted_solution[prof_name] = [
+            id_to_classroom.get(room_id, f"Unknown Room {room_id}") for room_id in room_ids
+        ]
+
+    for prof_name, rooms in formatted_solution.items():
+        print(f"{prof_name}: {', '.join(rooms)}")
+
+def print_weekly_walking_cost(professor_courses_monday,
+                              professor_courses_tuesday,
+                              professor_courses_wednesday,
+                              professor_courses_thursday,
+                              professor_courses_friday,
+                              walking_cost):
+    days_data = {
+        "Monday": professor_courses_monday,
+        "Tuesday": professor_courses_tuesday,
+        "Wednesday": professor_courses_wednesday,
+        "Thursday": professor_courses_thursday,
+        "Friday": professor_courses_friday
+    }
+
+    for day_name, professor_courses in days_data.items():
+        total_walking_cost = 0.0
+
+        num_professors = len(professor_courses)
+        num_classrooms = len(professor_courses[0])
+        num_time_slots = len(professor_courses[0][0])
+
+        for prof_index in range(num_professors):
+            prev_classroom = None
+            for time_slot in range(num_time_slots):
+                current_classroom = None
+                for classroom_index in range(num_classrooms):
+                    if professor_courses[prof_index][classroom_index][time_slot] == 1:
+                        current_classroom = classroom_index
+                        break
+                if current_classroom is not None:
+                    if prev_classroom is not None:
+                        cost = walking_cost[prev_classroom][current_classroom]
+                        total_walking_cost += cost
+                    prev_classroom = current_classroom
+        print(f"{day_name} cost: {total_walking_cost}")
 
 
 #################################################################################################################################################################
@@ -477,5 +536,10 @@ export_schedule_to_pkl("Tuesday", tuesday_professor_schedule, professor_courses_
 export_schedule_to_pkl("Wednesday", wednesday_professor_schedule, professor_courses_wednesday, "wednesday.pkl")
 export_schedule_to_pkl("Thursday", thursday_professor_schedule, professor_courses_thursday, "thursday.pkl")
 export_schedule_to_pkl("Friday", friday_professor_schedule, professor_courses_friday, "friday.pkl")
+
+
+process_solution('../data/best_solution.pkl')
+
+print_weekly_walking_cost(professor_courses_monday, professor_courses_tuesday, professor_courses_wednesday, professor_courses_thursday, professor_courses_friday, walking_cost)
 
 
