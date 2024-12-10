@@ -1,0 +1,9 @@
+requests
+pandas
+osmnx
+swifter
+folium
+tqdm
+beautifulsoup4
+seaborn
+matplotlib
