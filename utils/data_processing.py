@@ -10,120 +10,168 @@ output_file = '../data/details_cleaned.json'
 classroom_json = '../data/classroom_data.json'
 b2b_distance = "../data/b2b_walking_distance.csv"
 
-def clean_large_json(input_file, output_file, keys_to_remove):
+def data_cleaning_course(input_file, output_file, keys_to_remove, remove_bldg_cd=[]):
     with open(input_file, 'r', encoding='utf-8') as infile:
         data = json.load(infile)
-    def remove_keys(obj, keys):
+
+    def traverse_data(obj, func):
         if isinstance(obj, dict):
-            for key in keys:
-                obj.pop(key, None)
-            for value in obj.values():
-                remove_keys(value, keys)
+            return func(obj)
         elif isinstance(obj, list):
+            new_list = []
             for item in obj:
-                remove_keys(item, keys)
-    remove_keys(data, keys_to_remove)
-    with open(output_file, 'w', encoding='utf-8') as outfile:
-        json.dump(data, outfile, indent=4, ensure_ascii=False)
-def remove_class_capacity_999():
-    with open(output_file, 'r', encoding='utf-8') as infile:
-        data = json.load(infile)
-
-    def remove_capacity_999(obj):
-        if isinstance(obj, dict):
-            if obj.get("class_capacity") == "999" or obj.get("class_capacity") == 999:
-                return None
-            new_obj = {}
-            for key, value in obj.items():
-                result = remove_capacity_999(value)
+                result = traverse_data(item, func)
                 if result is not None:
-                    new_obj[key] = result
-            return new_obj
-        elif isinstance(obj, list):
-            return [remove_capacity_999(item) for item in obj if remove_capacity_999(item) is not None]
+                    new_list.append(result)
+            return new_list
         else:
             return obj
-    cleaned_data = remove_capacity_999(data)
 
-    with open(output_file, 'w', encoding='utf-8') as outfile:
-        json.dump(cleaned_data, outfile, indent=4, ensure_ascii=False)
-def remove_online_instruction_mode():
-    with open(output_file, 'r', encoding='utf-8') as infile:
-        data = json.load(infile)
-    def remove_online_mode(obj):
+    def remove_keys_func(obj):
         if isinstance(obj, dict):
-            if obj.get("instruction_mode") == 'Online':
-                return None
+            for k in keys_to_remove:
+                obj.pop(k, None)
             new_obj = {}
-            for key, value in obj.items():
-                result = remove_online_mode(value)
-                if result is not None:
-                    new_obj[key] = result
+            for k, v in obj.items():
+                res = traverse_data(v, remove_keys_func)
+                if res is not None:
+                    new_obj[k] = res
             return new_obj
-        elif isinstance(obj, list):
-            return [remove_online_mode(item) for item in obj if remove_online_mode(item) is not None]
         else:
             return obj
-    cleaned_data = remove_online_mode(data)
 
-    with open(output_file, 'w', encoding='utf-8') as outfile:
-        json.dump(cleaned_data, outfile, indent=4, ensure_ascii=False)
-def remove_tba_instructors():
-    with open(output_file, 'r', encoding='utf-8') as infile:
-        data = json.load(infile)
-    def clean_instructors(obj):
+    def remove_capacity_999_func(obj):
+        if isinstance(obj, dict):
+            if obj.get("class_capacity") in [999, "999"]:
+                return None
+            new_obj = {}
+            for k, v in obj.items():
+                res = traverse_data(v, remove_capacity_999_func)
+                if res is not None:
+                    new_obj[k] = res
+            return new_obj
+        return obj
+
+    def remove_online_mode_func(obj):
+        if isinstance(obj, dict):
+            if obj.get("instruction_mode") == "Online":
+                return None
+            new_obj = {}
+            for k, v in obj.items():
+                res = traverse_data(v, remove_online_mode_func)
+                if res is not None:
+                    new_obj[k] = res
+            return new_obj
+        return obj
+
+    def remove_unwanted_instructors_func(obj):
         if isinstance(obj, dict):
             if "meetings" in obj:
                 for meeting in obj["meetings"]:
                     if "instructors" in meeting:
                         meeting["instructors"] = [
-                            instructor for instructor in meeting["instructors"]
-                            if instructor.get("name") != "To Be Announced"
+                            inst for inst in meeting["instructors"]
+                            if inst.get("name") not in ["To Be Announced", "-"]
                         ]
-            for value in obj.values():
-                clean_instructors(value)
-        elif isinstance(obj, list):
-            for item in obj:
-                clean_instructors(item)
-    clean_instructors(data)
-    with open(output_file, 'w', encoding='utf-8') as outfile:
-        json.dump(data, outfile, indent=4, ensure_ascii=False)
-def remove_dash_instructors():
-    with open(output_file, 'r', encoding='utf-8') as infile:
-        data = json.load(infile)
+            new_obj = {}
+            for k, v in obj.items():
+                res = traverse_data(v, remove_unwanted_instructors_func)
+                if res is not None:
+                    new_obj[k] = res
+            return new_obj
+        return obj
 
-    def clean_instructors(obj):
+    def clean_invalid_entries_func(obj):
         if isinstance(obj, dict):
-            if "meetings" in obj:
-                for meeting in obj["meetings"]:
-                    if "instructors" in meeting:
-                        meeting["instructors"] = [
-                            instructor for instructor in meeting["instructors"]
-                            if instructor.get("name") != "-"
-                        ]
-            for value in obj.values():
-                clean_instructors(value)
-        elif isinstance(obj, list):
-            for item in obj:
-                clean_instructors(item)
+            if ("instructors" in obj and isinstance(obj["instructors"], list) and not obj["instructors"]) \
+               or obj.get("meets") == "TBA" \
+               or (obj.get("meeting_time_start") == "") \
+               or (obj.get("meeting_time_end") == ""):
+                return None
+            new_obj = {}
+            for k, v in obj.items():
+                res = traverse_data(v, clean_invalid_entries_func)
+                if res is not None:
+                    new_obj[k] = res
+            return new_obj
+        return obj
 
-    clean_instructors(data)
+    def remove_no_room_classes(data_list):
+        cleaned = []
+        for course in data_list:
+            section_info = course.get("section_info", {})
+            meetings = section_info.get("meetings", [])
+            if any(m.get('room') in [None, "NO ROOM"] for m in meetings):
+                continue
+            cleaned.append(course)
+        return cleaned
+
+    def remove_empty_meetings(data_list):
+        cleaned = []
+        for course in data_list:
+            section_info = course.get("section_info", {})
+            meetings = section_info.get("meetings", [])
+            if meetings:
+                cleaned.append(course)
+        return cleaned
+
+    def remove_bldg_cd_func(data_list):
+        for item in data_list:
+            if 'section_info' in item and 'meetings' in item['section_info']:
+                item['section_info']['meetings'] = [
+                    m for m in item['section_info']['meetings']
+                    if m.get('bldg_cd') not in remove_bldg_cd
+                ]
+            if 'similar_classes' in item:
+                for sc in item['similar_classes']:
+                    if 'meeting_patterns' in sc:
+                        sc['meeting_patterns'] = [
+                            p for p in sc['meeting_patterns']
+                            if p.get('bldg_cd') not in remove_bldg_cd
+                        ]
+        return data_list
+
+    data = traverse_data(data, remove_keys_func)
+    data = traverse_data(data, remove_capacity_999_func)
+    data = traverse_data(data, remove_online_mode_func)
+    data = traverse_data(data, remove_unwanted_instructors_func)
+    data = traverse_data(data, clean_invalid_entries_func)
+
+    if isinstance(data, list):
+        data = remove_no_room_classes(data)
+        data = remove_empty_meetings(data)
+        data = remove_bldg_cd_func(data)
 
     with open(output_file, 'w', encoding='utf-8') as outfile:
         json.dump(data, outfile, indent=4, ensure_ascii=False)
-def clean_empty_instructors_tba_meets_and_empty_times():
-    with open(output_file, 'r', encoding='utf-8') as infile:
+
+
+
+def data_cleaning_classroom(remove_bldg_cd):
+    import json
+    import re
+
+    with open(classroom_json, 'r', encoding='utf-8') as infile:
         data = json.load(infile)
+
     def clean_data(obj):
         if isinstance(obj, dict):
-            if "instructors" in obj and isinstance(obj["instructors"], list) and not obj["instructors"]:
+            # Remove invalid classrooms with '/' in the Name
+            if "Name" in obj and '/' in obj["Name"]:
                 return None
-            if obj.get("meets") == "TBA":
+            # Clean classroom names by replacing '-' with ' ' and removing text in parentheses
+            if "Name" in obj:
+                cleaned_name = obj["Name"].replace('-', ' ')
+                cleaned_name = re.sub(r'\(.*$', '', cleaned_name).strip()
+                obj["Name"] = cleaned_name
+            # Remove classrooms starting with specific building codes
+            if any(obj.get('Name', '').startswith(prefix) for prefix in remove_bldg_cd):
                 return None
-            if "meeting_time_start" in obj and obj["meeting_time_start"] == "":
-                return None
-            if "meeting_time_end" in obj and obj["meeting_time_end"] == "":
-                return None
+            # Remove classrooms with specific tags
+            if ("Details" in obj and "Classroom Tag" in obj["Details"]):
+                tags = obj["Details"]["Classroom Tag"]
+                if "Medical Campus" in tags or any("Fenway Campus" in tag for tag in tags):
+                    return None
             new_obj = {}
             for key, value in obj.items():
                 result = clean_data(value)
@@ -134,99 +182,14 @@ def clean_empty_instructors_tba_meets_and_empty_times():
             return [clean_data(item) for item in obj if clean_data(item) is not None]
         else:
             return obj
+
+    # Specify building codes to remove
+    remove_bldg_cd = remove_bldg_cd  # Replace with actual building codes as needed
+
     cleaned_data = clean_data(data)
-    with open(output_file, 'w', encoding='utf-8') as outfile:
-        json.dump(cleaned_data, outfile, indent=4, ensure_ascii=False)
-def clean_classroom_names():
-    with open(classroom_json, 'r', encoding='utf-8') as infile:
-        data = json.load(infile)
-    def remove_invalid_classrooms(obj):
-        if isinstance(obj, dict):
-            if "Name" in obj and '/' in obj["Name"]:
-                return None
-            new_obj = {}
-            for key, value in obj.items():
-                result = remove_invalid_classrooms(value)
-                if result is not None:
-                    new_obj[key] = result
-            return new_obj
-        elif isinstance(obj, list):
-            return [remove_invalid_classrooms(item) for item in obj if remove_invalid_classrooms(item) is not None]
-        else:
-            return obj
-    cleaned_data = remove_invalid_classrooms(data)
+
     with open(classroom_json, 'w', encoding='utf-8') as outfile:
         json.dump(cleaned_data, outfile, indent=4, ensure_ascii=False)
-def clean_classroom_names_hyphen():
-    with open(classroom_json, 'r', encoding='utf-8') as infile:
-        data = json.load(infile)
-    def process_classroom_names(obj):
-        if isinstance(obj, dict):
-            if "Name" in obj:
-                cleaned_name = obj["Name"].replace('-', ' ')
-                cleaned_name = re.sub(r'\(.*$', '', cleaned_name).strip()
-                obj["Name"] = cleaned_name
-            for key, value in obj.items():
-                process_classroom_names(value)
-        elif isinstance(obj, list):
-            for item in obj:
-                process_classroom_names(item)
-    process_classroom_names(data)
-    with open(classroom_json, 'w', encoding='utf-8') as outfile:
-        json.dump(data, outfile, indent=4, ensure_ascii=False)
-def clean_none_and_no_room_classrooms():
-    with open(output_file, 'r', encoding='utf-8') as infile:
-        data = json.load(infile)
-    cleaned_data = []
-    for course in data:
-        section_info = course.get("section_info", {})
-        meetings = section_info.get("meetings", [])
-        if any(meeting.get("room") in [None, "NO ROOM"] for meeting in meetings):
-            continue
-        else:
-            cleaned_data.append(course)
-    with open(output_file, 'w', encoding='utf-8') as outfile:
-        json.dump(cleaned_data, outfile, indent=4, ensure_ascii=False)
-def clean_empty_meetings():
-    with open(output_file, 'r', encoding='utf-8') as infile:
-        data = json.load(infile)
-    cleaned_data = []
-    for course in data:
-        section_info = course.get("section_info", {})
-        meetings = section_info.get("meetings", [])
-        if meetings:
-            cleaned_data.append(course)
-    with open(output_file, 'w', encoding='utf-8') as outfile:
-        json.dump(cleaned_data, outfile, indent=4, ensure_ascii=False)
-def remove_building_codes(input_file, output_file, remove_bldg_cd):
-    with open(input_file, 'r', encoding='utf-8') as file:
-        data = json.load(file)
-
-    for item in data:
-        if 'section_info' in item and 'meetings' in item['section_info']:
-            item['section_info']['meetings'] = [
-                meeting for meeting in item['section_info']['meetings']
-                if meeting.get('bldg_cd') not in remove_bldg_cd
-            ]
-        if 'similar_classes' in item:
-            for similar_class in item['similar_classes']:
-                if 'meeting_patterns' in similar_class:
-                    similar_class['meeting_patterns'] = [
-                        pattern for pattern in similar_class['meeting_patterns']
-                        if pattern.get('bldg_cd') not in remove_bldg_cd
-                    ]
-
-    with open(output_file, 'w', encoding='utf-8') as file:
-        json.dump(data, file, indent=4, ensure_ascii=False)
-def also_remove_building_codes(remove_bldg_cd):
-    with open(classroom_json, 'r') as file:
-        classrooms = json.load(file)
-    cleaned_classrooms = [
-        classroom for classroom in classrooms
-        if not any(classroom.get('Name', '').startswith(prefix) for prefix in remove_bldg_cd)
-    ]
-    with open(classroom_json, 'w') as file:
-        json.dump(cleaned_classrooms, file, indent=4)
 def clean_schedule(professor_schedule):
     cleaned_schedule = {}
     for key, schedule in professor_schedule.items():
@@ -240,99 +203,45 @@ def clean_schedule(professor_schedule):
         cleaned_schedule[key] = [(start, end, count) for (start, end), count in merged_dict.items()]
 
     return cleaned_schedule
-def check_tags():
-    with open(classroom_json, 'r') as file:
-        classrooms = json.load(file)
-
-    cleaned_classrooms = [
-        classroom for classroom in classrooms
-        if not ("Details" in classroom and
-                "Classroom Tag" in classroom["Details"] and
-                "Medical Campus" in classroom["Details"]["Classroom Tag"])
-    ]
-
-    with open(classroom_json, 'w') as file:
-        json.dump(cleaned_classrooms, file, indent=4)
-def clean_tags():
-    with open(classroom_json, 'r') as file:
-        classrooms = json.load(file)
-
-    cleaned_classrooms = [
-        classroom for classroom in classrooms
-        if not ("Details" in classroom and
-                "Classroom Tag" in classroom["Details"] and
-                any("Fenway Campus" in tag for tag in classroom["Details"]["Classroom Tag"]))
-    ]
-
-    with open(classroom_json, 'w') as file:
-        json.dump(cleaned_classrooms, file, indent=4)
-def extract_capacity_from_additional_info():
-    # Open the JSON file for reading and load its content into the 'data' variable
+def extract_from_classroom():
     with open(classroom_json, 'r', encoding='utf-8') as infile:
         data = json.load(infile)
-
-    # Initialize an empty list to store the capacities found
     capacities = []
-
-    # Define a helper function to find capacities within the JSON structure
-    def find_capacity(obj):
-        # Check if the current object is a dictionary
+    name_capacity_dict = {}
+    classroom_mapping = {}
+    classroom_id_counter = 0
+    def process_classroom_data(obj):
+        nonlocal classroom_id_counter
         if isinstance(obj, dict):
-            # If 'AdditionalInfo' and 'Capacity' are keys in the object, attempt to extract the capacity
             if "AdditionalInfo" in obj and "Capacity" in obj["AdditionalInfo"]:
                 try:
-                    # Convert the capacity to an integer and add it to the capacities list
                     capacities.append(int(obj["AdditionalInfo"]["Capacity"]))
                 except ValueError:
-                    # If conversion to integer fails, ignore this capacity
                     pass
 
-            # Recursively search for capacities in each value of the dictionary
-            for value in obj.values():
-                find_capacity(value)
-        # If the current object is a list, iterate over its items and apply the function on each
-        elif isinstance(obj, list):
-            for item in obj:
-                find_capacity(item)
-
-    # Start the capacity finding process on the main data structure loaded from JSON
-    find_capacity(data)
-
-    # Return the list of capacities extracted from the JSON data
-    return capacities
-def extract_name_capacity_dict():
-    # This function reads a JSON file containing classroom data and extracts a dictionary mapping classroom names to their capacities.
-
-    with open(classroom_json, 'r', encoding='utf-8') as infile:
-        # Open the JSON file and load its content into a Python dictionary.
-        data = json.load(infile)
-
-    # Initialize a dictionary to store name-capacity pairs.
-    name_capacity_dict = {}
-
-    # Define a recursive function to traverse through JSON objects and find name-capacity pairs.
-    def find_name_capacity(obj):
-        if isinstance(obj, dict):
-            # If the object is a dictionary, check for the presence of "Name" and "Capacity" in the "AdditionalInfo" field.
             if "Name" in obj and "AdditionalInfo" in obj and "Capacity" in obj["AdditionalInfo"]:
                 try:
                     name_capacity_dict[obj["Name"]] = int(obj["AdditionalInfo"]["Capacity"])
                 except ValueError:
-                    # If the conversion to an integer fails, ignore this entry.
                     pass
-            # Recursively process all values in the dictionary.
+
+            if "Name" in obj:
+                classroom_name = obj["Name"]
+                if classroom_name not in classroom_mapping:
+                    classroom_mapping[classroom_name] = classroom_id_counter
+                    classroom_id_counter += 1
+
             for value in obj.values():
-                find_name_capacity(value)
+                process_classroom_data(value)
+
         elif isinstance(obj, list):
-            # If the object is a list, iterate over each item and apply the function recursively.
             for item in obj:
-                find_name_capacity(item)
+                process_classroom_data(item)
 
-    # Start the recursive process to populate the name_capacity_dict with data from the JSON.
-    find_name_capacity(data)
+    process_classroom_data(data)
 
-    # Return the dictionary containing classroom names and their corresponding capacities.
-    return name_capacity_dict
+    return capacities, name_capacity_dict, classroom_mapping
+
 def extract_professor_mapping():
     # Open the JSON file specified by output_file and load its contents into a Python dictionary.
     with open(output_file, 'r', encoding='utf-8') as infile:
@@ -375,115 +284,34 @@ def extract_professor_mapping():
 
     # Return the dictionary which contains the mapping of professor names to unique IDs.
     return professor_mapping
-def build_professor_schedule():
-    # Open the JSON file that contains the cleaned data and load it into a variable
+def build_professor_schedule_for_day(day_index, professor_mapping):
     with open(output_file, 'r', encoding='utf-8') as infile:
         data = json.load(infile)
 
-    # Initialize an empty dictionary to store the schedule of each professor
     professor_schedule = {}
-
-    # Map days of the week to corresponding indices
     day_mapping = {
         "Mo": 0, "Tu": 1, "We": 2, "Th": 3, "Fr": 4, "Sa": 5, "Su": 6
     }
 
-    # Helper function to convert a time string into a time slot index
-    def parse_time(time_str, day):
-        # Parse the time string into a datetime object
-        time_obj = datetime.strptime(time_str, "%I:%M%p")
-        # Convert hours and minutes to total minutes
-        minutes = time_obj.hour * 60 + time_obj.minute
-        # Calculate a unique time slot index considering both time and day
-        return (minutes // 5) + day * (24 * 60 // 5)
-
-    # Recursive function to find meetings in JSON data and build the schedule
-    def find_meetings(obj):
-        if isinstance(obj, dict):
-            # Check if the object contains meeting information necessary for building the schedule
-            if "meetings" in obj and "class_availability" in obj:
-                # Retrieve and convert the class capacity to integer
-                capacity = obj["class_availability"].get("class_capacity")
-                if capacity is not None:
-                    capacity = int(capacity)
-
-                # Iterate over each meeting to extract details
-                for meeting in obj["meetings"]:
-                    if "instructors" in meeting and "days" in meeting and "meeting_time_start" in meeting and "meeting_time_end" in meeting:
-                        # Convert the days string to a list of corresponding indices using day_mapping
-                        days_str = meeting["days"]
-                        days = [day_mapping[days_str[i:i+2]] for i in range(0, len(days_str), 2) if days_str[i:i+2] in day_mapping]
-
-                        # Iterate over each instructor and update their schedule
-                        for instructor in meeting["instructors"]:
-                            professor_name = instructor.get("name")
-                            professor_id = professor_mapping.get(professor_name)
-
-                            if professor_id is not None:
-                                # Ensure there's a list for storing the professor's meetings
-                                if professor_id not in professor_schedule:
-                                    professor_schedule[professor_id] = []
-
-                                # Add the meeting details to the professor's schedule for each day
-                                for day in days:
-                                    start_time = parse_time(meeting["meeting_time_start"], day)
-                                    end_time = parse_time(meeting["meeting_time_end"], day)
-                                    professor_schedule[professor_id].append((start_time, end_time, capacity))
-
-            # Recursively process all values in the dictionary
-            for value in obj.values():
-                find_meetings(value)
-        elif isinstance(obj, list):
-            # Recursively apply the function to each item in a list
-            for item in obj:
-                find_meetings(item)
-
-    # Begin the process of finding meetings
-    find_meetings(data)
-
-    # Return the completed schedule for each professor
-    return professor_schedule
-def build_monday_professor_schedule():
-    # Load data from the specified JSON file. The purpose of this step is to read the structured class data
-    # to extract relevant meeting information.
-    with open(output_file, 'r', encoding='utf-8') as infile:
-        data = json.load(infile)
-
-    # Initialize an empty dictionary to store professors' schedules.
-    # Keys will be unique professor IDs and values will be lists of their scheduled meetings.
-    professor_schedule = {}
-
-    # Mapping of day abbreviations to indices, helping translate string representations of days into numeric indices.
-    day_mapping = {
-        "Mo": 0, "Tu": 1, "We": 2, "Th": 3, "Fr": 4, "Sa": 5, "Su": 6
-    }
-
-    # Function to convert a time string into the number of 5-minute units from the start of the day.
-    # It helps in creating a uniform representation of time for easy comparison and scheduling.
-    def parse_time(time_str, day):
+    def parse_time(time_str):
         time_obj = datetime.strptime(time_str, "%I:%M%p")
         minutes = time_obj.hour * 60 + time_obj.minute
         return minutes // 5
 
-    # Recursive function to traverse the JSON data structure and find meetings scheduled on Monday.
-    # The focus is on extracting meeting times and associating them with instructors, updating their schedules.
-    def find_monday_meetings(obj):
+    def find_meetings_for_day(obj):
         if isinstance(obj, dict):
-            # Check if the current dict contains meeting and capacity information.
             if "meetings" in obj and "class_availability" in obj:
                 capacity = obj["class_availability"].get("class_capacity")
                 if capacity is not None:
                     capacity = int(capacity)
 
                 for meeting in obj["meetings"]:
-                    # Look for meetings with defined days, start time, end time, and instructors.
                     if (
                         "instructors" in meeting
                         and "days" in meeting
                         and "meeting_time_start" in meeting
                         and "meeting_time_end" in meeting
                     ):
-                        # Determine which days the meeting occurs, converting them to indices using day_mapping.
                         days_str = meeting["days"]
                         days = [
                             day_mapping[days_str[i:i+2]]
@@ -491,208 +319,101 @@ def build_monday_professor_schedule():
                             if days_str[i:i+2] in day_mapping
                         ]
 
-                        # If the meeting takes place on Monday (index 0), process the meeting details.
-                        if 0 in days:
+                        if day_index in days:
                             for instructor in meeting["instructors"]:
                                 professor_name = instructor.get("name")
                                 professor_id = professor_mapping.get(professor_name)
 
                                 if professor_id is not None:
-                                    # Initialize the schedule list for the professor if it does not exist.
                                     if professor_id not in professor_schedule:
                                         professor_schedule[professor_id] = []
 
-                                    # Parse the start and end time of the meeting and add them to the schedule.
-                                    start_time = parse_time(meeting["meeting_time_start"], 0)
-                                    end_time = parse_time(meeting["meeting_time_end"], 0)
+                                    start_time = parse_time(meeting["meeting_time_start"])
+                                    end_time = parse_time(meeting["meeting_time_end"])
                                     professor_schedule[professor_id].append((start_time, end_time, capacity))
 
-            # Continue traversing through other elements of the JSON structure.
             for value in obj.values():
-                find_monday_meetings(value)
+                find_meetings_for_day(value)
         elif isinstance(obj, list):
-            # Apply the search function to each item if the current object is a list.
             for item in obj:
-                find_monday_meetings(item)
+                find_meetings_for_day(item)
 
-    # Start the recursive search for Monday meetings in the loaded data.
-    find_monday_meetings(data)
-
-    # Return the fully constructed dictionary of Monday schedules for each professor.
+    find_meetings_for_day(data)
     return professor_schedule
-def create_classroom_mapping():
-    # Load JSON data from the specified file into the 'data' variable
-    with open(classroom_json, 'r', encoding='utf-8') as infile:
-        data = json.load(infile)
-
-    # Dictionary to hold the mapping of classroom names to unique identifiers
-    classroom_mapping = {}
-
-    # Counter to generate unique identifiers for each classroom
-    classroom_id_counter = 0
-
-    # Recursive function to traverse the JSON structure to find classrooms
-    def find_classrooms(obj):
-        nonlocal classroom_id_counter  # Allow the nested function to modify this variable
-        if isinstance(obj, dict):  # Check if the object is a dictionary
-            if "Name" in obj:  # If the classroom name is found in the object
-                classroom_name = obj["Name"]
-
-                # If the classroom name is not already in the mapping, add it
-                if classroom_name not in classroom_mapping:
-                    classroom_mapping[classroom_name] = classroom_id_counter
-                    classroom_id_counter += 1  # Increment the counter for the next unique ID
-
-            # Iterate over dictionary values for further processing
-            for value in obj.values():
-                find_classrooms(value)  # Recursive call for nested dictionaries
-        elif isinstance(obj, list):  # Check if the object is a list
-            # Iterate over list items to look for classrooms
-            for item in obj:
-                find_classrooms(item)  # Recursive call for list items
-
-    find_classrooms(data)  # Initial call to the recursive function with loaded data
-
-    # Return the final mapping of classroom names to IDs
-    return classroom_mapping
-def allocate_professor_courses(professor_mapping, classroom_mapping, output_file):
-    # Determine the number of unique professors and rooms
+def allocate_professor_courses_for_day(professor_mapping, classroom_mapping, output_file):
     N = len(professor_mapping)
     M = len(classroom_mapping)
+    T_day = 24 * 60 // 5
 
-    # Calculate the total number of 5-minute intervals in a week
-    T = 7 * 24 * 60 // 5
+    # 初始化每天的数据存储
+    professor_courses_monday = np.zeros((N, M, T_day), dtype=int)
+    professor_courses_tuesday = np.zeros((N, M, T_day), dtype=int)
+    professor_courses_wednesday = np.zeros((N, M, T_day), dtype=int)
+    professor_courses_thursday = np.zeros((N, M, T_day), dtype=int)
+    professor_courses_friday = np.zeros((N, M, T_day), dtype=int)
 
-    # Initialize a 3D array for professor-room-time allocations
-    professor_courses = np.zeros((N, M, T), dtype=int)
-
-    # Helper function to convert time to 5-minute intervals
     def parse_time_to_5_min_units(time_str):
         time_obj = datetime.strptime(time_str, "%I:%M%p")
-        return (time_obj.hour * 60 + time_obj.minute) // 5
+        minutes = time_obj.hour * 60 + time_obj.minute
+        return minutes // 5
 
-    # Load JSON data
     with open(output_file, 'r', encoding='utf-8') as infile:
         data = json.load(infile)
-
         for course in data:
             section_info = course.get("section_info", {})
             meetings = section_info.get("meetings", [])
-
             for obj in meetings:
                 room_field = obj.get("room", "")
                 room_parts = room_field.split()
                 room_name = room_parts[-2] + " " + room_parts[-1] if len(room_parts) >= 2 else None
-
                 if room_name in [None, "NO ROOM"]:
                     continue
-
                 instructors = obj.get("instructors", [])
                 for instructor in instructors:
                     professor_name = instructor.get("name")
                     professor_id = professor_mapping.get(professor_name)
                     room_id = classroom_mapping.get(room_name)
+                    if professor_id is None:
+                        print(f"教授 '{professor_name}' 未找到对应的 ID")
+                    if room_id is None:
+                        print(f"Room '{room_name}' can't find ID")
+                    if professor_id is not None and room_id is not None:
+                        days_str = obj.get("days", "")
+                        start_time = parse_time_to_5_min_units(obj["meeting_time_start"])
+                        end_time = parse_time_to_5_min_units(obj["meeting_time_end"])
+                        for day_abbr in [days_str[i:i + 2] for i in range(0, len(days_str), 2)]:
+                            if day_abbr == "Mo":
+                                for k in range(start_time, end_time):
+                                    professor_courses_monday[professor_id][room_id][k] = 1
+                            elif day_abbr == "Tu":
+                                for k in range(start_time, end_time):
+                                    professor_courses_tuesday[professor_id][room_id][k] = 1
+                            elif day_abbr == "We":
+                                for k in range(start_time, end_time):
+                                    professor_courses_wednesday[professor_id][room_id][k] = 1
+                            elif day_abbr == "Th":
+                                for k in range(start_time, end_time):
+                                    professor_courses_thursday[professor_id][room_id][k] = 1
+                            elif day_abbr == "Fr":
+                                for k in range(start_time, end_time):
+                                    professor_courses_friday[professor_id][room_id][k] = 1
 
-                    if professor_id is None or room_id is None:
-                        continue
+    return professor_courses_monday, professor_courses_tuesday, professor_courses_wednesday, professor_courses_thursday, professor_courses_friday
 
-                    days_str = obj.get("days", "")
-                    start_time = parse_time_to_5_min_units(obj["meeting_time_start"])
-                    end_time = parse_time_to_5_min_units(obj["meeting_time_end"])
-
-                    day_mapping = {"Mo": 0, "Tu": 1, "We": 2, "Th": 3, "Fr": 4, "Sa": 5, "Su": 6}
-                    for day_abbr in [days_str[i:i + 2] for i in range(0, len(days_str), 2)]:
-                        day = day_mapping.get(day_abbr)
-                        if day is not None:
-                            start_k = start_time + day * (24 * 60 // 5)
-                            end_k = end_time + day * (24 * 60 // 5)
-                            for k in range(start_k, end_k):
-                                professor_courses[professor_id][room_id][k] = 1
-
-    return professor_courses
-def allocate_monday_professor_courses(professor_mapping, classroom_mapping, output_file):
-    # Determine the number of professors and rooms
-    N = len(professor_mapping)
-    M = len(classroom_mapping)
-
-    # Define the number of 5-minute intervals for Monday
-    T_monday = 24 * 60 // 5
-
-    # Initialize the 3D array for Monday allocations
-    professor_courses_monday = np.zeros((N, M, T_monday), dtype=int)
-
-    # Helper function to parse time to 5-minute intervals
-    def parse_time_to_5_min_units(time_str):
-        time_obj = datetime.strptime(time_str, "%I:%M%p")
-        return (time_obj.hour * 60 + time_obj.minute) // 5
-
-    # Load JSON data
-    with open(output_file, 'r', encoding='utf-8') as infile:
-        data = json.load(infile)
-
-        for course in data:
-            section_info = course.get("section_info", {})
-            meetings = section_info.get("meetings", [])
-
-            for obj in meetings:
-                room_field = obj.get("room", "")
-                room_parts = room_field.split()
-                room_name = room_parts[-2] + " " + room_parts[-1] if len(room_parts) >= 2 else None
-
-                if room_name in [None, "NO ROOM"]:
-                    continue
-
-                instructors = obj.get("instructors", [])
-                for instructor in instructors:
-                    professor_name = instructor.get("name")
-                    professor_id = professor_mapping.get(professor_name)
-                    room_id = classroom_mapping.get(room_name)
-
-                    if professor_id is None or room_id is None:
-                        continue
-
-                    days_str = obj.get("days", "")
-                    if "Mo" not in days_str:  # Only process records that include Monday
-                        continue
-
-                    start_time = parse_time_to_5_min_units(obj["meeting_time_start"])
-                    end_time = parse_time_to_5_min_units(obj["meeting_time_end"])
-
-                    day_mapping = {"Mo": 0, "Tu": 1, "We": 2, "Th": 3, "Fr": 4, "Sa": 5, "Su": 6}
-                    for day_abbr in [days_str[i:i+2] for i in range(0, len(days_str), 2)]:
-                        day = day_mapping.get(day_abbr)
-                        if day == 0:  # Process only Monday
-                            for k in range(start_time, end_time):
-                                professor_courses_monday[professor_id][room_id][k] = 1
-
-    return professor_courses_monday
 def create_walking_cost_matrix(classroom_mapping, b2b_distance_file):
     # Step 1: Read the 'b2b_walking_distance.csv' file into a pandas DataFrame.
     b2b_distance = pd.read_csv(b2b_distance_file)
 
-    # Step 2: Create a dictionary of building names mapped to their respective indices from classroom_mapping.
-    buildings = {name.split()[0]: idx for name, idx in classroom_mapping.items()}
-
-    # Step 3: Define the number of classrooms using the size of classroom_mapping.
+    # Step 3: Define the number of classrooms using the size of the classroom mapping.
     num_classrooms = len(classroom_mapping)
 
     # Initialize the walking_cost matrix with 'inf', denoting initially unknown walking distances.
     walking_cost = np.full((num_classrooms, num_classrooms), np.inf)
 
-    # Iterate over each possible classroom pairing to set the initial walking costs.
-    for i in range(num_classrooms):
-        for j in range(num_classrooms):
-            # Set the walking cost to 0 for the same room (no walking required).
-            if i == j:
-                walking_cost[i][j] = 0
-            # Assign a generic cost of 10 for moving within the same building.
-            elif list(classroom_mapping.keys())[i].split()[0] == list(classroom_mapping.keys())[j].split()[0]:
-                walking_cost[i][j] = 10
-
     # Step 4: Iterate over each row in the 'b2b_distance' DataFrame to update the walking_cost matrix.
     for _, row in b2b_distance.iterrows():
         building_a, building_b, distance = row['abbreviationA'], row['abbreviationB'], row['distance']
-        # Update the matrix for pairs of classrooms between each pair of buildings.
+        # Update the matrix for pairs of classrooms, between each pair of buildings.
         for classroom_a, idx_a in classroom_mapping.items():
             for classroom_b, idx_b in classroom_mapping.items():
                 if classroom_a.split()[0] == building_a and classroom_b.split()[0] == building_b:
@@ -700,50 +421,61 @@ def create_walking_cost_matrix(classroom_mapping, b2b_distance_file):
                     walking_cost[idx_a][idx_b] = distance
                     walking_cost[idx_b][idx_a] = distance
 
-    # Step 5: Identify positions where walking_cost remains 'inf' (meaning unreachable).
+    # Iterate over each possible classroom pairing to set the initial walking costs.
+    for i in range(num_classrooms):
+        for j in range(num_classrooms):
+            # Set the walking cost to 0 for the same room (i.e., no walking required).
+            if i == j:
+                walking_cost[i][j] = 0
+            # Assign a generic cost of 10 for moving within the same building.
+            elif list(classroom_mapping.keys())[i].split()[0] == list(classroom_mapping.keys())[j].split()[0]:
+                walking_cost[i][j] = 10
+
+    # Step 5: Identify and print positions where walking_cost remains 'inf' (meaning unreachable). If none, confirm.
     inf_positions = np.where(walking_cost == np.inf)
     if inf_positions[0].size > 0:
         for i, j in zip(inf_positions[0], inf_positions[1]):
             print(f"Inf found at walking_cost[{i}][{j}]")
+    else:
+        print("No Inf values found in walking_cost matrix.")
 
     return walking_cost
 
-keys_to_remove = ["additionalLinks", "bookstore", "cfg", "catalog_descr", "materials", "enrollment_information", "reserve_caps", "catalog_descr", "messages", "notes"]
-clean_large_json(input_file, output_file, keys_to_remove)
-remove_class_capacity_999()
-remove_online_instruction_mode()
-remove_tba_instructors()
-remove_dash_instructors()
-clean_empty_instructors_tba_meets_and_empty_times()
-clean_classroom_names()
-clean_classroom_names_hyphen()
-clean_none_and_no_room_classrooms()
-clean_empty_meetings()
-remove_bldg_cd = ["ALB", "CTC", "INS", "SPH", "XBG", "MED", "FAB", "FCB", "FCC", "HAW", "GDS", "FPH", "EVN"]
-remove_building_codes(output_file, output_file, remove_bldg_cd)
-also_remove_building_codes(remove_bldg_cd)
-check_tags()
-capacities = extract_capacity_from_additional_info()
-name_capacity_dict = extract_name_capacity_dict()
-professor_mapping = extract_professor_mapping()
-professor_schedule = build_professor_schedule()
-professor_schedule = clean_schedule(professor_schedule)
-monday_professor_schedule = build_monday_professor_schedule()
-monday_professor_schedule = clean_schedule(monday_professor_schedule)
-classroom_mapping = create_classroom_mapping()
-professor_courses = allocate_professor_courses(professor_mapping, classroom_mapping, output_file)
-professor_courses_monday = allocate_monday_professor_courses(professor_mapping, classroom_mapping, output_file)
-walking_cost = create_walking_cost_matrix(classroom_mapping, b2b_distance)
-data_to_export = {
-    "monday_professor_schedule": monday_professor_schedule,
-    "professor_mapping": professor_mapping,
-    "classroom_mapping": classroom_mapping,
-    "professor_courses_monday ": professor_courses_monday ,
-    "capacities": capacities,
-    "walking_cost": walking_cost
-}
+def export_schedule_to_pkl(day_name, professor_schedule, professor_courses, file_name):
+    data_to_export = {
+        f"{day_name.lower()}_professor_schedule": professor_schedule,
+        "professor_mapping": professor_mapping,
+        "classroom_mapping": classroom_mapping,
+        f"professor_courses_{day_name.lower()}": professor_courses,
+        "capacities": capacities,
+        "walking_cost": walking_cost
+    }
+    with open(file_name, "wb") as file:
+        pickle.dump(data_to_export, file)
 
-with open("data_export.pkl", "wb") as file:
-    pickle.dump(data_to_export, file)
+
+#################################################################################################################################################################
+
+
+keys_to_remove = ["additionalLinks", "bookstore", "cfg", "catalog_descr", "materials", "enrollment_information", "reserve_caps", "catalog_descr", "messages", "notes"]
+remove_bldg_cd = ["ALB", "CTC", "INS", "SPH", "XBG", "MED", "FAB", "FCB", "FCC", "HAW", "GDS", "FPH", "EVN"]
+
+data_cleaning_course(input_file=input_file, output_file=output_file, keys_to_remove=keys_to_remove, remove_bldg_cd=remove_bldg_cd)
+data_cleaning_classroom(remove_bldg_cd)
+capacities, name_capacity_dict, classroom_mapping = extract_from_classroom()
+professor_mapping = extract_professor_mapping()
+professor_courses_monday, professor_courses_tuesday, professor_courses_wednesday, professor_courses_thursday, professor_courses_friday = allocate_professor_courses_for_day(professor_mapping, classroom_mapping, output_file)
+monday_professor_schedule = clean_schedule(build_professor_schedule_for_day(0, professor_mapping))
+tuesday_professor_schedule = clean_schedule(build_professor_schedule_for_day(1, professor_mapping))
+wednesday_professor_schedule = clean_schedule(build_professor_schedule_for_day(2, professor_mapping))
+thursday_professor_schedule = clean_schedule(build_professor_schedule_for_day(3, professor_mapping))
+friday_professor_schedule = clean_schedule(build_professor_schedule_for_day(4, professor_mapping))
+walking_cost = create_walking_cost_matrix(classroom_mapping, b2b_distance)
+
+export_schedule_to_pkl("Monday", monday_professor_schedule, professor_courses_monday, "monday.pkl")
+export_schedule_to_pkl("Tuesday", tuesday_professor_schedule, professor_courses_tuesday, "tuesday.pkl")
+export_schedule_to_pkl("Wednesday", wednesday_professor_schedule, professor_courses_wednesday, "wednesday.pkl")
+export_schedule_to_pkl("Thursday", thursday_professor_schedule, professor_courses_thursday, "thursday.pkl")
+export_schedule_to_pkl("Friday", friday_professor_schedule, professor_courses_friday, "friday.pkl")
 
 
