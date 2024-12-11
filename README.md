@@ -1,3 +1,5 @@
+Visit the [HTML version](https://zilongpa.github.io/CS506-Final-Project/), which includes functional interactive maps.
+
 # CS506 Final Project
 
 ![](assets/图片_20241210194403.webp)
