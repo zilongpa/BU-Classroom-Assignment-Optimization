@@ -7,3 +7,4 @@ tqdm
 beautifulsoup4
 seaborn
 matplotlib
+numpy
