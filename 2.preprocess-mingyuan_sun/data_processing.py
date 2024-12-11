@@ -663,20 +663,20 @@ wednesday_professor_schedule = clean_schedule(build_professor_schedule_for_day(2
 thursday_professor_schedule = clean_schedule(build_professor_schedule_for_day(3, professor_mapping))
 friday_professor_schedule = clean_schedule(build_professor_schedule_for_day(4, professor_mapping))
 
-# generate_schedules_and_plots(monday_professor_schedule, tuesday_professor_schedule, wednesday_professor_schedule, thursday_professor_schedule, friday_professor_schedule, capacities)
+generate_schedules_and_plots(monday_professor_schedule, tuesday_professor_schedule, wednesday_professor_schedule, thursday_professor_schedule, friday_professor_schedule, capacities)
 
-#  walking_cost = create_walking_cost_matrix(classroom_mapping, b2b_distance)
+walking_cost = create_walking_cost_matrix(classroom_mapping, b2b_distance)
 
-# export_schedule_to_pkl("Monday", monday_professor_schedule, professor_courses_monday, "monday.pkl")
-# export_schedule_to_pkl("Tuesday", tuesday_professor_schedule, professor_courses_tuesday, "tuesday.pkl")
-# export_schedule_to_pkl("Wednesday", wednesday_professor_schedule, professor_courses_wednesday, "wednesday.pkl")
-# export_schedule_to_pkl("Thursday", thursday_professor_schedule, professor_courses_thursday, "thursday.pkl")
-# export_schedule_to_pkl("Friday", friday_professor_schedule, professor_courses_friday, "friday.pkl")
+export_schedule_to_pkl("Monday", monday_professor_schedule, professor_courses_monday, "monday.pkl")
+export_schedule_to_pkl("Tuesday", tuesday_professor_schedule, professor_courses_tuesday, "tuesday.pkl")
+export_schedule_to_pkl("Wednesday", wednesday_professor_schedule, professor_courses_wednesday, "wednesday.pkl")
+export_schedule_to_pkl("Thursday", thursday_professor_schedule, professor_courses_thursday, "thursday.pkl")
+export_schedule_to_pkl("Friday", friday_professor_schedule, professor_courses_friday, "friday.pkl")
 
 
-# process_daily_solutions()
+process_daily_solutions()
 
-# print_weekly_walking_cost(professor_courses_monday, professor_courses_tuesday, professor_courses_wednesday, professor_courses_thursday, professor_courses_friday, walking_cost)
+print_weekly_walking_cost(professor_courses_monday, professor_courses_tuesday, professor_courses_wednesday, professor_courses_thursday, professor_courses_friday, walking_cost)
 
 import csv
 
