@@ -89,7 +89,7 @@ def scrape_classroom_data(input_csv, output_json):
 
 if __name__ == '__main__':
     base_url = "https://www.bu.edu/classrooms/find-a-classroom/page/{}/?cts_address&cts_capacity_lfa&cts_capacity&cts_filter_submit=Search"
-    output_csv = '../data/classroom_links.csv'
-    output_json = '../data/classroom_data.json'
+    output_csv = './classroom_links.csv'
+    output_json = './classroom_data.json'
     scrape_classroom_links(base_url, output_csv)
     scrape_classroom_data(output_csv, output_json)

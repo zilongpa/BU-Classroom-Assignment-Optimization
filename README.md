@@ -36,7 +36,12 @@ make install
 make run
 ```
 
+Most of the code is developed on Windows, while some parts are created using Linux. If the Makefile doesn't work, execute the following scripts in order:
 
+- `2.preprocess-mingyuan_sun/get_classroom.py`
+- `2.preprocess-mingyuan_sun/data_processing.py`
+- `3.annealing-junhui_huang/annealing.py`
+- `5.evaluation/evalution.py`
 
 ## Goals
 
@@ -223,6 +228,33 @@ Below is a bar chart visualization, highlighting the comparison between the orig
 We also have an animated heat map illustrating the occupancy of buildings, with an interactive version available [here](5.evaluation/heatmap.html).
 
 ![](assets/ezgif-2-4f405aea6f.gif)
+
+The full arrangement is named `f"best_solution_{dayofweek}_arrangement.txt"` in the `4.solution` folder, and here is a partial arrangement for Monday:
+
+```
+Sorcha Martin: IEC B09A, IEC B09A, IEC B09A, IEC B09A, EOP 279
+Libang Wang: MUG 203
+Aiman Abilova: HAR 315, HAR 315, HAR 315
+Diana Lobel: CDS B62
+Nilay Kafali: STH 115, STH 115, STH 115
+Joshua Benton: CAS 521
+Patrice Oppliger: LAW 108
+Sandra Buerger: HAR 228, HAR 228, HAR 228
+Bjorn Persson: COM 310, COM 310
+Tanima Chatterjee: EPC 203, EPC 203, EPC 203, EPC 203, EPC 203
+Yi Grace Ji: GSU 321
+Ara Sarkissian: LAW AUD
+Edward Kearns: SOC B67, SOC B67
+Jerome Mertz: SCI 440
+Sally Sedgwick: CAS 312, CAS 312
+Gregg Jaeger: CDS B62, CDS B62, CDS B62
+Doug Gould: ENG B01
+Weijia Huang: CAS 204B, CAS 204B, CAS 204B
+Masanao Yajima: CFA 308
+Lisa Wobbes: LAW 212, LAW 212, ENG B01, ENG B01, ENG B01, ENG B01
+```
+
+
 
 ### Conclusion and Future Directions
 
