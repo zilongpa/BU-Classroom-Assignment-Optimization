@@ -6,6 +6,8 @@ import re
 import pandas as pd
 import os
 
+from matplotlib import pyplot as plt
+
 input_file = '../1.acquisition-junhui_huang/details.json'
 output_file = './details_cleaned.json'
 classroom_json = './classroom_data.json'
@@ -44,7 +46,7 @@ def data_cleaning_course(input_file, output_file, keys_to_remove, remove_bldg_cd
 
     def remove_capacity_999_func(obj):
         if isinstance(obj, dict):
-            if obj.get("class_capacity") in [999, "999"]:
+            if obj.get("class_capacity") in [999, "999", 9999, "9999"]:
                 return None
             new_obj = {}
             for k, v in obj.items():
@@ -448,10 +450,10 @@ def export_schedule_to_pkl(day_name, professor_schedule, professor_courses, file
     with open(file_name, "wb") as file:
         pickle.dump(data_to_export, file)
 
+
 def process_daily_solutions():
     solutions_dir = "../4.solutions"
     if not os.path.isdir(solutions_dir) or not os.listdir(solutions_dir):
-        print("4.solutions is empty or does not exist.")
         return
 
     days = {
@@ -462,7 +464,12 @@ def process_daily_solutions():
         "Friday": "../4.solutions/best_solution_friday.pkl"
     }
 
+    daily_costs = {}
+
     for day, pkl_file in days.items():
+        if not os.path.exists(pkl_file):
+            continue
+
         with open(pkl_file, 'rb') as file:
             data = pickle.load(file)
 
@@ -478,7 +485,7 @@ def process_daily_solutions():
                 cost = walking_cost[from_room][to_room]
                 total_walking_cost += cost
 
-        print(f"{day} cost: {total_walking_cost}")
+        daily_costs[day] = total_walking_cost
 
         id_to_professor = {v: k for k, v in professor_mapping.items()}
         id_to_classroom = {v: k for k, v in classroom_mapping.items()}
@@ -492,9 +499,15 @@ def process_daily_solutions():
 
         base_name = os.path.splitext(pkl_file)[0]
         txt_filename = f"{base_name}_arrangement.txt"
+
         with open(txt_filename, "w", encoding="utf-8") as txt_file:
             for prof_name, rooms in formatted_solution.items():
                 txt_file.write(f"{prof_name}: {', '.join(rooms)}\n")
+
+    with open("../4.solutions/weekly_walking_cost.txt", "w", encoding="utf-8") as cost_file:
+        for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]:
+            if day in daily_costs:
+                cost_file.write(f"{day} cost: {daily_costs[day]}\n")
 
 def print_weekly_walking_cost(professor_courses_monday,
                               professor_courses_tuesday,
@@ -510,27 +523,62 @@ def print_weekly_walking_cost(professor_courses_monday,
         "Friday": professor_courses_friday
     }
 
-    for day_name, professor_courses in days_data.items():
-        total_walking_cost = 0.0
+    with open("../4.solutions/weekly_walking_cost.txt", "w", encoding="utf-8") as outfile:
+        for day_name, professor_courses in days_data.items():
+            total_walking_cost = 0.0
 
-        num_professors = len(professor_courses)
-        num_classrooms = len(professor_courses[0])
-        num_time_slots = len(professor_courses[0][0])
+            num_professors = len(professor_courses)
+            num_classrooms = len(professor_courses[0])
+            num_time_slots = len(professor_courses[0][0])
 
-        for prof_index in range(num_professors):
-            prev_classroom = None
-            for time_slot in range(num_time_slots):
-                current_classroom = None
-                for classroom_index in range(num_classrooms):
-                    if professor_courses[prof_index][classroom_index][time_slot] == 1:
-                        current_classroom = classroom_index
-                        break
-                if current_classroom is not None:
-                    if prev_classroom is not None:
-                        cost = walking_cost[prev_classroom][current_classroom]
-                        total_walking_cost += cost
-                    prev_classroom = current_classroom
-        print(f"{day_name} cost: {total_walking_cost}")
+            for prof_index in range(num_professors):
+                prev_classroom = None
+                for time_slot in range(num_time_slots):
+                    current_classroom = None
+                    for classroom_index in range(num_classrooms):
+                        if professor_courses[prof_index][classroom_index][time_slot] == 1:
+                            current_classroom = classroom_index
+                            break
+                    if current_classroom is not None:
+                        if prev_classroom is not None:
+                            cost = walking_cost[prev_classroom][current_classroom]
+                            total_walking_cost += cost
+                        prev_classroom = current_classroom
+
+            outfile.write(f"{day_name} cost: {total_walking_cost}\n")
+
+def generate_schedules_and_plots(monday_professor_schedule, tuesday_professor_schedule, wednesday_professor_schedule, thursday_professor_schedule, friday_professor_schedule):
+    all_schedules = [monday_professor_schedule, tuesday_professor_schedule, wednesday_professor_schedule, thursday_professor_schedule, friday_professor_schedule]
+    start_times = []
+    course_lengths = []
+    capacities_required = []
+
+    for day_schedule in all_schedules:
+        for prof_id, courses in day_schedule.items():
+            for (start, end, capacity) in courses:
+                start_times.append(start)
+                course_lengths.append(end - start)
+                if capacity is not None:
+                    capacities_required.append(capacity)
+
+    def plot_and_save_hist(data, title, xlabel, ylabel, filename, bins=10):
+        plt.figure(figsize=(6,4))
+        plt.hist(data, bins=bins, edgecolor='black')
+        plt.title(title)
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        plt.tight_layout()
+        plt.savefig(filename)
+        plt.close()
+
+    if start_times:
+        plot_and_save_hist(start_times, "Start Time Distribution", "Start Time (time slots)", "Frequency", "start_time_distribution.png")
+
+    if course_lengths:
+        plot_and_save_hist(course_lengths, "Course Length Distribution", "Length (time slots)", "Frequency", "course_length_distribution.png")
+
+    if capacities_required:
+        plot_and_save_hist(capacities_required, "Required Classroom Capacity Distribution", "Required Capacity", "Frequency", "capacity_required_distribution.png")
 
 
 #################################################################################################################################################################
@@ -549,6 +597,9 @@ tuesday_professor_schedule = clean_schedule(build_professor_schedule_for_day(1, 
 wednesday_professor_schedule = clean_schedule(build_professor_schedule_for_day(2, professor_mapping))
 thursday_professor_schedule = clean_schedule(build_professor_schedule_for_day(3, professor_mapping))
 friday_professor_schedule = clean_schedule(build_professor_schedule_for_day(4, professor_mapping))
+
+generate_schedules_and_plots(monday_professor_schedule, tuesday_professor_schedule, wednesday_professor_schedule, thursday_professor_schedule, friday_professor_schedule)
+
 walking_cost = create_walking_cost_matrix(classroom_mapping, b2b_distance)
 
 export_schedule_to_pkl("Monday", monday_professor_schedule, professor_courses_monday, "monday.pkl")
