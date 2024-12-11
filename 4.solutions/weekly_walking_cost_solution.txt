@@ -1,0 +1,5 @@
+Monday cost: 1735.569
+Tuesday cost: 2208.3289999999997
+Wednesday cost: 6589.606000000001
+Thursday cost: 1715.063
+Friday cost: 5805.839999999999

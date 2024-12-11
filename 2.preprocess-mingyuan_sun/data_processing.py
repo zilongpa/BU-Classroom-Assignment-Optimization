@@ -1,4 +1,6 @@
 import pickle
+
+import folium
 import numpy as np
 import json
 from datetime import datetime
@@ -6,6 +8,7 @@ import re
 import pandas as pd
 import os
 
+from folium.plugins import HeatMapWithTime
 from matplotlib import pyplot as plt
 
 input_file = '../1.acquisition-junhui_huang/details.json'
@@ -148,9 +151,6 @@ def data_cleaning_course(input_file, output_file, keys_to_remove, remove_bldg_cd
 
     with open(output_file, 'w', encoding='utf-8') as outfile:
         json.dump(data, outfile, indent=4, ensure_ascii=False)
-
-
-
 def data_cleaning_classroom(remove_bldg_cd):
     import json
     import re
@@ -504,7 +504,7 @@ def process_daily_solutions():
             for prof_name, rooms in formatted_solution.items():
                 txt_file.write(f"{prof_name}: {', '.join(rooms)}\n")
 
-    with open("../4.solutions/weekly_walking_cost.txt", "w", encoding="utf-8") as cost_file:
+    with open("../4.solutions/weekly_walking_cost_solution.txt", "w", encoding="utf-8") as cost_file:
         for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]:
             if day in daily_costs:
                 cost_file.write(f"{day} cost: {daily_costs[day]}\n")
@@ -523,7 +523,7 @@ def print_weekly_walking_cost(professor_courses_monday,
         "Friday": professor_courses_friday
     }
 
-    with open("../4.solutions/weekly_walking_cost.txt", "w", encoding="utf-8") as outfile:
+    with open("../4.solutions/weekly_walking_cost_original.txt", "w", encoding="utf-8") as outfile:
         for day_name, professor_courses in days_data.items():
             total_walking_cost = 0.0
 
@@ -547,38 +547,103 @@ def print_weekly_walking_cost(professor_courses_monday,
 
             outfile.write(f"{day_name} cost: {total_walking_cost}\n")
 
-def generate_schedules_and_plots(monday_professor_schedule, tuesday_professor_schedule, wednesday_professor_schedule, thursday_professor_schedule, friday_professor_schedule):
+def generate_schedules_and_plots(monday_professor_schedule, tuesday_professor_schedule, wednesday_professor_schedule, thursday_professor_schedule, friday_professor_schedule, capacities):
     all_schedules = [monday_professor_schedule, tuesday_professor_schedule, wednesday_professor_schedule, thursday_professor_schedule, friday_professor_schedule]
     start_times = []
+    readable_start_times = []
     course_lengths = []
     capacities_required = []
+
+    def decode_interval(interval):
+        total_minutes = interval * 1
+        day_of_week = total_minutes // (24 * 60)
+        days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        day_name = days_of_week[day_of_week]
+        remaining_minutes = total_minutes % (24 * 60)
+        hour = remaining_minutes // 60
+        minute = remaining_minutes % 60
+        return f"{str(hour).zfill(2)}:{str(minute).zfill(2)}"
 
     for day_schedule in all_schedules:
         for prof_id, courses in day_schedule.items():
             for (start, end, capacity) in courses:
                 start_times.append(start)
+                readable_start_times.append(start*5)
                 course_lengths.append(end - start)
                 if capacity is not None:
                     capacities_required.append(capacity)
 
-    def plot_and_save_hist(data, title, xlabel, ylabel, filename, bins=10):
-        plt.figure(figsize=(6,4))
+    sorted_indices = sorted(range(len(start_times)), key=lambda i: start_times[i])
+    start_times = [start_times[i] for i in sorted_indices]
+    readable_start_times = [readable_start_times[i] for i in sorted_indices]
+    course_lengths = [course_lengths[i] * 5 for i in sorted_indices]
+    capacities_required = [capacities_required[i] for i in range(len(capacities_required))]
+
+    def plot_and_save_hist_with_time(data, title, xlabel, ylabel, filename, bins=10, rotation=45):
+        import matplotlib.pyplot as plt
+        plt.figure(figsize=(16, 12))
         plt.hist(data, bins=bins, edgecolor='black')
         plt.title(title)
         plt.xlabel(xlabel)
         plt.ylabel(ylabel)
+
+        plt.xticks(ticks=range(0, 24 * 60, 60),
+                   labels=[decode_interval(x) for x in range(0, 24 * 60, 60)],
+                   rotation=rotation)
+        plt.tight_layout(pad=2)
+        plt.savefig(filename)
+        plt.close()
+
+    def plot_and_save_hist_course(data, title, xlabel, ylabel, filename, bins=20):
+        plt.figure(figsize=(10, 4))
+        plt.hist(data, bins=bins, range=(0,600),edgecolor='black')
+        plt.title(title)
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        plt.xlim(0, 600)
+        plt.xticks(ticks=np.arange(0, max(data) + 10, 25))
+        plt.tight_layout()
+        plt.savefig(filename)
+        plt.close()
+        
+    def plot_and_save_hist_capacities(data, title, xlabel, ylabel, filename, bins=20):
+        plt.figure(figsize=(10, 4))
+        plt.hist(data, bins=bins, range=(0,500),edgecolor='black')
+        plt.title(title)
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        # plt.xlim(0, 500)
+        plt.xticks(ticks=np.arange(0, max(data) + 10, 50))
         plt.tight_layout()
         plt.savefig(filename)
         plt.close()
 
+
     if start_times:
-        plot_and_save_hist(start_times, "Start Time Distribution", "Start Time (time slots)", "Frequency", "start_time_distribution.png")
+        plot_and_save_hist_with_time(
+            readable_start_times,
+            "Start Time Distribution",
+            "Start Time (HH:MM)",
+            "Frequency",
+            "../assets/start_time_distribution.png",
+            bins=20,
+            rotation=45
+        )
 
     if course_lengths:
-        plot_and_save_hist(course_lengths, "Course Length Distribution", "Length (time slots)", "Frequency", "course_length_distribution.png")
+        plot_and_save_hist_course(course_lengths, "Course Length Distribution", "Length (mins)", "Frequency", "../assets/course_length_distribution.png",bins=160)
 
     if capacities_required:
-        plot_and_save_hist(capacities_required, "Required Classroom Capacity Distribution", "Required Capacity", "Frequency", "capacity_required_distribution.png")
+        plot_and_save_hist_capacities(capacities_required, "Required Classroom Capacity Distribution", "Required Capacity", "Frequency", "../assets/capacity_required_distribution.png",bins=40)
+
+    plt.figure(figsize=(6,4))
+    plt.hist(capacities, bins=50, edgecolor='black')
+    plt.title("Classroom Capacities Distribution")
+    plt.xlabel("Capacity")
+    plt.ylabel("Frequency")
+    plt.tight_layout()
+    plt.savefig("../assets/capacities_distribution.png")
+    plt.close()
 
 
 #################################################################################################################################################################
@@ -598,19 +663,158 @@ wednesday_professor_schedule = clean_schedule(build_professor_schedule_for_day(2
 thursday_professor_schedule = clean_schedule(build_professor_schedule_for_day(3, professor_mapping))
 friday_professor_schedule = clean_schedule(build_professor_schedule_for_day(4, professor_mapping))
 
-generate_schedules_and_plots(monday_professor_schedule, tuesday_professor_schedule, wednesday_professor_schedule, thursday_professor_schedule, friday_professor_schedule)
+# generate_schedules_and_plots(monday_professor_schedule, tuesday_professor_schedule, wednesday_professor_schedule, thursday_professor_schedule, friday_professor_schedule, capacities)
 
-walking_cost = create_walking_cost_matrix(classroom_mapping, b2b_distance)
+#  walking_cost = create_walking_cost_matrix(classroom_mapping, b2b_distance)
 
-export_schedule_to_pkl("Monday", monday_professor_schedule, professor_courses_monday, "monday.pkl")
-export_schedule_to_pkl("Tuesday", tuesday_professor_schedule, professor_courses_tuesday, "tuesday.pkl")
-export_schedule_to_pkl("Wednesday", wednesday_professor_schedule, professor_courses_wednesday, "wednesday.pkl")
-export_schedule_to_pkl("Thursday", thursday_professor_schedule, professor_courses_thursday, "thursday.pkl")
-export_schedule_to_pkl("Friday", friday_professor_schedule, professor_courses_friday, "friday.pkl")
-
-
-process_daily_solutions()
-
-print_weekly_walking_cost(professor_courses_monday, professor_courses_tuesday, professor_courses_wednesday, professor_courses_thursday, professor_courses_friday, walking_cost)
+# export_schedule_to_pkl("Monday", monday_professor_schedule, professor_courses_monday, "monday.pkl")
+# export_schedule_to_pkl("Tuesday", tuesday_professor_schedule, professor_courses_tuesday, "tuesday.pkl")
+# export_schedule_to_pkl("Wednesday", wednesday_professor_schedule, professor_courses_wednesday, "wednesday.pkl")
+# export_schedule_to_pkl("Thursday", thursday_professor_schedule, professor_courses_thursday, "thursday.pkl")
+# export_schedule_to_pkl("Friday", friday_professor_schedule, professor_courses_friday, "friday.pkl")
 
 
+# process_daily_solutions()
+
+# print_weekly_walking_cost(professor_courses_monday, professor_courses_tuesday, professor_courses_wednesday, professor_courses_thursday, professor_courses_friday, walking_cost)
+
+import csv
+
+building_codes_file = "../1.acquisition-junhui_huang/building_codes.csv"
+location_from_address_file = "../1.acquisition-junhui_huang/location_from_address.csv"
+
+def build_professor_schedule():
+    with open(output_file, 'r', encoding='utf-8') as infile:
+        data = json.load(infile)
+
+    professor_schedule = {}
+
+
+    day_mapping = {
+        "Mo": 0, "Tu": 1, "We": 2, "Th": 3, "Fr": 4, "Sa": 5, "Su": 6
+    }
+
+
+    def parse_time(time_str, day):
+        time_obj = datetime.strptime(time_str, "%I:%M%p")
+        minutes = time_obj.hour * 60 + time_obj.minute
+
+        return (minutes // 5) + day * (24 * 60 // 5)
+
+
+    def find_meetings(obj):
+        if isinstance(obj, dict):
+
+            if "meetings" in obj and "class_availability" in obj:
+
+                capacity = obj["class_availability"].get("class_capacity")
+                if capacity is not None:
+                    capacity = int(capacity)
+
+                for meeting in obj["meetings"]:
+                    if "instructors" in meeting and "days" in meeting and "meeting_time_start" in meeting and "meeting_time_end" in meeting:
+
+                        days_str = meeting["days"]
+                        days = [day_mapping[days_str[i:i+2]] for i in range(0, len(days_str), 2) if days_str[i:i+2] in day_mapping]
+
+
+                        for instructor in meeting["instructors"]:
+                            professor_name = instructor.get("name")
+                            professor_id = professor_mapping.get(professor_name)
+
+                            if professor_id is not None:
+                                if professor_id not in professor_schedule:
+                                    professor_schedule[professor_id] = []
+
+
+                                for day in days:
+                                    start_time = parse_time(meeting["meeting_time_start"], day)
+                                    end_time = parse_time(meeting["meeting_time_end"], day)
+                                    professor_schedule[professor_id].append((start_time, end_time, capacity))
+
+
+            for value in obj.values():
+                find_meetings(value)
+        elif isinstance(obj, list):
+            for item in obj:
+                find_meetings(item)
+
+
+    find_meetings(data)
+
+
+    return professor_schedule
+address_to_location = {}
+with open(location_from_address_file, 'r', encoding='utf-8') as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        address = row["address"]
+        location = row["location"]
+        address_to_location[address] = location
+
+abbreviation_to_location = {}
+with open(building_codes_file, 'r', encoding='utf-8') as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        abbreviation = row["abbreviation"]
+        address = row["address"]
+        if address in address_to_location:
+            abbreviation_to_location[abbreviation] = address_to_location[address]
+
+professor_schedule = build_professor_schedule()
+for abbrev, coord_str in abbreviation_to_location.items():
+    coord_str = coord_str.strip('()')
+    lat_str, lon_str = coord_str.split(',')
+    lat, lon = float(lat_str.strip()), float(lon_str.strip())
+    abbreviation_to_location[abbrev] = (lat, lon)
+
+def minutes_to_frame(minutes):
+    return minutes // 5
+
+prof_ids = sorted(professor_schedule.keys())
+prof_id_to_index = {p: i for i, p in enumerate(prof_ids)}
+num_profs = len(prof_ids)
+
+FRAMES_PER_DAY = 288
+professor_course_solution = [[[None, None] for _ in range(FRAMES_PER_DAY)] for _ in range(num_profs)]
+
+int_to_classroom = {v: k for k, v in classroom_mapping.items()}
+
+for prof_id, schedule in professor_schedule.items():
+    i = prof_id_to_index[prof_id]
+    for (start_time, end_time, classroom_id) in schedule:
+        start_frame = minutes_to_frame(start_time)
+        end_frame = minutes_to_frame(end_time)
+
+        classroom_str = int_to_classroom[classroom_id]
+        building_abbrev = classroom_str.split()[0]
+        coords = abbreviation_to_location.get(building_abbrev, None)
+
+        for j in range(start_frame, min(end_frame, FRAMES_PER_DAY)):
+            if coords is None:
+                professor_course_solution[i][j] = [None, None]
+            else:
+                professor_course_solution[i][j] = [coords[0], coords[1]]
+print(professor_course_solution)
+heatmap = {}
+for i in range(num_profs):
+    for j in range(FRAMES_PER_DAY):
+        x, y = professor_course_solution[i][j]
+        if x is not None and y is not None:
+            if j not in heatmap:
+                heatmap[j] = []
+            heatmap[j].append((x, y))
+from collections import Counter
+
+data = []
+for j in range(FRAMES_PER_DAY):
+    if j in heatmap:
+        point_counts = Counter(heatmap[j])
+        frame_points = [[lat, lon, 0.7 + count / 5] for (lat, lon), count in point_counts.items()]
+    else:
+        frame_points = []
+    data.append(frame_points)
+
+m = folium.Map(location=[42.350421499999996, -71.10322831831216], zoom_start=16)
+HeatMapWithTime(data,radius=50, max_opacity=0.5, auto_play=True, blur=0.9).add_to(m)
+m.save("../5.evaluation/heatmap.html")

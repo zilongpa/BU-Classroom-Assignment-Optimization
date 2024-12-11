@@ -20,9 +20,24 @@ Optimizing Classroom Allocation to Minimize Professors’ Walking Cost at Boston
 
 The project aims to optimize the allocation of classrooms to professors by considering each professor’s required classroom size at specific time periods and the cost associated with walking between classrooms. The objective is to reassign classrooms to minimize the total walking cost for all professors. The optimization will be performed using the simulated annealing in Python.
 
+#### How to Run
+
+1. **Install dependencies**:
+
+```sh
+make install
+```
+
+2. **Fetch data, preprocess, and run simulated annealing**
+
+```sh
+make run
+```
+
 
 
 ## Goals
+
 - Develop a classroom allocation model that minimizes the total walking cost for all professors.
 - Take room capacity limits into account, and, if possible, consider additional factors such as media device requirements.
 - Implement the model using the simulated annealing.
@@ -54,10 +69,18 @@ This report provides a detailed description of the data processing steps complet
 
 ### Data Cleaning and Integration
 
-- **Data Cleaning**  
-  - **Responsibility**: Mingyuan Sun  
-  - **Process**: Irrelevant fields were removed, and rows with missing or unreliable data were discarded to ensure data quality.
-  - **Reformatting**: The data from both sources were reformatted to achieve consistency, enabling integration between course and classroom datasets.
+- **Data Cleaning**
+  - **Responsibility**: Mingyuan Sun
+  - **Process**:  
+    1. **Course and Classroom Data Cleaning**:  
+       - **Irrelevant fields** are removed based on predefined keys.  
+       - **Low-quality entries** (e.g., missing instructors, invalid meeting times, “Online” instruction mode, capacity values like 999 or 9999, “TBA” meeting patterns, or invalid classroom names containing ‘/’) are filtered out.  
+       - **Unwanted instructor names** (e.g., “To Be Announced”) and classrooms with specific tags (e.g., “Medical Campus” or “Fenway Campus”) are discarded.  
+       - **Rooms with invalid building codes** or “NO ROOM” entries are removed.  
+       - Classroom names are normalized by replacing ‘-’ with ‘ ’ and removing text in parentheses.
+    2. **Professor Schedule Cleaning**:  
+       - Schedules are merged based on matching start and end times, combining counts for identical time slots to simplify and standardize schedule data.
+  - **Reformatting**: Once cleaned, the data from various sources (courses, classrooms, schedules) is reformatted to maintain a consistent schema, ensuring compatibility and integration across different datasets.
 
 - **Data Transformation**  
   - Fields were transformed and mapped across datasets, establishing links between course schedules and classroom details to support advanced scheduling models.
@@ -69,10 +92,17 @@ From the cleaned and integrated dataset, the following data elements were extrac
 1. **Classroom Capacities**  
    - **Format**: Integer array  
    - **Description**: An array listing the seating capacity of each classroom, useful for determining space constraints in scheduling.
-
+   - **Visualizations**
+     - Below is a histogram illustrating the distribution of classroom capacities:
+     - ![](assets/capacities_distribution.png)
+   
 2. **Professor Schedule**  
    - **Format**: Dictionary with keys as `professor_id` and values as tuples `(start_time, end_time, capacity_required)`  
    - **Description**: Each professor’s weekly schedule, recorded in five-minute intervals, with a total of 2016 time slots per week. This structure also records each professor’s required classroom capacity.
+   - **Visualizations**
+     - ![start_time_distribution.png](assets/start_time_distribution.png)
+     - ![capacity_required_distribution.png](assets/capacity_required_distribution.png)
+     - ![course_length_distribution.png](assets/course_length_distribution.png)
 
 3. **Walking Cost**  
    
@@ -133,9 +163,75 @@ Since simulated annealing does not guarantee an exact optimal solution, we decid
 
 
 
-## Evaluation
+![](assets\annealing.png)
 
-- Test the model on various what-if scenarios, such as changes in classroom availability.
-- Assess the reduction in total walking cost achieved by the model.
-- Evaluate the model’s ability to meet accessibility and feature requirements.
-- Perform comparative analysis with the current classroom allocation to demonstrate improvements
+
+
+### Hyperparameter tuning
+
+Since the algorithm is implemented by myself using numpy and does not have a pre-built sklearn model API, I used nested loops to carry out the fine-tuning. Below is the code used for the hyperparameter tuning process:
+
+```python
+best_cost = float('inf')
+best_solution = None
+best_hyperparameters = None
+
+temperatures = [500, 1000, 1500]
+cooling_rates = [0.90, 0.95, 0.99]
+
+for temp in temperatures:
+    for rate in cooling_rates:
+        print(f"Running with temperature={temp}, cooling_rate={rate}")
+        solution, cost = simulated_annealing(
+            professor_courses, 
+            num_classrooms, 
+            classroom_capacities, 
+            walking_cost, 
+            max_runtime, 
+            temperature=temp, 
+            cooling_rate=rate
+        )
+
+        if cost < best_cost:
+            best_cost = cost
+            best_solution = solution
+            best_hyperparameters = (temp, rate)
+```
+
+After performing hyperparameter tuning on Monday's schedule, the optimal parameters were found to be `temperature=1000.0` and `cooling_rate=0.99`.
+
+
+
+## Results
+
+| **Day**   | **Original Walking Cost** | **Optimized Walking Cost** |
+| --------- | ------------------------- | -------------------------- |
+| Monday    | 109,916.716               | 1,735.569                  |
+| Tuesday   | 102,759.072               | 2,208.329                  |
+| Wednesday | 155,470.092               | 6,589.606                  |
+| Thursday  | 114,212.881               | 1,715.063                  |
+| Friday    | 146,141.078               | 5,805.840                  |
+
+**Overall Improvement:** 97.12%
+
+Below is a bar chart visualization, highlighting the comparison between the original and optimized walking costs:
+
+![cost_comparison.png](assets/cost_comparison.png)
+
+We also have an animated heat map illustrating the occupancy of buildings, with an interactive version available [here](5.evaluation/heatmap.html).
+
+![](assets/ezgif-2-4f405aea6f.gif)
+
+### Conclusion and Future Directions
+
+The results demonstrate that the algorithm significantly reduces the walking cost, showcasing its potential to provide practical arrangements for classroom allocation. However, the drastic improvement also reveals some limitations in the algorithm that could be addressed in future research. 
+
+#### Future Directions
+1. **Incorporating Additional Constraints:** 
+
+   Certain disciplines at BU may have preferences for specific buildings, such as labs or discussion classes. Further analysis in this area could enhance the algorithm's realism.  
+
+2. **Field Measurement of Inter-Building Distances:** 
+
+   The current fixed value for intra-building changes does not fully capture the complexity of real-world scenarios. Differences between classrooms, as well as the cost of moving between floors, could be incorporated into the dataset for more accurate results.  
+
