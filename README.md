@@ -1,6 +1,6 @@
 # CS506 Final Project
 
-![](assets\图片_20241210194403.webp)
+![](assets/图片_20241210194403.webp)
 
 > This is a 3D visualization of the campus created using Blender. Unfortunately, I was unable to complete it due to time constraints.
 
