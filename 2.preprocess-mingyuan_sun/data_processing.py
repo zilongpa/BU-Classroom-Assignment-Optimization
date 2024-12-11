@@ -4,12 +4,13 @@ import json
 from datetime import datetime
 import re
 import pandas as pd
+import os
 
+input_file = '../1.acquisition-junhui_huang/details.json'
+output_file = './details_cleaned.json'
+classroom_json = './classroom_data.json'
+b2b_distance = "../1.acquisition-junhui_huang/b2b_walking_distance.csv"
 
-input_file = '../data/details.json'
-output_file = '../data/details_cleaned.json'
-classroom_json = '../data/classroom_data.json'
-b2b_distance = "../data/b2b_walking_distance.csv"
 
 def data_cleaning_course(input_file, output_file, keys_to_remove, remove_bldg_cd=[]):
     with open(input_file, 'r', encoding='utf-8') as infile:
@@ -447,34 +448,53 @@ def export_schedule_to_pkl(day_name, professor_schedule, professor_courses, file
     with open(file_name, "wb") as file:
         pickle.dump(data_to_export, file)
 
-def process_solution(file_path):
-    with open(file_path, 'rb') as file:
-        data = pickle.load(file)
-    solution = data[0]
-    total_walking_cost = 0.0
-    for prof_id, classrooms in solution.items():
-        if len(classrooms) <= 1:
-            continue
-        for i in range(len(classrooms) - 1):
-            from_room = classrooms[i]
-            to_room = classrooms[i + 1]
-            cost = walking_cost[from_room][to_room]
-            total_walking_cost += cost
+def process_daily_solutions():
+    solutions_dir = "../4.solutions"
+    if not os.path.isdir(solutions_dir) or not os.listdir(solutions_dir):
+        print("4.solutions is empty or does not exist.")
+        return
 
-    print(f"Solution walking cost：{total_walking_cost}")
-    id_to_professor = {v: k for k, v in professor_mapping.items()}
-    id_to_classroom = {v: k for k, v in classroom_mapping.items()}
+    days = {
+        "Monday": "../4.solutions/best_solution_monday.pkl",
+        "Tuesday": "../4.solutions/best_solution_tuesday.pkl",
+        "Wednesday": "../4.solutions/best_solution_wednesday.pkl",
+        "Thursday": "../4.solutions/best_solution_thursday.pkl",
+        "Friday": "../4.solutions/best_solution_friday.pkl"
+    }
 
-    formatted_solution = {}
+    for day, pkl_file in days.items():
+        with open(pkl_file, 'rb') as file:
+            data = pickle.load(file)
 
-    for prof_id, room_ids in solution.items():
-        prof_name = id_to_professor.get(prof_id, f"Unknown Professor {prof_id}")
-        formatted_solution[prof_name] = [
-            id_to_classroom.get(room_id, f"Unknown Room {room_id}") for room_id in room_ids
-        ]
+        solution = data[0]
+        total_walking_cost = 0.0
 
-    for prof_name, rooms in formatted_solution.items():
-        print(f"{prof_name}: {', '.join(rooms)}")
+        for prof_id, classrooms in solution.items():
+            if len(classrooms) <= 1:
+                continue
+            for i in range(len(classrooms) - 1):
+                from_room = classrooms[i]
+                to_room = classrooms[i + 1]
+                cost = walking_cost[from_room][to_room]
+                total_walking_cost += cost
+
+        print(f"{day} cost: {total_walking_cost}")
+
+        id_to_professor = {v: k for k, v in professor_mapping.items()}
+        id_to_classroom = {v: k for k, v in classroom_mapping.items()}
+
+        formatted_solution = {}
+        for prof_id, room_ids in solution.items():
+            prof_name = id_to_professor.get(prof_id, f"Unknown Professor {prof_id}")
+            formatted_solution[prof_name] = [
+                id_to_classroom.get(room_id, f"Unknown Room {room_id}") for room_id in room_ids
+            ]
+
+        base_name = os.path.splitext(pkl_file)[0]
+        txt_filename = f"{base_name}_arrangement.txt"
+        with open(txt_filename, "w", encoding="utf-8") as txt_file:
+            for prof_name, rooms in formatted_solution.items():
+                txt_file.write(f"{prof_name}: {', '.join(rooms)}\n")
 
 def print_weekly_walking_cost(professor_courses_monday,
                               professor_courses_tuesday,
@@ -538,7 +558,7 @@ export_schedule_to_pkl("Thursday", thursday_professor_schedule, professor_course
 export_schedule_to_pkl("Friday", friday_professor_schedule, professor_courses_friday, "friday.pkl")
 
 
-process_solution('../data/best_solution.pkl')
+process_daily_solutions()
 
 print_weekly_walking_cost(professor_courses_monday, professor_courses_tuesday, professor_courses_wednesday, professor_courses_thursday, professor_courses_friday, walking_cost)
 

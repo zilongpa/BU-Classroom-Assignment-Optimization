@@ -1,0 +1,1224 @@
+Min Ye: STH 325, STH 325
+Roberto Tron: SCI 407
+Assaf Kfoury: PSY B37
+William Letizia: FLR 338
+Christine Hamel: CAS 211, CAS 211
+Christine Papadakis-Kanaris: MUG 205, MUG 205, MUG 205
+Hongwei Xi: LAW 212, LAW 212
+Ronald Czik: KCB 102
+Brian Kellum: CAS 502
+Jeffrey Leonard: CAS 521
+Rebecca Roesler: KCB 104, KCB 104
+Lorenzo Sanchez-Gatt: MCS B33
+Lance Galletti: CAS 203, CAS 203, CAS 203, CAS 203
+Shivam Dhama: LAW 212
+Len Tetta: CDS 364, CDS 364
+Scott Butterfield: SCI B01, SCI B01
+Michael Seele: COM 338
+John Celenza: KCB 201, KCB 201
+Tyler Critz: FLR 237
+Mengrui Wang: CDS B64B
+Jacquelyn Farrell: CAS 214
+Jodi Cranston: LAW 605
+Kaylee Kelley: CAS B06A
+Rachelle Reinhart: IEC B13
+Kyla Botsian: FRC 220
+Megan Young: CAS 502
+Jonathan Katz: CAS 116, CAS 116, CAS 116
+Thomas Whalen: STH B24, STH B24, STH B24
+Taymaz Davoodi: CDS 163, CDS 163, CDS 163, CDS 364, CDS 364
+Edgardo Tormos Bigles: CDS 363, CDS 363, CDS 363
+Chenille Hogan: KCB 104
+Lidya Wlasiuk: PSY 210
+Matthew Creighton: EOP 266
+Bruno Guarana: CGS 129
+Mohammad Soltanieh Ha: IEC B10, IEC B10
+Alyssa Kranc: CAS 315
+Christopher Edwards: MCS B37, MCS B37
+Sara O'Brien: EOP 266
+Ashleigh Reade: FRC L132
+Victor Cayres De Mendonca: LAW 204
+Thomas Little: CDS 163
+Yo-El Cassell: HAR 314, HAR 314, HAR 314, HAR 314, HAR 314
+Megan Sandel: CAS 226
+Kelley Chunn: CAS 323B, CAS 323B
+Christine Crawford: LAW 605
+Scott Harris: SCI 407, SCI 407
+Richard Currie: STH 318
+Anna Lim: CAS 427, CAS 326, CAS 326
+William Rodriguez: STH B20
+George Vahamikos: CAS 213, CAS 213
+Sam Sarkisian: IEC B09B, IEC B09B, IEC B09B
+Scott Jarrett: CAS B27
+Emerson Conrad-Rooney: MUG 205
+Richard Shupert: CAS 227, CAS 227
+Sarah Barnes: CGS 521
+Zoran Djordjevic: AGG G105
+Mau Law: EOP 268
+Mouhamadou Diallo: HAR 408, HAR 408
+Elaine McCarthy: COM 217
+Linda McClain: EOP 270, EOP 270
+Benjamin Crowe: LSE B01, LSE B01, LSE B01
+Robert Carey: MUG 203, MUG 203
+Michael Elasmar: CDS 265, CDS 265
+Tamara Lev: STH 318, STH 318
+Donald Wright: STH B19, STH B19
+Hannah Kloster: CAS B06A
+Loren Samons: CFA 557, CFA 557
+J Boley: CAS 521, CAS 521, CAS 521
+Christopher Lee: FLR 209
+Katelyn Bird: AGG C205
+Joseph Russo: BAB 148
+Nicole Robertson: GSU 228
+Heather Schoenfeld: SCI 444, SCI 444
+Pamela Zabala Ortiz: EMA 101
+M Unlu: HAR 426, HAR 426, HAR 426
+Joyce Scott: COM 310, COM 310
+Ryan Winkles: CAS 228
+Jae Lee: PSY B55
+Julia Aquino: CAS 521, CAS 521
+Susan Feldman: AGG G171
+Alevtina Guseva: IEC B01, IEC B01
+Regina Cati: KCB 107, KCB 107
+Kerri Dooley-Lincoln: PSY B33
+Christine Prifti: GSU 228
+Matthew Butterfield: SCI 128, SCI 128
+Kevin Gold: LAW AUD, LAW AUD, LAW AUD, LAW AUD
+Anders Sandvik: EPC 209
+Caterina Scaramelli: CGS 117B, CGS 117B
+MICHAEL KAYE: FLR 404L, FLR 404L, FLR 404L
+Esteban Lopez: CAS 114A
+Debra Borkovitz: CAS B12, CAS B12, CAS B12
+Nelia Newell: CDS 364, CDS 364, CDS 364
+Florian Ederer: CDS 363, CDS 363, CDS 363
+Jonathan Greenacre: CAS 233
+Micah Goodrich: EOP 269, EOP 269
+Ryanne McEvoy: FLR 404D
+Fan Yang: LAW 103, LAW 103, LAW 103
+Todd Idson: CFA B37, CFA B37
+Kenneth Amis: MUG 205
+Giselle Khoury-Disano: SCI 427, SCI 427, SCI 427
+Makeba Kent: LSE B01
+Lakedra Pam: PTH 114
+Mary Battenfeld: COM 206, COM 206
+Henrik Selin: MET 122
+Jacquelyn Groeper: IEC B09A
+Sonia Ananthakrishnan: CFA 102, CFA 102
+Yulianna Santos: CAS 330
+Diane Dalton: IEC B09A
+Mary Holmes: MCS B31
+Evelyn Pain: HAR 212, HAR 212, HAR 212
+Margaret Beck: CDS 364, CDS 364
+Tatyana Bronstein: IEC B04, IEC B04, IEC B04
+Michael Albro: FRC 220
+Vidit Munshi: CDS 364, CDS 364, CDS 364
+Christopher Ricks: ERB B08, ERB B08
+Andrew Duffy: LAW 212, MUG 205, LAW 212, STH 113, STH 113, STH 319, STH 319, FLR 404L, FLR 404L, FLR 404L, FLR 346
+James Miller: MUG 205
+Michael Everdell: IEC B09A
+Robert Kaufmann: FLR 404B, FLR 404B
+Debbie Danielpour: CSE 452
+Samuel Isaacson: IEC B05, IEC B05
+Zoliswa Mali: HAR 208, HAR 208, HAR 208
+Justin Alpert: IRC 220
+Tanima Chatterjee: GSU 310, GSU 310, GSU 315, GSU 315
+Pavan Bhavsar: CAS 227
+Benjamin Scott: PTH 114
+Michael Holley: CAS 415
+Erik Peinert: SOC B61
+Jonathan Berz: IEC B07
+Mehrdad Nourai: CDS 463
+Wendy Goldberg: COM 107
+David Somers: KCB 103
+Wen Li: STH 525
+Chirag Arora: EPC 102
+David Castanon: CAS 220
+Lida Maxwell: IEC B01, IEC B01
+Rebecca Gracia: COM 310, COM 310
+Abigail Gillman: LEV 201
+Bria Dunham: CGS 323, CGS 323
+Simon Falconer: CGS 523, CGS 523
+Caleb Farny: COM B05, COM 319, COM 319, COM 317
+Domenic Screnci: HAR 420
+John Dithomas: EOP 274
+Thomas Hook: KCB 106
+Raymond Fisman: CGS 323, CGS 323
+Laura Harrington: CAS 330, CAS 330, CAS 330
+Justin Shatraw: HAR 105, HAR 105
+Mary Yang: GSU B02, GSU B02
+James Panek: FLR 404D
+Daniel Weiner: EPC 207, EPC 207
+Nina Silber: CFA 303
+Chenxi Liu: PSY B33
+Emma Mortara: CAS 534
+Brady Dailey: LAW 108
+Jonathan Foltz: CDS 363, CDS 363
+Adriana Craciun: JSC 107
+Leslie Kaufman: CFA 557
+Shriram Raja: CAS 502
+Richard West: HAR 222
+Molly Nicknish: EMA 215
+Louise Michelle Vital: EPC 204
+Onur Celik: CFA 557, CFA 557, CFA 557, CFA 557, CFA 557
+Alisa Bokulich: COM 317, COM 317, COM 317
+Saira Tahsin: COM B31, COM B31
+Diane Mello-Goldner: LAW 418, LAW 418
+Minjung Son: HAR 430
+Montie Avery: KCB 104
+James Cummings: PHO 206, PHO 206
+Sean Desilets: IEC B13
+Sadiq Reza: FLR 404R
+Joanne Favuzza: CAS 330
+Diana Lobel: CDS 364
+Abigail Bodnar: CAS 314
+Bruce Watson: CDS 264, CDS 264
+James Johnson: GSU 219B
+Danielle Pelfrey Duryea: FLR 124
+Ernest Pouttu: PSY B47
+Abigail Ostriker: COM 310, COM 310
+Alvard Arazyan: FLR 404D, FLR 404D
+Meghan Irons: CFA 556
+Traci Hong: CDS 265
+Carmen Torre Perez: COM 208, COM 208, COM 208, COM 208
+Gerald Reid: CDS 363, CDS 363
+Andrew Bottoms: IEC B09A, IEC B09A
+Kevin Thomas: CDS 262
+Charles Kieswetter: IEC B01, IEC B01
+Mario Muscedere: PSY 212
+June Grasso: CGS 117B, CGS 117B, CGS 117B
+Mark Williams: CAS 326, CAS 326
+M Arakelian: PHO 117
+Nivea Canalli Bona: SCI 407, SCI 407
+Madani Naidjate: EPC 204
+Kamil Ekinci: LEV 201
+Lauren Mattioli: LAW AUD, LAW AUD
+Joseph Bunch: SOC B57, SOC B57
+Anthony Linn: CAS 222, CAS 222
+Kmarie Tejeda: FLR 207
+Stephanie Schorow: COM 107, COM 107
+Stephen Scully: CAS 216
+John Devoy: CDS 264, CDS 264
+Sarah Miller: CAS 330, CAS 330
+Matthew Porto: IEC B05
+Kirsten Greenidge: IEC B12, IEC B12
+Garrett Johnson: KCB 102, KCB 102
+Simon Anderson: HAR 430
+Stacy Ulrich: SOC B63
+Yves Atchade: ENG B01
+Shariq Mohammed: IEC B09A
+Marjorie Warfield: FLR 346
+James Geiger: HAR 210, HAR 210
+Joan Salge-Blake: ERB B07
+Juan Fuxman Bass: RKC 101
+Jesse Moreira-Bouchard: MUG 205, MUG 205
+Celeste Curington: CAS 213, CAS 213
+Emily Glenn-Smith: CAS 330, CAS 330, CAS 330
+Jeffrey Gruenglas: COM 100
+Keiko Fuchioka: CAS 220, CAS 220
+Karen Kariv: LSE B01, LSE B01
+Xiaozhou Ruan: FRC L137
+Rubina Nagarkatti: EOP 266
+Fallou Ngom: EOP 269, EOP 269
+Denice Sakakeeny: PSY 210
+Anthony Petro: CAS 330, CAS 330, CAS 330
+Yidi Wu: CAS 318, CAS 318
+Chaeyoung Lee: FLR 237, FLR 237
+John Thornton: CAS 225
+Stephanie Radzinski: CAS 116, CAS 116
+Fosca Maddaloni: CAS 211, CAS 211
+Ankush Das: CAS 220, CAS 220
+Nathan Mull: FRC L137, FRC L137, FRC L137, FRC 220
+Robert Wexelblatt: CDS 363, CDS 363, CDS 363
+Lauren Scott: GSU 310
+Nicolas Fernandez Medina: COM 323
+Jesse Chan: CAS 204B, CAS 204B, CAS 204B
+Rosella Cappella Zielinski: WED 130
+Aaron Kopp: SCI B23, SCI B23
+Rakesh Pandey: IEC B06, EOP 276, EOP 276
+Aldo Pacchiano Camacho: EOP 270
+Mary Bussiere: HAR 212, HAR 212
+Alishah Chator: IEC B13
+Francisco Naya: MCS B37
+Thomas Anastasi: CAS 502, CAS 502, CAS 502
+Claire Bula: CAS 223, CAS 223
+Aaron Kesseli: STH B19
+M Paserman: EOP 260
+Kirby Chazal: CAS 315, CAS 315, CAS 315
+Sucharita Gopal: GSU B02
+Katherine Einstein: COM 317, COM 317
+Arturo Vegas: HAR 310
+Shaikhah Alshuaib: CAS B06A, CAS B06A
+Beatriz Calderon Villon: THA 208
+Cheryl Knott: PSY B41
+Franklin Jones: HAR 240, HAR 224, HAR 224, HAR 224
+Matthew Reis: GSU 322, GSU 322
+Stefanie Weigmann: LAW 418, LAW 418, LAW 418
+Boqing Gong: CAS 116, CAS 213, CAS 213, CAS 213
+Kate Saenko: CAS 312, CAS 312, CAS 312, CAS 312
+Mark Kean: LAW 418, LAW 418, LAW 418, STH 115, STH 115
+Andrea Bien: FRC L132
+Christopher Conley: STH 441
+Stacey Dogan: COM B31
+Jennifer Cazenave: CDS 264, CDS 264
+Alexander Becker: EOP 269
+Jan Haenraets: CGS 323, CGS 323
+Aaron Stevens: EOP 268, EOP 268
+John Lister: HAR 212
+Stephen Donweber: LAW AUD
+Frank Golf: MUG 205
+Paul Stillman: CAS 214, CAS 214
+PRAKASH ISHWAR: IEC B09B
+Kim Donlan: EOP 266, EOP 266
+Stephanie Nelson: COM 107, COM 107
+Moshe Cohen: EOP 270
+Kelsey Lindley: HAR 210
+Halim Lee: SCI 309, SCI 309
+John Baillieul: CAS 502
+Dirk Hackbarth: GSU 330A
+Sophie Godley: CGS 117B, CGS 117B
+Rabia Yazicigil Kirby: IEC B05
+Eric Chang: MUG 205, MUG 205, MUG 205
+Mickey Salins: SCI 440, SCI 440, SCI 440
+Shively Smith: HAR 314, HAR 314
+Leanne Yinusa-Nyahkoon: CFA 516, CFA 516
+Stephanie Ahrens: CAS 315
+Heinrich Christensen: CAS 229
+Clay Hopper: CAS 114B, CAS 114B
+Judith Lok: CGS 315
+James Galagan: COM 107, COM 107
+Simon Payaslian: CAS 323B, CAS 323B
+Langdon White: CFA 308, CFA 308, CFA 308
+Douglas Holmes: IEC B06
+Sarah Phillips: FLR 303, FLR 303
+Lee Marinko: CAS 330, CAS 330, CAS 222
+Sassan Tabatabai: HAR 404, HAR 404
+Elijah Gruszecki: CDS 164
+Victor Coelho: CAS 330, CAS 330
+Dylan Renca: PSY B55
+Joshua Robinson: CAS 330, CAS 330
+Soumendra Basu: HAR 312
+Levon Goukasian: CAS 222, CAS 222
+Theodore Sims: SCI 407, SCI 407
+Simone Gill: GSU 310
+Wanzheng Hu: WED 130, WED 130
+Ellen Faszewski: CDS 262, CDS 262
+Christopher Seferlis: CFA 102
+Osama Alshaykh: FRC 220
+Michael Hirsch: FRC 220
+Alan Pisano: FLR 405
+Jeffrey Carruthers: IEC B09A
+Matthew Schratz: COM 211
+Christina Dobbs: SOC B65
+Maurice Lee: CGS 423, CGS 423
+Manuel Egele: BAB 148
+Betty Anderson: CDS B64B, CDS B64B
+Annie Beckett: PHO 305
+Soubhik Mondal: COM 106, COM 106, COM 319, COM 319, COM 319
+Mark Kramer: CAS 522
+Rafael Hernandez: CAS 315, CAS 315
+A.D. Hughes: FLR 122
+Dane Scott: CFA 500
+Alyssa Hunziker: HAR 208, HAR 208
+Abigail Robinson: EOP 276, EOP 276
+Philip Muirhead: IEC B01, IEC B01
+Lucy Sutherland: LAW 102
+Jessica Silbey: PSY B33
+Robin Stevens: CAS 220
+Xufeng Fang: CAS 325
+Daniel Nartey: STH 113, STH 113
+Irving Bigio: LAW 211
+Emily Whiting: MCS B37
+Kristin Leahey: BCN 115
+Anita Patterson: PRB 150
+John Straub: HAR 211
+Brandon Simonson: FLR 404D, FLR 404D
+Shamiran Mako: CAS 213, CAS 213
+David Sullivan: CAS 326, CAS 326, CAS 326
+Thomas Meusel: STH B19
+Abhijit Sarid: EOP 258
+Kavon Karrobi: CAS 312
+Yuting Zhang: CAS 502, CAS 502
+Carly Block: SCI 442
+David Shim: CAS 227, CAS 227
+Carlos Casso Dominguez: CAS 522, CAS 522, CAS 522, CAS 522
+Ian Mashiter: MOR 101
+Nicholas Huckle: CAS 427, CAS 427
+Zsuzsanna Varhelyi: LAW 103, LAW 103
+Zachary Rossetti: HAR 310
+Paul Hutchinson: PSY 153
+Evan Apfelbaum: IEC B13
+Olivera Gajic: SHA 201
+Laurina Zhang: STH 325, STH 325
+Alejandra Salinas: CGS 313, CGS 313, CGS 313
+Sungho Noh: CDS 262
+Rebecca Bourgault: SCI B01
+TJ Dipuma: PSY B43, PSY B43
+Irit Kleiman: HAR 302, HAR 302
+Nolan Shepherd: PSY B55
+Jennifer Bentley: LAW 108
+Jared Highlen: BCN 115
+Stacey Gelsheimer: CAS 114A, CAS 114A, CAS 521, CAS 521
+Mark Richardson: CAS 227, CAS 227
+Sophia Sheumack: GSU B03
+Abigail Strayer: COM 100
+Arlene Ovalle-Child: CAS 114A, CAS 114A, CAS 114A
+Linda Doerrer: MET 101
+Monique Kelley: FLR 404B, FLR 404B, FLR 404B
+David Marino: HAR 428, HAR 428
+Maria Datel: EPC 208
+Ashley Davis: FLR 404R, FLR 404R
+Christina Michaud: CAS 502
+Christine Mulvey: STH B22
+Kamal Sen: IEC B09B
+Stephen Cesso: CGS 123
+Lorraine Kaplan: KCB 104
+Pinghua Liu: PSY 212
+Felice Amato: SCI B19
+Lucy White: CAS 227, CAS 227
+Nancy Harrowitz: HAR 314
+Ariel Grubb: CAS 327
+Karl Kirchwey: CGS 121, CGS 121
+Keanu Nichols: CAS 204B
+Bryan Plummer: FLR 404L
+Steve Ramirez: COM 107
+Alice Cronin-Golomb: PSY B51
+John Kirks: CDS B64B, CDS B64B
+Dilip Mookherjee: PHO 203, PHO 203
+Andrew Newman: THA 208, THA 208
+Juliet Pennington: EOP 278, EOP 278, EOP 278
+Chuanfei Dong: CAS 114B
+Saida Grundy: FLR 404D
+Albert Lamonda: CAS 315
+Shilpa Parnami: CAS 237, CAS 237, CAS 237
+Reza Rawassizadeh: IEC B09B
+Jane Pryma: IEC B11, IEC B11
+Donald Andrade: IEC B13, EOP 276, IEC B01, IEC B01
+Joseph LiPuma: FLR 254, FLR 254, FLR 254, FLR 254, FLR 254
+Susan McGurk: FLR 405
+Peter Mayer: CFA 105
+Samia Hesni: CDS 265, CDS 163, CDS 163
+Rachell Powell: KCB 104, KCB 104
+Jihye Sung: CAS 330, CAS 330, CAS 330, CAS 330
+Karla Odenwald: PTH 114
+John Bolduc: PSY B33
+Srikanth Gopalan: CDS 264, CDS 264, CDS 264
+Lisa Becker: CAS B20, CAS B20, CAS B20
+Jongin Kim: LAW AUD
+Preethi Narayanan: PSY 212, PSY 212, PSY 212
+Leonid Reyzin: FLR 404L, FLR 404L
+Ari Trachtenberg: EOP 264
+Sandra McEvoy: CDS 262
+Rena Conti: CAS 502
+Hong Ko: CAS 310, CAS 310
+Kathryn Coduto: COM 310, COM 310, COM 310
+James Uden: HAR 220, HAR 220
+Craig Sender: MCS B29
+Brian Hummel: FLR 338
+Manher Jariwala: COM 319, COM 319, COM 319, COM 319, CAS 502, CAS 502, CAS 426, CAS 426
+Ian Sue Wing: EOP 278
+Monica Carvalho Gimenes: COM B29, COM B29
+Behdad Shahossini: AGG G105
+Duncan Reehl: IEC B07, IEC B07
+Vartan Aghababian: LSE B01
+Igor Iwanek: EPC 102
+Gaurab Aryal: PSY 210
+John Shea: GSU 312, GSU 312
+Kyle Gobrogge: COM 206, COM 206, COM 206
+Patrice Oppliger: AGG G171
+Karina Sembe: STH 625
+Curtis Runnels: CAS B25B, CAS B25B
+Alona Maslennykov: IEC B09B, IEC B09B
+Aliaksandra Kiniova: EPC 206
+Manos Athanassoulis: PSY B33
+Aneesh Raman: FLR 404R
+Matthew Moore: MCS B37, MCS B37
+Judith Scott: PSY B55
+Rebecca Copeland: THA 201
+John Fox: CAS 330, CAS 330
+Patricia Babb: CAS 325
+Alison Brack: STH 319
+Dustin Allen: CDS B64B, CDS B64B, CDS B64B
+Yoon Yang: CAS 203, CAS 203
+Ashis Gangopadhyay: HAR 240
+Catherine Espaillat: COM 208, COM 208
+Elizabeth Coppock: GSU 219A, GSU 219A
+Vesko Garcevic: CAS 114A, CAS 114A
+Andrew Campolieto: IEC B01
+Daniel Abramson: PSY B55
+Megan Horn: PSY B55
+Fatema Tasmia: COM 310
+Margaret Litvin: PSY 210, PSY 210
+Moshe Hagigi: HAR 210
+Eric Simonian: FLR 404D, FLR 404D, FLR 404L, FLR 404L
+Dmitriy Leyfer: LAW 605
+Nancy Harayama: CAS 223
+Lynne Cooney: HAR 212
+Dimitrije Stamenovic: MUG 205, MUG 205
+Alexis Courtney: KCB 103
+Joshua Kays: MUG 205
+Mariama Bah: FLR 404D
+Harprit Bedi: FLR 404B
+John Matthews: CAS 220, CAS 220
+Noelle Graves: BRB 122
+David Ritt: CGS 315
+Steven Weigt: CDS 365
+Erin Murphy: CAS 218, CAS 218
+Sandra Deacon Carr: LAW 212
+Jimmy Erkens: IEC B10
+Carolyn Hodges-Simeon: ENG B01
+Brooke Rothamer: CFA 102
+Jose Diaz Baez: CFA 167
+Tina Durand: HAR 210, HAR 210
+Marlies Spanjaard: STH 318
+Alison Carberry: CAS 224, CAS 224, CAS 224
+Kathleen Vandenberg: CAS 306
+Pawel Przytycki: COM 106
+Jen-Wei Lin: SAR 610
+Nathan Davis: CAS 203
+Jonathan Savage: CFA 105
+Jesse Kaminsky: FRC L131
+Elizabeth Tubergen: FLR 236
+William Braudis: CFA 171
+Brian Kulis: PHO 203
+Tasia Jones: HAR 314, HAR 314
+Kimberly Saudino: FLR 405
+Michael Brody: CFA 216
+Jennifer Gomez: CAS 237, CAS 237
+Jason Wong: CAS 426
+Peter Golbus: CGS 323, CGS 323
+Harry Hobbs: CAS 213, CAS 213
+Andy Fan: EPC 203, EPC 203
+Andreana Cunningham: PHO 203, PHO 203
+Thomas Berger: EOP 276
+Deepak Rauniyar: CAS 521
+Yang Qu: SAR B01
+Jennifer Kaldenberg: STH B24
+Michaela Mcsweeney: CAS 225
+Patrick Abouchalache: CDS B64A, CDS B64A, CDS B64A
+Kathleen Brubaker: EPC 208
+Amiremad Ghassami: SCI 150
+Rachel Levy-Bell: BCN 115
+Ana Albuquerque: SHA 206
+Marshall Hook: CAS 427
+Eva Garrett: MUG 203, MUG 203
+Rita Cote: COM B27
+Ryan Goh: CFA 468
+Hannah Braverman: EOP 264, EOP 264, EOP 264
+James Grasso: CGS 115
+Christophe Chamley: CFA 105, CFA 105
+Jason Grossman: ERB B07
+Jack Arnold: IEC B13
+Deeana Klepper: BAB 140
+Brian Flaherty: CAS 114A
+Samuel Solomon: FLR 404R
+Gianluca Stringhini: LAW 605
+Zhuming Yao: CDS B62, CDS B62
+Yanhang Zhang: BAB 148
+George Papadakis: CGS 117B
+Caitlin Glass: CAS 216
+Melodie Jeffery-Cassell: CDS 463, CDS 463
+Nathan Troup: LAW 211
+Jennifer Powell: AGG C205, AGG C205, AGG C205
+Gavin Whitelaw: LAW 102
+Kimberly Arkin: ENG 113, ENG 113
+Suwen Shi: CDS 164
+Daniel Parsley: FLR 405
+Catalina Rodriguez: CAS 426, CAS 426
+Ivan Fernandez-Val: CAS 318, CAS 318
+Enrico Bellotti: SCI 444
+Timothy Kohl: FLR 404D
+Angelo Guadagno: FLR 404B
+Erich Bryant: SCI B01
+Anne Callahan: EPC 102
+Andrew Robichaud: CAS 323B, CAS 323B
+Joseph Derosa: PSY B55
+Yuhe Chang: COM 206
+Curtis Woodcock: PTH 115
+Samantha Topka: COM 321, COM 321
+Lana Cook: CSE 450
+Diane Fargo: COM B05, COM B05
+Christopher Kelliher: CAS 502, CAS 502, CAS 502, CAS 502
+Hsueh-Ling Huynh: SOC B65, SOC B65
+Andrew Wood: CGS 117B, CGS 117B, CGS 117B, CGS 117B
+Angela O'Neil: STH B20
+James McCarty: CAS 201
+Grace Hansen: CDS 365
+David Hackett: CGS 121
+Esther Bullitt: FLR 338
+Gregory Gomez: EMB 125, EMB 125
+Frederick Geyer: LAW 212
+Alysa Williams: COM 213
+Jeffrey Allen: WED 130, WED 130, CDS B64B, CDS B64B, CDS B64B
+Emily Evans: SCI 348A
+Jorge Sanchez: GSU 239
+Alexander Belyaev: EPC 206
+Bjorn Persson: SCI B19
+Stephen Esposito: CAS 222, CAS 222
+Elizabeth Duffy: CAS 212
+Cecelia Slayter: CGS 505
+Jennifer LaRoche: CFA 500
+Tereasa Brainerd: GSU B02
+Andrea Berlin: CDS B64A, CDS B64A
+Keith Spangler: CAS 227, CAS 227
+Sharon Topper: HAR 240, HAR 240
+Martin Fiszbein: CDS 265, CDS 265
+Jennifer Mavroudakis: CAS B08B, CAS B08B, CAS 222, CAS 222, CAS 222
+Jeffrey Markuns: PRB 148
+Christopher Brown: CAS 227
+Rady Roldan-Figueroa: LAW AUD
+Maciej Szczesny: CAS 220, CAS 220, CAS 323B, CAS 323B
+Fotios Kokkotos: COM 317, COM 317
+Roy Grundmann: CAS 203, CAS 203
+Lisa Roberts: MCS B37, MCS B37, CAS B08B, CAS B08B
+Lynne Allen: IEC B10
+Cecily Banks: SCI 442
+Varsha Kulkarni: IEC B10
+Edward Loechler: IEC B01, IEC B01, IEC B01
+Elliot Saltzman: IEC B07, IEC B07
+Dana Janbek: CFA 557, CFA 557, CFA 557
+Toni Pepe: SAR 610
+Sharon Goldberg: LAW 212
+Daniel Silver: THA 422, THA 422, THA 422
+Jonathan Zatlin: IEC B10
+Sean Lubner: PSY B37, PSY B37
+Thomas Barfield: FLR 404L, FLR 404L
+Hua Wang: IEC B07
+Jiashu Sun: CGS 423
+Margaret Ingolia: CAS 316
+Seynedhee Avenie: CAS 425
+Aimee Genell: FRC L132, FRC L132
+Meers Oppenheim: THA 422
+Andre Switala: CDS B64A, CDS B64A, CDS 264, CDS 264, CDS 264
+Abigail Leblanc: THA 422, THA 422
+Lawford Anderson: CDS 265, CDS 265
+Christopher Maurer: PSY B37
+Joshua Johnson: FRC 222
+Gregory Williams: IEC B09B
+Rachel Nolan: CAS 222, CAS 222
+Yunmei Bai: PRB 148
+Alex Denison: FLR 404R, FLR 404R, FLR 404R
+Mark Crovella: WED 130
+Haegi Kwon: PSY B33
+Jonathan Huggins: JSC 201
+James Vincent: COM 319, COM 319
+Steven Katz: COM 317, COM 317
+Leora Lanz: RKC 101
+Rebecca Moorman: CAS B06B, CAS B06B
+Gina Powers: CDS 163, CDS 163, CDS 163
+Paul Piwko: CDS 364, CDS 364
+James Cherry: CGS 323
+Eric Marks: FLR 409, FLR 409
+Gary Klein: COM B05
+Layla Khayr: CFA 308
+Marisa Crichton Amaya: CAS 222, CAS 222
+Chuanhua Duan: STH 115
+Ran Canetti: GSU 228
+Yiding Zhang: IEC B09A
+John Tullai: FLR 404B, FLR 404B
+Michelle Sander: CFA 557
+Alan Wu: EOP 258
+John Mackey: CAS 425, CAS 425, CAS 425
+Brittany Jackson: HAR 105, HAR 105
+Megan Macgarvie: CDS B64A, CDS B64A
+Paul Gutierrez: GSU 219B
+William Waters: COM B05, COM B05
+Kristen Coogan: LAW 211
+Eric Cordero-Siy: HAR 212
+Amanda Deloureiro: GSU 310
+Kenneth Sebesta: HAR 224
+Mia Correia: CFA 468
+Sirui Chen: SAR 300
+Janice Pieroni: EMB 125
+Catherine Klancer: CAS 227
+Thomas Enkosky: LAW 102, STH B23, STH B23, STH B23, CAS 326, CAS 326
+Wanchen Hong: SOC B57, SOC B57
+Laura Captari: HAR 410
+Yawen Zhang: ENG 302, ENG 302
+Maura Walker: BAB 121
+Olivia Kulczycky: ERA 201
+Marcus Shaw: PRB 146
+Horacio Frydman: CFA 105
+Allison Beauregard: CAS 201
+Shelley Brown: MET 122
+Benjamin Varat: CAS 204B, CAS 204B, CAS 204B
+Debarghya Mukherjee: STH 115
+Konstantinos Spiliopoulos: IEC B09A
+Ching-Hsiang Yao: THA 201, THA 201, THA 201
+Tim Palmer: COM 317, COM 317
+Marc Weinberg: CAS 522, CAS 522
+Zilu Tang: PSY B33
+Andrew Jacobs: CAS 425, CAS 425
+Juan Ortner: CGS 313, CGS 313
+Kecia Ali: CDS B62, CDS B62
+Hayes Jackson: CFA 410
+Arash Yazdanbakhsh: CAS 227, CAS 227
+Logan Tohline: COM 323
+Grace Kim: KCB 102
+Pearl Steinbuch: MCS B37, MCS B37
+Lauren O'Neal: CAS 425
+Takashi Kimura: PSY 150
+Maria Torras Freixa: KCB 104, KCB 104, KCB 104
+Michela Gerardin: HAR 312
+Paul McManus: CGS 323, CGS 323
+Haci Gunduz: MET 101
+Meg Younger: EOP 262
+Xuezhou Zhang: PSY B33
+Christopher Evans: HAR 310
+John Maleyeff: STH 325
+Edward Chien: PRB 148
+Daniel Scrivener: SOC B67
+Potter Palmer: OSW 922
+Martha Tompson: CAS 227
+Justen Carter: CDS 363, CDS B64B, CDS B64B
+Kaija Schilde: THA 123
+Deborah Cornell: SCI 348B, SCI 348B
+Antoine Pageau-St-Hilaire: CAS 114A
+Kelsee Bratley: IRC 220
+Brian Walsh: CAS B12
+John Baynard: STH B20
+Todd Farchione: MUG 203
+Filipe Maia: SCI 117
+Chris Wells: MUG 205
+Susan Mizruchi: CGS 117B
+Gregory Benoit: SCI 130
+Joel Brandwine: GSU 310
+Jeffrey Considine: FLR 404B
+Spyridon Konstantinos Dragazis: MUG 205
+Dora Erdos: FLR 404L
+Garry Kuwanto: KCB 103
+Jack Weinstein: GSU 228, GSU 228
+Natalya Bassina: FLR 209, FLR 209
+Daniela Rivera: CAS B12
+Jason Yust: LSE B03, LSE B03
+Anatoli Polkovnikov: EOP 278
+Mikel Garcia-Marcos: CGS 421
+David Waxman: FLR 338
+Carolyn Gallagher: OSW 916
+Kathryn Griner: MCS B37, MCS B37
+Prasad Kothapalli: CAS 522, CAS 522
+Gisela Hoecherl-Alden: BAB 141
+Dinara Lewis: CDS 463
+Tali Moreshet: FLR 404L
+Darien Pollock: SCI 348B, SCI 407, SCI 407
+Lynn Lei Li: CAS 330, CAS 330, CAS 330
+Victoria Maguire: KCB 107
+Angela Seliga: SCI 128
+Melanie Hall: CAS 327
+Robert Hefner: CAS 114A
+Uri Eden: EPC 207
+Mulugeta Zegeye: CFA 167
+Ayelet Kershenbaum: CDS B64B
+Steven Kou: CDS 365, CDS 365
+Ziba Cranmer: CAS 312, CAS 312, CAS 312, CAS 312, CAS 204B
+Thomas Gardos: HAR 211, HAR 211
+Simon Kasif: ERB B08
+Hiep Bui: CFA 460
+Ankan Ganguly: COM 213
+Denise Wong: LSE B01
+Paul Thayer: LAW 418
+David Coker: OSW 921
+Richard Deese: CGS 115
+Siu Lau: FRC 222
+Robert Cadigan: IEC B11
+David Abel: KCB 103, KCB 103
+John Hall: CFA 102, CFA 102
+Jessica Ghai: OSW 921
+J Keegan: STH 113
+Salma Tazi-Naim: FRC L137, FRC L137, FRC L137, FRC L137
+Alicia Borinsky: CAS 306
+Angela Gooch: FRC L137
+Daniel Fulford: CGS 323
+Ann Aschengrau: ERB B07
+Daigengna Duoer: AGG G171, AGG G171
+Jerry Jalette: SCI 442, SCI 442
+Kathleen Liakos: KCB 101
+Rachel Weiss: AGG G171
+Anne Carney: GSU B02
+Paul Hare: HAR 222, HAR 222
+Branka Tomic: CAS 114B
+Julie Yen: CAS 114B, CAS 114B
+Aaron Goldberg: IEC B11
+Andrei Hagiu: CAS 314, CAS 314
+Anne Gehrenbeck-Shim: PSY B55, PSY B55
+Ken Chung: THA 422, THA 422
+Kathryn Burak: FLR 404B, FLR 404B
+Johanna Milord: KHC 101
+Katherine Lakin-Schultz: THA 412, THA 412, THA 412
+Andrew Sheehan: SOC B57
+Christopher Athaide: HAR 310, HAR 310
+Adam Seligman: HAR 315
+Robert Weller: ERB 203
+Catherine O'Connor: MUG 203
+Ann Allen: PRB 148
+Micki Taylor-Pinney: CAS 201, CAS 201
+Gabriel Ocker: HAR 105
+Ryan Kath: FLR 205
+Anne Short: CAS 330
+Ines Garcia De La Puente: CFA 500, CFA 500
+Sheila Sitomer: SCI 294
+Aryssa Harris: LAW 605
+Spencer Piston: IEC B10
+Maria Gapotchenko: COM 317
+Rosemary Corbin Cummings: CAS 318
+Matthew Larson: STH 319
+Richard Primack: KHC 101
+Karl Ludwig: GSU 330A
+Kelly Mayo: LAW 212
+Gabriel Polonsky: COM 206
+Yuhei Miyauchi: FRC 222
+Jawwad Noor: EOP 279, EOP 279
+Nicholas Deporzio: HAR 426
+William Klein: CGS 505
+Mark Miller: MUG 205
+Viktoria Hackbarth: CFA 171, CFA 171
+Thomas Bania: GSU 219A
+Maged El-Batanouny: CGS 315, CGS 315
+Jill Jankelowitz: PSY B49
+Tessa Hite: CDS 365
+Akihiro Kanamori: CAS 201
+Kexin Zheng: CAS B06A, CAS B06A
+Jonathan Barnes: FLR 404L, FLR 404L
+Purva Ranchal: PHO 205
+Sihan Zhang: STH B23
+David Walker: CAS 227
+Janusz Konrad: MCS B31
+Cornelia Streeter: LSE B01
+Leslie Epstein: CAS 204B
+Jerry Chen: CAS 213
+Douglas Rosene: MCS B29
+Richard Rushmore: CDS 264
+Daniel Dahlstrom: EOP 262, EOP 262
+Leslie Hawkes: EPC 201
+Didem Vardar-Ulu: IEC B01
+Bahareh Bazargani: CAS 227
+Christina Alcaro: FRC L131
+Joseph Basile: CAS B08A
+Asya Lyass: GSU 330A
+Monica Watford: STH 325, STH 325
+Anne Escher: LAW 204
+Matthew Bretschneider: PHO 201
+Nahum Karlinsky: FLR 304
+Ephraim Linder: ENG B01
+Sofya Raskhodnikova: WED 130
+Robert Chodat: SCI 153
+Shannon Peters: CGS 121
+Lucas Clemens: HAR 211
+Carl Ruck: CGS 129, CGS 129
+David Snyder: CAS 114A
+Constance Browne: COM 111
+Richard Maltzman: EOP 270
+H. Sami Karaca: RKC 101, RKC 101, RKC 101, RKC 101
+Timothy Duncan: COM 211
+Kerlyne Pacombe: LAW 211
+Ellen Herzfelder: SCI 162, SCI 162
+Kangjoon Cho: STH 317
+Michael Dietze: LAW 418
+Timothy Longman: IEC B10
+Vidhu Priya Mukundan: EPC 203
+Noora Lori: CAS 223
+Farshid Alizadeh-Shabdiz: COM 100, COM 100
+Meg Salvia: MCS B37, MCS B37
+Jilene Chua: EOP 264
+Emma Lejeune: EOP 268
+W Munsell: THA 422, THA 422
+Eleni Granas: FLR 346
+Pratistha Joshi Rajkarnikar: HAR 212
+Ouzena Bouadi: BAB 121
+Tuan Leng Tay: MCS B37
+Daniel Williams: CFA 216
+Julie Springwater: EOP 262
+Ayala Berger: CFA 104
+Tsitsi Musasike: EPC 101
+Zachary Mondesire: SHA 110
+Uwe Beffert: CFA 102, CFA 102
+Aaron Garrett: FLR 404D, FLR 404D
+Janna Greenberg: MOR 101
+Brian Moen: SCI 438
+Adrish Dey: ENG B01
+Abhinit Sati: CAS 330
+Iddo Drori: IEC B09B, IEC B09B
+Ge Gao: EOP 279
+Carrie Donovan: COM 310, COM 310
+Ginna Hall: SAR 300
+Joshua Fineberg: CAS 522
+Rebekah Stearns: GSU 310
+Liam Quidore: CAS B06A
+Trace Sears: GSU 219A
+Esteban Alejandro Crespo Jaramillo: HAR 324, HAR 324
+Kabrina Chang: IEC B12
+Paul Cosway: KCB 102, KCB 102, KCB 102, KCB 103
+Woodrow Hartzog: HAR 312
+Bailey Benson: HAR 224
+Mary Snyder: MCS B31
+Cynthia Bradham: MCS B33
+Keith Ericson: THA 208
+Karen Warkentin: PTH 114
+Peng Yin: PSY B55
+Anming Gu: CAS 315
+Leonid Levin: FLR 207
+Winter Miller: MCS B37
+William Kahn: CAS 323B
+Carryl Navalta: PTH 114
+Shira Diner: SOC 241, SOC 241
+Angelo Petrigh: HAR 404, HAR 404
+Karen Pita Loor: SCI 348A
+Brian Wilson: CAS 233, CAS 233
+Dennis Wuerthner: CAS 310, CAS 310
+Archibald Burnett: HAR 314, HAR 314
+Barry Horwitz: AGG G105
+William Woo: IEC B09B
+Zlatko Vasilkoski: CDS 262
+Eliska Wichterlova: COM B31
+Michelle Ehrenreich: SCI 309
+Merav Shohet: LAW 103, LAW 103
+James Chapman: EPC 209
+Jana Mulkern: PSY 210
+Alexander Papanikolaou: LAW 102
+Peter Howard: SCI B23
+Donna Pincus: KCB 102
+Jordi Jaumandreu: CDS B64A, CDS B64A
+Roberta Micallef: CFA 556
+Krystie Dickson: HAR 240
+Michael Birenbaum Quintero: CAS 208, CAS 208
+Loretta Lees: HAR 406
+B Roberts: FRC 220
+Nicole Berry: CDS B64B, CDS B64B
+Juanita Duque Rosero: WED 130
+Catherine Nez: CDS 364
+Madison Condon: PSY B53
+R. Claire Bunschoten: MOR 101
+Andrew David: CAS B06B, CAS B06B, CAS B06B
+Cristina Brinkerhoff: EPC 206
+Haylee Backs: PTH 114, PTH 114
+Min Kim: CDS 163
+Michael Davis: MET 101
+Hanan Akbari: CAS 227
+Lena Sheehan: PSY B33
+Zayir Malik: PHO 305
+Linghui Feng: COM 338
+Nathan Klein: COM 100
+Catherine Connell: MCS B37
+Scott Schaus: CGS 523, CGS 523
+James Baldwin: MUG 205, MUG 205
+Peter Schwartz: HAR 222
+Alexander de la Paz: FRC L137, FRC L137
+Deborah Kelemen: IEC B09A
+Barry Barth: SCI 130
+Carole Palumbo: EPC B05
+Babak Kia Montazam: CAS 203, CAS 203
+Erin Riley: CDS 263, CDS 263, CDS 263
+Dionne Lomax: SOC B65, SOC B65
+Nicole Cohen: GSU B02
+Andrey Vyshedskiy: SCI 109
+Peter Blake: KCB 103
+Katherine Baulier: CAS 228
+Netta Davis: GSU 312
+Eric Cueny: CFA 304
+Ruth Paris: HAR 304
+Sarah Madsen Hardy: EOP 270
+Syed Nawab: KCB 103
+Nadja Jacimovic: CDS 365, CDS 365, CDS 365
+Nicole Smythe-Johnson: LAW 212
+David Demeritt: EPC 203, EPC 203
+Deniz Cetin Corbaci: IEC B10
+Jared Weinstein: FLR 404D
+John McCarthy: CGS 113
+Meredith Santaus: CFA 106
+Ashley Moore: SAR B02
+Sherrod Blakely: EOP 268
+Remi Trudel: CAS 521
+William Moore: CAS 211
+Dorothy Hutchinson: IEC B07
+Stephen Haines: OSW 922, OSW 922
+Shashan Bao: KCB 101
+Dan Li: OSW 922
+Karen Tucker: OSW 922
+Shyamsunder Erramilli: EOP 278, EOP 278
+William Mcclendon: EOP 268
+Aziza Ahmed: COM 107
+Tina M. McDuffie: CAS 233
+Herbert Golder: CGS 323
+Zhongjun Qu: FLR 404B
+Mark Kon: HAR 306
+Patricia Coleman: STH 343
+Kirill Korolev: CAS 427
+Healey Suto: THA 422
+Mark Bamford: CGS 311
+Hong Pan: MCS B33
+Oriane Georgeac: CGS 521
+Bene' Cruz: CDS 463, CDS 463
+Michael Kort: SCI 409, SCI 409, SCI 409
+Petra Hesse: MCS B31
+Roberto Paiella: CFA 460
+Paul Ewenstein: CDS 265
+Krzysztof Onak: RKC 101
+Michael Dodge: STH 525
+Aaron Sheehan: FLR 122
+Daniel DiPaolo: COM 100
+Ericka Osses: IEC B10
+Kristin Smith-Crowe: SOC B57
+Scott Thompson: SCI B01, SCI B01
+Samantha Kubica: PSY B37
+Pierre Perron: HAR 228
+Qiang Cui: STH 115
+Melisa Osborne: IEC B09A
+Mazen Sakr: COM 321
+Brittany Bernard: PRB 150
+Monica L. Wang: EOP 274
+Christopher Vaughan: MET 101
+Alexander Bertoloni Meli: CAS 313
+Mark Stanley: CAS 203
+Jill Walsh: FLR 303, FLR 303
+Joshua Peterson: FRC L132
+Magdalen Balz: FLR 237
+Richard Serrao: AGG G171
+David Weidman: MCS B33
+Faye Harwell: HAR 208, HAR 208
+Laura Hannon: EOP 268
+Becky Martin: KCB 103, KCB 103
+Suela Papagelis: MUG 205
+Pankaj Tandon: IEC B09B, IEC B09B
+Maria O'Brien: BAB 121
+Likun Chou: EPC 206
+Robert Martinelle: IEC B10
+Ranjan Panth: GSU 228
+Rui Ye: CDS 364
+Rebecca Nichols: GSU 320
+Douglas Sumi: PSY B39
+Christopher Chung: HAR 228
+Barbara Piette: CFA 254
+Allison Waxman: PSY B37
+Jeff Furman: COM 213
+Joan Dimicco: LSE B03
+John Porco: PSY 212
+Raymond Nagem: CDS 265, CDS 265, CDS 265
+Michael Meurer: HAR 414
+Jodi Luber: CFA 468
+Nicholas Rock: OSW 916
+Melissa Holt: CFA 102
+Christopher Rominger: SOC B57
+Kerrin Gallagher: CDS 265
+Simona Altshuler: CAS B08B
+Joseph Darby: CAS 220
+Zhuoyan Si: LSE B01
+Elizabeth Rogers: AGG G171
+Lindsy Goldberg: COM 323
+Brendan Mcconville: PSY 150, PSY 150
+Brooke Williams: HAR 228, HAR 228
+Teona Bagashvili: FLR 404D
+Amy Feng Chen: FLR 404D
+Sabrina Neuman: FLR 405
+Jorge Delva: LAW 414
+Paul Withers: CAS 212
+Nolla Haidar: IEC B01
+Rebecca Loy: ERB B08
+Linda Barnes: THA 412
+Lance Laird: FRC L132
+Ekaterina Gnedenko: CAS 522, CAS 522
+Michael Prince: STO B50
+Scott Morris: WED 130, WED 130
+James Bird: CAS 220
+Emily Goldmann: FLR 404D
+Diana Dansereau: HAR 228, HAR 228
+Patrese McClain: CAS 116, CAS 116
+Brock Tibert: CFA 557
+Larry Yackle: CAS 204B
+Yamiley Laratte: GSU 320
+Jodi Dean: CFA 254
+Pegaret Pichler: CDS B64B
+Kimberly Howard: FRC L131
+David McMahon: IRC 220
+Jiratchaya Thanayangyuen: CDS 264
+Victor Kumar: BRB 121
+Joshua Coleman: CAS 415
+Anthony Chamberas: CAS 204B
+Parker Shipton: CDS 463, CDS 463
+Richard Lehr: CDS 163
+Aliyah Phipps: CDS 264
+David Sperka: EPC 201
+Ranga Myneni: KHC 101
+Seth Villegas: FLR 207
+Richard Raiselis: CAS B25B, CAS B25B
+Gustavo Rosa: ERA B11, ERA B11
+James French: CDS 463, CDS 463
+James McDaniel: PSY B47
+Nicholas Westberg: PSY 150
+Francis Rose: ERA 201
+Richard Cornell: IEC B09A
+John Russo: GSU B02
+Douglas DeNatale: LAW 108
+Emily Smith: EPC 203
+Melissa Kibbe: CAS 330
+Andrew Fitzpatrick: CFA 355
+Seferine Baez: BCN 208
+Ritika Sibal: EOP 262
+Elise Choe: IEC B06
+Eleonora Grotteria: CDS 364
+Alan Feld: COM 319
+Erica Pratt: THA 410
+Anna Henchman: MCS B31
+Susana Sinclair: SCI B01
+Jenna Pelletier: PHO 906
+Elijah Willig: LAW 102
+Samantha Mayowa: CAS B06A
+Erin Mullins: SCI B19
+Dennis Reilly: FLR 122
+Victoria Sweetser: GSU 330A
+Nina Mazar: CDS 364
+Kari Kipf Horstmann: EPC 208
+Shelly Rambo: STH 113
+Margrit Betke: AGG G171
+Yiwen Gu: ENG B01
+Sha Lai: CFA 308
+Mahir Patel: SCI 407
+Ruchi Khanna: PHO 205
+Thomas Tullius: CAS 427
+Charles Tharp: WED 130
+Martin Aucoin: CAS 426
+Ilana Hurwitz Starfield: IEC B09A
+Michel Anteby: ENG B01
+Pankaj Mehta: EOP 270
+Avi Mohan: SCI 415
+Jori Berger-Greenstein: CDS B64A
+Seth Blumenthal: HAR 212
+Kathryn Lamontagne: SCI B19, SCI B19
+Eugenio Menegon: HAR 222
+Aixin Yi: IRC 220
+Michael Reilly: COM 323
+Alina Ene: LAW AUD
+Tiago Januario: LAW 212
+Ta Duy Nguyen: CFA 102
+Gregory DeFronzo: PSY 150
+San Chee: COM 326B
+JOSEPHINE MA: FLR 207
+Emanuel Katz: EPC 203
+Johannes Schmieder: COM 338
+Lauren Szenderski: COM B29
+Melissa Zarate: HAR 240, HAR 240
+Anna Ward: SOC B67
+Kimberly Crespo: CAS 502
+James Joyce: CAS B25A
+Kelly Capri: THA 124
+Saniya Dattatraya: SCI 307
+Lenette Azzi-Lessing: GSU 315
+Melissa Pergande: CAS 228
+Niveditha Senthilvel: THA 201
+Jacob Willig-Onwuachi: JSC 107
+Stephen Marks: PSY B53
+Zachery Casey: LAW AUD
+Qiancheng Fu: FLR 404L
+June Wunder: PSY 212
+Tatenda Pasipanodya: HAR 314
+Jenna Conklin: GSU B02
+John Caradonna: FLR 404L
+Brianna Pecourt: THA 201
+Zohra Ahmed: BAB 141
+Sofia Perez: SCI 348A, SCI 348A
+Srdjan Divac: IEC B09B
+Adam Guren: HAR 224
+Pegeen Ryan: BAB 148
+Rebekah Miller: CGS 313
+Alex Sushkov: CGS 315
+Laura Jimenez: FLR 404R
+Grace Hymel: PSY B47
+Eleonora Mancuso: CAS 235
+Jonathan Feingold: STH 325
+Jerson Caro Reyes: COM B27
+Xin Brown: MCS B37, MCS B37
+Bobak Nazer: FLR 254
+Nakul Padalkar: LSE B03
+Frederic Fitts: IEC B04
+Sorcha Martin: FLR 405
+Cinzia Arruzza: CAS 204B
+Jack Polnar: CAS 214
+Tsegay Tekleselassie: CAS 229
+Kim McCall: CGS 311
+Jacqueline Kaye: CDS 262
+Cutler Cleveland: CAS 326
+Gregory Page: COM B25
+Adriana Tomic: SHA 201
+JM Howey: FRC 220
+Gregory Dorchak: SCI 268D
+Bahar Erbas: EPC 207, EPC 207, EPC 207
+Patrick Courtney: GSU 219B
+Koritha Mitchell: ERA B11
+Alexander Green: LAW 212
+Wilson Wong: STH B23
+Siobhan O'Mahony: CAS 327
+Muhammed Yusuf Kocyigit: COM 338
+Yerzhan Umirzakov: IEC B09A
+Nicolette Manglos Weber: LAW 414
+Petro Lisowsky: MCS B29
+Andy Andres: IEC B07, IEC B07
+Zoe Hoyt: KCB 101
+Joseph Harris: CGS 323
+Jenna Hagan: HAR 322
+Lisa Borden: GSU 330A
+Jasmine Gonzales Rose: PSY 153
+Edward Nelson: EPC 203
+Joel Gill: CSE 452
+Martha Werler: GSU 315
+Brian Williams: LAW 103
+Jana Iverson: PSY B51
+Jenna Raheb: IRC 220
+Laura Stephens: CFA 104
+Kimberly Macdonald: SCI 115
+Michelle Amazeen: CAS 228
+Maura Smith: CAS 229
+Meroline Bazile: CAS 114A
+Ariel Tichnor-Wagner: STH B20
+Detris Adelabu: CAS B36
+Mark Berman: PRB 150
+Sandra King: FLR 237
+Jerome Detemple: JSC 201
+Jennifer Altavilla-Giordano: STH 325
+Oduwa Osagiede: JSC 201
+Jane Starkman: SCI 448
+Annemarie McClain: CFA 557, CFA 557
+Isabel Novick: BAB 141
+James Rohlf: FLR 404L
+Eleonora Villegas-Reimers: CFA 106
+Warren Hershman: PSY B55
+Carol Sennott: IEC B10
+Katie Wynn: ERB B07
+Tianyu Wang: CAS 220
+Jeffrey Gavornik: CGS 117B
+A. Max Reppen: IEC B09B
+Stephen Chomyszak: CDS 463
+MARIA COUTINHO: SCI B23
+Daniel Weidknecht: PSY 212
+Bailey McLernon: CFA 557
+Lois Horwitz: THA 124
+Allison McDonald: IEC B09A
+Elizabeth Cohen: PSY 210
+Lior Hamovitz: IEC B13
+Michael Hisamoto: STH 525
+P Kotiuga: PHO 205
+Edward Kearns: STH 115
+Deborah Kahn: LAW 212
+Qimin Liu: FLR 404R
+Nadirah Mansour: SAR 104
+Lisa Freudenheim: CDS 265
+Jeffrey Rubin: CFA 216
+Andrew Sabelhaus: CAS 426
+Max Greenberg: PSY 212
+Korie Tinch: SHA 201
+Solomon Owusu: GSU 219B
+Kelly Pesanelli: CAS 330
+Jack Beermann: KCB 104
+S Merritt: GSU 310
+Michael Medina: HAR 210
+Marie McDonough: EOP 266
+David Rohrlich: IEC B10
+Eric Bjornson: GSU 228
+Sonia Chung: ENG 302
+Edward Downes: EOP 274
+Peter Garik: FLR 236
+Jonathan Mijs: MCS B37
+Mamikon Ginovyan: PHO 211
+Maria Grabe: IEC B05
+Carla Kath: CFA 468
+Wei Wang: CAS 326
+Na Yu: AGG G171
+Andrew Licini: FRC L137
+Kim Hokanson: PSY B51
