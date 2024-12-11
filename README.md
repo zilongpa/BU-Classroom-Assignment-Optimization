@@ -1,6 +1,6 @@
 # CS506 Final Project
 
-![](assets\图片_20241210194403.png)
+![](assets\图片_20241210194403.webp)
 
 > This is a 3D visualization of the campus created using Blender. Unfortunately, I was unable to complete it due to time constraints.
 
@@ -82,15 +82,15 @@ From the cleaned and integrated dataset, the following data elements were extrac
    
    - **Visualizations**
    
-     - ![](1.acquisition-junhui_huang\distribution_of_walking_distances.png)![](1.acquisition-junhui_huang\boxplot_of_walking_distances.png)
+     - ![](assets/distribution_of_walking_distances.png)![](assets/boxplot_of_walking_distances.png)
    
      - Most of the buildings are reachable within 2200 meters, with an average distance of 1200 meters. The outliers on the right represent building pairs that require walking between the main campus and the medical campus. To maintain relevance to computer science activities, we will exclude medical campus buildings to avoid scenarios like scheduling a computer science class in an operating room.
    
-     - ![](1.acquisition-junhui_huang\top_10_distances.png)
+     - ![](assets/top_10_distances.png)
    
      - We also provide a heat map of walking distances, which requires zooming in to view the values within the cells.
    
-     - ![](1.acquisition-junhui_huang\heatmap_of_walking_distances.png)
+     - ![](assets/heatmap_of_walking_distances.png)
    
      - We also provide a [map displaying the distribution of building locations](1.acquisition-junhui_huang\map.html), along with another [map illustrating the paths from all other buildings to the LAW building](1.acquisition-junhui_huang\path_to_law_map.html). Below are the corresponding screenshots:
    
