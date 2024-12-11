@@ -92,7 +92,7 @@ From the cleaned and integrated dataset, the following data elements were extrac
    
      - ![](assets/heatmap_of_walking_distances.png)
    
-     - We also provide a [map displaying the distribution of building locations](1.acquisition-junhui_huang\map.html), along with another [map illustrating the paths from all other buildings to the LAW building](1.acquisition-junhui_huang\path_to_law_map.html). Below are the corresponding screenshots:
+     - We also provide a [map displaying the distribution of building locations](1.acquisition-junhui_huang/map.html), along with another [map illustrating the paths from all other buildings to the LAW building](1.acquisition-junhui_huang/path_to_law_map.html). Below are the corresponding screenshots:
    
      - ![image-20241210232204164](assets/image-20241210232204164.png)
    
