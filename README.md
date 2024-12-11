@@ -109,40 +109,27 @@ To streamline future data access, all processed datasets were serialized using P
 
 ## Modeling
 
-The classroom assignment challenge is formulated as a linear optimization model. The objective is to allocate classrooms to professors in a way that **minimizes the total walking cost** over the entire schedule.
+Originally, the classroom assignment challenge was formulated as a linear optimization model. The objective was to allocate classrooms to professors in a way that **minimizes the total walking cost** across the entire schedule.
+
+For the midterm, the optimization problem was modeled using PuLP and solved with the CBC solver on a small dataset. However, when we attempted to input the full schedule into the solver, the memory overflowed. To address this, we realized that schedules for different days are independent, allowing us to break down the problem into five smaller optimization tasks to reduce memory usage. Unfortunately, this approach still failed to run on a machine with 64GB of RAM.
+
+Later, I decided to use **simulated annealing**, an optimization method often used for scheduling problems. The concept behind simulated annealing is to iteratively explore the solution space by allowing worse solutions to be accepted with a certain probability, gradually reducing this probability over time. This process helps avoid local minima and increases the likelihood of finding a near-optimal solution
+
+My primary responsibility (Junhui Huang) was to design the cost function, and fortunately, our previous schema still worked in this context. The following constraints were incorporated into the optimization problem. Violating any of these constraints would result in a penalty of `1e6` added to the total cost, ensuring that the final solution is unlikely to breach them.
 
 
-
-**Decision Variables**:
-
-- Define a binary variable `x[i, j, k]`, which represents whether professor i is assigned to classroom j at time slot k. This variable helps determine classroom assignments while aiming to minimize walking costs.
-- Introduce another helper binary variable `y[i, j, k, m]` to represent whether professor i transitions from classroom j at time k to classroom m at time k+1. 
 
 **Constraints**:
 
-- **Transition Constraints**: For each professor, if they are in classroom j at time k and then move to classroom m at time k+1, the variable y[i,j,k,m] must be 1 according to the classroom assignments.
 - **One Classroom per Course**: Each professor can only be assigned to one classroom at a time.
 - **One Course per Classroom**: To prevent classroom conflicts, each classroom can host only one course at any given time. 
-- **Classroom Capacity Constraint**: Each classroom’s capacity must meet or exceed the demand of the assigned course. 
-
-**Solution Approach**:
-
-- The optimization problem is modeled with PuLP and solved using CBC for the midterm with a small datasets. We decide to run the full datasets with Cplex since it has a better optimization strategy.
+- **Classroom Capacity Constraint**: The capacity of each classroom must meet or exceed the demand of the assigned course. 
 
 
 
-## Visualization
+Another factor we considered was the cost of moving between classrooms within a building. Initially, we planned to develop an estimation algorithm to calculate the equivalent walking distance. However, we later realized that some buildings have elevators while others do not, making it difficult to develop a standardized approach. As a compromise, we decided to reward the algorithm with a reduction of `10` units from the total cost if it assigned a professor to the same classroom for two consecutive lectures. This incentivized the algorithm to maintain professors in the same room whenever possible.
 
-- Create scatter plots or campus maps showing the locations of classrooms and the walking paths between them.
-- Use heatmaps to display the frequency of classroom usage ( and highlight heavily trafficked areas if possible).
-- Generate bar charts comparing total walking costs before and after optimization.
-- Visualize the distribution of classrooms with special features and accessibility options.
-
-
-
-#### A map showing the distribution of building locations.
-
-[Here](https://github.com/zilongpa/CS506-Final-Project/blob/master/map.html)
+Since simulated annealing does not guarantee an exact optimal solution, we decided to run the algorithm on each day's schedule for 11 hours. This approach was necessary because Kaggle imposes a two-hour execution limit, and downloading the dataset also takes time. To ensure robustness, the algorithm updates the pickle file `f'4.solutions/best_solution_{dayofweek}.pkl'` every time a more optimized solution is found. This guarantees that even if the program crashes, the best possible result up to that point is preserved.
 
 
 
