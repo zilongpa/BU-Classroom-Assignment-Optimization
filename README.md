@@ -1,4 +1,4 @@
-Visit the [HTML version](https://zilongpa.github.io/CS506-Final-Project/), which includes functional interactive maps.
+Visit the [HTML version](https://zilongpa.github.io/BU-Classroom-Assignment-Optimization/), which includes functional interactive maps.
 
 # BU Classroom Assignment Optimization
 
